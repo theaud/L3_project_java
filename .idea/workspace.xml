@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd101131-1de1-4493-bafc-6a1b4a09b567" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Location/Adresse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Location/Auto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Location/Date.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Location/Emprunteur.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Location/Exemplaire.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Location/Location.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Location/Moto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Location/Vehicule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Affichage/Bouton.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Affichage/Choix.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Affichage/Fenetre.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Affichage/Form.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Affichage/Login.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/L3_projet_java/Main.class" afterPath="$PROJECT_DIR$/out/production/L3_projet_java/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
     <ignored path="L3_projet_java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +37,71 @@
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding>
-                <element signature="e#64#65#0" expanded="true" />
-                <element signature="e#114#115#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Choix.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Affichage/Choix.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Affichage/Login.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.81067127">
+              <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3219#3220#0" expanded="true" />
+                <element signature="e#3264#3265#0" expanded="true" />
+                <element signature="e#3300#3301#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Fenetre.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Affichage/Fenetre.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Form.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Affichage/Form.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bouton.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Affichage/Bouton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,66 +120,26 @@
         <entry file="file://$PROJECT_DIR$/src/Location/Exemplaire.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="82" selection-start-line="25" selection-start-column="82" selection-end-line="25" selection-end-column="82" />
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Adresse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Location/Adresse.java">
+      <file leaf-file-name="lol.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lol.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Location.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Location/Location.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Date.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Location/Date.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Auto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Location/Auto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Moto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Location/Moto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vehicule.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Vehicule.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Location/Vehicule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28055078">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
               <folding />
             </state>
@@ -147,13 +167,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Location/Emprunteur.java" />
-        <option value="$PROJECT_DIR$/src/Location/Exemplaire.java" />
         <option value="$PROJECT_DIR$/src/Location/Vehicule.java" />
         <option value="$PROJECT_DIR$/src/Location/Location.java" />
         <option value="$PROJECT_DIR$/src/Location/Moto.java" />
         <option value="$PROJECT_DIR$/src/Location/Adresse.java" />
         <option value="$PROJECT_DIR$/src/Location/Auto.java" />
         <option value="$PROJECT_DIR$/src/Location/Date.java" />
+        <option value="$PROJECT_DIR$/src/Location/Exemplaire.java" />
+        <option value="$PROJECT_DIR$/lol.txt" />
+        <option value="$PROJECT_DIR$/src/Affichage/Panneau.java" />
+        <option value="$PROJECT_DIR$/src/Affichage/Choix.java" />
+        <option value="$PROJECT_DIR$/src/Affichage/Fenetre1.java" />
+        <option value="$PROJECT_DIR$/src/Affichage/Form.java" />
+        <option value="$PROJECT_DIR$/src/Affichage/Fenetre.java" />
+        <option value="$PROJECT_DIR$/src/Affichage/Login.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -245,6 +273,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L3_projet_java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L3_projet_java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Affichage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -253,7 +299,12 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TP3_java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mathieu\Documents\developement 1\L3_projet_java\src" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
@@ -693,7 +744,7 @@
       <option name="number" value="Default" />
       <updated>1457701717261</updated>
       <workItem from="1457701721714" duration="306000" />
-      <workItem from="1457702043992" duration="2284000" />
+      <workItem from="1457702043992" duration="8200000" />
     </task>
     <task id="LOCAL-00001" summary="fuck thomas">
       <created>1457702114212</created>
@@ -701,11 +752,23 @@
       <option name="project" value="LOCAL" />
       <updated>1457702114212</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Generator getter setter auto generer">
+      <created>1457704483487</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1457704483487</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Generator getter setter auto generer 2">
+      <created>1457704554196</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1457704554196</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2590000" />
+    <option name="totallyTimeSpent" value="8506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -713,7 +776,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -741,10 +804,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fuck thomas" />
-    <option name="LAST_COMMIT_MESSAGE" value="fuck thomas" />
+    <MESSAGE value="Generator getter setter auto generer" />
+    <MESSAGE value="Generator getter setter auto generer 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generator getter setter auto generer 2" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -757,19 +824,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#64#65#0" expanded="true" />
-            <element signature="e#114#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#64#65#0" expanded="true" />
-            <element signature="e#114#115#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -798,22 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Location/Emprunteur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Location/Exemplaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="82" selection-start-line="25" selection-start-column="82" selection-end-line="25" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Location/Location.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -832,9 +871,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Location/Vehicule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28055078">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Location/Exemplaire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Location/Emprunteur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lol.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Affichage/Bouton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Affichage/Choix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Affichage/Fenetre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Affichage/Form.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Affichage/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.81067127">
+          <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3219#3220#0" expanded="true" />
+            <element signature="e#3264#3265#0" expanded="true" />
+            <element signature="e#3300#3301#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
