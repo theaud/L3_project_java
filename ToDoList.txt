@@ -1,0 +1,75 @@
+______Projet de Java 2_____  /                   |
+|	   __   	  | /  Je suis Travail ! |
+|_________________________|<_____________________/
+					17:42 11/03/2016
+
+What's the plan : To conquer the World by doing : 
+
+- Diagramme des classes (ToTo)
+
+- Login
+
+- Interface graphique (/2)
+
+- thread (/4)
+
+
+Base de données Structure ; 
+
+Infos Voiture :
+	
+	- Nom
+	- Marque
+	- Modèle
+	- Constructeur
+	- Couleur
+	- Kilomètrage
+	- Type (luxe ou standard) 
+	- 
+
+
+- LOCATION
+Gestion des Locations sous forme de Devis
+	Devis = Infos Emprunteur, Infos Véhicule, Durée prévue du prêt (-> date de retour ?), Tarif
+			Tarif = Variable celon Catégorie Véhicule et durée du prêt.
+		Option(=> Choix oui ou non) Assurance (contre la dégradation et les accidents) -> Tarif
+		
+- RETOUR 
+retour du véhicule (Menu : retour)-> génération FACTURE
+		FACTURE : Si retard -> pénalitée sur le prix de base
+			Consommation de carburant  : supplément celon la quantité de carburant restante
+			état : si pas assurance & Véhicule abimé : Frais ++ (celon véhicule)
+
+- Onglet : Location : 
+
+Affichage : 
+
+Liste - Véhicule
+
+Recherche de véhicule : par marque et par kilométrage
+
+trie celon type (moto, voiture standard, voiture de luxe)
+		trie celon la marque et selon le kilométrage.
+
+ADMIN : Ajouter, Supprimer, Update une voiture
+
+
+- Onglet : Emprunteurs : 
+
+Affichage : 
+
+Liste - Emprunteur
+
+Recherche par nom, tout les emprunteur ayant un  emprunt de voiture (a spécifier dans la recherche)en cours
+
+
+Ajouter, Supprimer, Update un Emprunteur
+
+Bouton generation facture associé au client en txt ou pdf (1document/facture) 
+ 
+
+
+
+
+
+
