@@ -17,7 +17,7 @@ public class Exemplaire {
     }
 
 
-    public int getNumero() {        return Numero;    }
+    public int getNumero() {return Numero;    }
 
     public void setNumero(int numero) {        Numero = numero;    }
 
