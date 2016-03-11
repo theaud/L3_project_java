@@ -2,6 +2,8 @@ package Affichage;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.util.ArrayList;
@@ -13,19 +15,13 @@ public class Login extends JFrame {
 
 
     private Fenetre container    =new Fenetre();
-    private Bouton[] Bouton     =new Bouton[1];
-    private Form[]   Form       =new Form[2];
-    private JLabel[] Texte      =new JLabel[3];
-    private Fenetre[] Lign       =new  Fenetre[4];
+    private Bouton[] bouton    =Bouton.Tableau_Bouton(1);
+    private Form[]   form      =Form.Tableau_Form(2);
+    private JLabel[] texte     =Fenetre.Tableau_JLabel(3);
+    private Fenetre[] lign     =Fenetre.Tableau_Fenetre(4);
     private boolean ouvert=true;
 
     public Login() {
-        //---------------------------initiation des tableaux  ---------------------------------------------------------------
-        for(int i=0;i<1;i++){Bouton[i]=new Bouton("Valider");}
-        for(int i=0;i<2;i++){Form[i]=new Form();}
-        for(int i=0;i<3;i++){Texte[i]=new JLabel("texte");}
-        for(int i=0;i<4;i++){Lign[i]=new Fenetre();}
-
         //----------------------------Creation de la fenetre global ---------------------------------------------------------
         this.setTitle(" Login ");
         this.setSize(250, 250);
@@ -50,45 +46,67 @@ public class Login extends JFrame {
     private void container()
     {
         //ligne 0
-        Texte[2].setText("Authentification");
-        Lign[0].add(Texte[2]);
+        texte[2].setText("Authentification");
+        lign[0].add(texte[2]);
 
         //ligne 1
-        Texte[0].setText("Utilisateur");
+        texte[0].setText("Utilisateur");
 
-        Texte[0].setPreferredSize(new Dimension(getWidth()/3, 30));
-        Form[0].setPreferredSize(new Dimension(getWidth()/3, 30));
+        texte[0].setPreferredSize(new Dimension(getWidth()/3, 30));
+        form[0].setPreferredSize(new Dimension(getWidth()/3, 30));
 
-        Lign[1].add(Texte[0]);
-        Lign[1].add(Form[0]);
+        lign[1].add(texte[0]);
+        lign[1].add(form[0]);
 
         //ligne 2
-        Texte[1].setText("Mot de passe");
+        texte[1].setText("Mot de passe");
 
-        Texte[1].setPreferredSize(new Dimension(getWidth()/3, 30));
-        Form[1].setPreferredSize(new Dimension(getWidth()/3, 30));
-        Lign[2].add(Texte[1]);
-        Lign[2].add(Form[1]);
+        texte[1].setPreferredSize(new Dimension(getWidth()/3, 30));
+        form[1].setPreferredSize(new Dimension(getWidth()/3, 30));
+        lign[2].add(texte[1]);
+        lign[2].add(form[1]);
         //ligne 3
 
-        Bouton[0].setPreferredSize(new Dimension(getWidth()/2,25));
-        Lign[3].add(Bouton[0]);
+        bouton[0].setPreferredSize(new Dimension(getWidth()/2,25));
+        bouton[0].addActionListener(new validation());
+        lign[3].add(bouton[0]);
 
 // mise des lignes dans le container afin d'etre afficher
-        container.add(Lign,new Dimension(getWidth(), getHeight() / 5), 4);
+        container.add(lign,new Dimension(getWidth(), getHeight() / 5), 4);
 
 
 
     }
 
+    public  boolean Authentification_utilisateur(String Utilisateur,String Mdp)
+    {
+        System.out.println("Test d'Authentification a faire return true actuelment");
+        System.out.println("Utilisateur :"+Utilisateur+" Mdp: "+Mdp);
+
+        Menu Menu=new Menu();
+        setVisible(false);
 
 
+        return true;
+    }
+
+    class validation implements ActionListener {
+        //Redéfinition de la méthode actionPerformed()
+        public void actionPerformed(ActionEvent arg0) {
+            if(Authentification_utilisateur(""+form[0].getText(),""+form[1].getText()))
+            {
+                System.out.println("Validation");
+
+            }
+
+        }
+    }
 
     class MyWindowListener implements WindowListener {
         public void windowActivated (WindowEvent e) {}
         public void windowClosed (WindowEvent e) {System.exit(0);}
         public void windowClosing (WindowEvent e) {
-            System.out.println("On ferme la fenetre");
+
             ouvert=false;
             // code ajouté
             ((Frame)e.getSource()).dispose();
@@ -100,11 +118,6 @@ public class Login extends JFrame {
     }
 
 
-    public boolean isOuvert() {
-        return ouvert;
-    }
-
-    public void setOuvert(boolean ouvert) {
-        this.ouvert = ouvert;
-    }
+    public boolean isOuvert() {return ouvert;}
+    public void setOuvert(boolean ouvert) {this.ouvert = ouvert;}
 }

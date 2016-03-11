@@ -19,6 +19,14 @@ public class Bouton extends JButton {
         setBackground(Color.lightGray);
     }
 
+    public static  Bouton[] Tableau_Bouton(int size)
+    { Bouton[] Bouton     =new Bouton[size];
+        for(int i=0;i<size;i++)
+        {Bouton[i]=new Bouton("bouton"+i);}
+        return Bouton;
+    }
+
+
     public void paintComponent(Graphics g){
         Graphics2D g2d = (Graphics2D)g;
         GradientPaint gp = new GradientPaint(0, 0, Color.blue, 0, 20, Color.cyan, true);

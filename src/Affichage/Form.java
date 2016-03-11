@@ -16,7 +16,12 @@ public class Form extends JTextField {
     }
 
 
-
+    public static  Form[] Tableau_Form(int size)
+    { Form[] form     =new Form[size];
+        for(int i=0;i<size;i++)
+        {form[i]=new Form();}
+        return form;
+    }
 
 
 

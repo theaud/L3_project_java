@@ -20,6 +20,24 @@ public class Fenetre extends JPanel {
 
     }
 
+
+    public static  JLabel[] Tableau_JLabel(int size)
+    { JLabel[] label     =new JLabel[size];
+        for(int i=0;i<size;i++)
+        {label[i]=new JLabel();}
+        return label;
+    }
+
+
+    public static  Fenetre[] Tableau_Fenetre(int size)
+    { Fenetre[] lign     =new Fenetre[size];
+        for(int i=0;i<size;i++)
+        {lign[i]=new Fenetre();}
+        return lign;
+    }
+
+
+
     public void add(Fenetre[] list,Dimension dim,int size)
     {
         for(int i=0;i<size;i++)
