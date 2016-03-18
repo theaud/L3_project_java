@@ -2,6 +2,8 @@ package util3;
 
 import javax.swing.text.Utilities;
 import java.io.*;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
@@ -12,6 +14,40 @@ public class fichier {
 
 
     //------------------------------------------------------------------------------------------------------------------------
+    public static void ecrire(String nomFic, LinkedList<String> texte)
+    {
+        //on va chercher le chemin et le nom du fichier et on me tout ca dans un String
+        String adressedufichier = System.getProperty("user.dir") + "/"+ nomFic;
+
+        //on met try si jamais il y a une exception
+        try
+        {FileWriter fw = new FileWriter(adressedufichier, false);//on ecrase le fichier
+            // FileWriter fw = new FileWriter(adressedufichier, true);//on ecrit a la suite du fichier
+
+            BufferedWriter output = new BufferedWriter(fw);
+
+
+
+
+            for(int i=0;i<texte.size();i++)
+                {
+                    write(output,texte.get(i)+"\n");
+                }
+
+
+
+
+            output.flush();
+            output.close();
+
+        }
+        catch(IOException ioe){
+            System.out.print("Erreur : ");
+            ioe.printStackTrace();
+        }
+    }
+
+
     public static void ecrire(String nomFic, String texte)
     {
         //on va chercher le chemin et le nom du fichier et on me tout ca dans un String
@@ -62,8 +98,8 @@ public static void writeFile(String fileContent, String filePathOutput) {
     }
 }
 //------------------------------------------------------------------------------------------------------------------------
-    public static void dupliquerfichier(String Fichier_entrer, String Fichier_sortie) {
-
+    public static LinkedList<String> lectureFichier(String Fichier_entrer) {
+    LinkedList<String> listLign=new  LinkedList<String>();
     Scanner scanner = null;
     String line = null;
     StringBuffer str = new StringBuffer();
@@ -74,7 +110,7 @@ public static void writeFile(String fileContent, String filePathOutput) {
         while (scanner.hasNextLine()) {
             line = scanner.nextLine();
            // System.out.println(line);
-
+            listLign.add(line);
             if (line != null)
                 str.append(line + "\r\n");
         }
@@ -86,7 +122,7 @@ public static void writeFile(String fileContent, String filePathOutput) {
         e.printStackTrace();
     }
 
-    writeFile(str.toString(), Fichier_sortie);
+    return listLign;
 }
 
 
