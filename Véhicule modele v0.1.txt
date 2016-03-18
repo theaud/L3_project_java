@@ -2,17 +2,18 @@
 	- ID 		int PK
 	- Nom		Varchar
 	- Marque		Varchar
-	- Modèle		Varchar
+	- ModÃ¨le		Varchar
 	- Constructeur			Varchar
 	- Couleur			Varchar
-	- Kilomètrage			double/int
-	- Type (luxe ou standard) 	bool
+	- KilomÃ¨trage			double/int
+	- Type1 (moto ou voiture) 	bool
+	- Type2 (luxe ou standard) 	bool
 	- Tarif				double
-	- Nombre de véhicule en stock		int
+	- Nombre de vÃ©hicule en stock		int
 
-//nombre de véhicule loué
+//nombre de vÃ©hicule louÃ©
 	- 4	int
-//Vehicule x loué a Y	
+//Vehicule x louÃ© a Y	
 	- 1 2  
 	- 2 3
 	- 4 5
