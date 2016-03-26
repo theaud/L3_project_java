@@ -55,15 +55,18 @@ public class ComplexeInt {
    public void   setRe(int re)   {_re=re;} 
     
    public void set(int re,int im){_re=re;_im=im;}
-    
+
     public ComplexeInt addition (ComplexeInt c2){
-    ComplexeInt c3 = new ComplexeInt() ;
-    c3._re = this._re + c2._re ;
-    c3._im = this._im + c2._im ;
-    return c3 ;
+        int partiere = this._re + c2._re ;
+        int partieim   = this._im + c2._im ;
+        return new ComplexeInt(partiere, partieim);
     }
-    
-    
+
+    public ComplexeInt multiplication(ComplexeInt C) {
+        int partiere = (this._re * C._re - this._im * C._im);
+        int partieim = (this._re * C._im - this._im * C._re);
+        return new ComplexeInt(partiere, partieim);
+    }
    
     
     

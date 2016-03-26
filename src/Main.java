@@ -1,6 +1,9 @@
 import Affichage.Login;
 import BDD.Gestion_BDD;
 import Location.*;
+import util3.*;
+
+import java.util.Scanner;
 
 public class Main {
 
@@ -10,6 +13,10 @@ public class Main {
 
         Gestion_BDD.actualisation_annuaire_ajout("./src/BDD/test.txt",11);
 
+        Scan scan=new Scan();
+
+        int a=scan.scanINT();
+        System.out.println(a);
 
        /* Login Initiation=new Login();
 
