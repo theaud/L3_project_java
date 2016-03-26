@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd101131-1de1-4493-bafc-6a1b4a09b567" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/util3/test.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/util3/scanner.java" afterPath="$PROJECT_DIR$/src/util3/scan.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/L3_projet_java/Main.class" afterPath="$PROJECT_DIR$/out/production/L3_projet_java/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BDD/test.txt" afterPath="$PROJECT_DIR$/src/BDD/test.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util3/Complexe.java" afterPath="$PROJECT_DIR$/src/util3/Complexe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util3/ComplexeInt.java" afterPath="$PROJECT_DIR$/src/util3/ComplexeInt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util3/fichier.java" afterPath="$PROJECT_DIR$/src/util3/fichier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util3/Util3.java" afterPath="$PROJECT_DIR$/src/util3/Util3.java" />
     </list>
     <ignored path="L3_projet_java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +42,8 @@
       <file leaf-file-name="Util3.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/util3/Util3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6084425">
-              <caret line="71" column="15" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.47016013">
+              <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -210,6 +203,7 @@
         <option value="$PROJECT_DIR$/src/util3/Scan.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/util3/test.java" />
+        <option value="$PROJECT_DIR$/src/util3/Util3.java" />
       </list>
     </option>
   </component>
@@ -786,7 +780,7 @@
       <workItem from="1458123513790" duration="91000" />
       <workItem from="1458305231736" duration="65000" />
       <workItem from="1458305964764" duration="10877000" />
-      <workItem from="1459010405324" duration="3767000" />
+      <workItem from="1459010405324" duration="4020000" />
     </task>
     <task id="LOCAL-00001" summary="fuck thomas">
       <created>1457702114212</created>
@@ -842,11 +836,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458314111294</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="travail sur mon package utilitaire : principalement Scan">
+      <created>1459014230437</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1459014230437</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28648000" />
+    <option name="totallyTimeSpent" value="28901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -898,7 +898,8 @@
     <MESSAGE value="add utilitaire mathieu&#10;" />
     <MESSAGE value="creation base de la BDD" />
     <MESSAGE value="creation base de la BDD 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="creation base de la BDD 2" />
+    <MESSAGE value="travail sur mon package utilitaire : principalement Scan" />
+    <option name="LAST_COMMIT_MESSAGE" value="travail sur mon package utilitaire : principalement Scan" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1316,8 +1317,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util3/Util3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6084425">
-          <caret line="71" column="15" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.47016013">
+          <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
           <folding />
         </state>
       </provider>
