@@ -1,11 +1,7 @@
-
 package util3;
 import java.util.*;
 
-/**
- *
- * @author mathieu
- */
+
 public class Scan {
     public Scanner scan= new Scanner(System.in);;
     public Scan(){}
@@ -13,13 +9,7 @@ public class Scan {
  //---------------------------------------------------------------------------------------------------------------------
  //----------------Scanner with Scan clear included---------------------------------------------------------------------
  //---------------------------------------------------------------------------------------------------------------------
-
-
-/**
- *  scanBoolean
- "import java.util.*" at the begining and
- "Scanner Scan = new Scanner(System.in);" to define the Scan. <br/>
- * - integer 0 2 = No other yes<br/>
+/**  - integer 0 2 = No other yes<br/>
  * -string Yes True y Y T t <br/>
  * -string No False n N f F <br/>
  * @return the value true/false 
@@ -63,12 +53,8 @@ public class Scan {
     }
   }
 
-  /**
- *  scanINT
- "import java.util.*" at the begining and
- "Scanner Scan = new Scanner(System.in);" to define the Scan.
- * @return the value integer selected
- */
+  /** @return the value integer selected
+   * */
   public  int scanINT()
   {int returned=0;
   while(true)
@@ -82,46 +68,38 @@ public class Scan {
     }
   }
 
-/**
- *  scanINT
- "import java.util.*"
- * @param min the minimum point (useless with type 0 or 3)
+/** @param min the minimum point (useless with type 0 or 3)
  * @param max the maximum point (useless with type 0 or 3)
          * @param type choose the type          <br/>
          *  type 0 = without less or more       <br/>
          *  type 1 = with less and  more        <br/>
          *  type 2 = with less no more          <br/>
          *  type 3 = no less but with more      <br/>
-  *
  * @return the value integer selected
  */
-    public  int scanINT(int min,int max,int type)
+public  int scanINT(int min,int max,int type)
   { int returned=scanINT();// la version a finir et copier coller pour double
 
     switch(type)
-    {   case 1:while(returned<min || returned>max)
-                {System.out.print("Invalid input need between :"+min+" and "+max+". Please try again.");
-                returned=scanINT();}
-            break;
-        case 2: while(returned<min )
-                {System.out.print("Invalid input need minimum :"+min+". Please try again.");
-                returned=scanINT();}
-            break;
-        case 3:while(returned>max)
-                {System.out.print("Invalid input need maximum :"+max+". Please try again.");
-                returned=scanINT(); }
-            break;
-        default:  break;
-
-    }
+        {case 1:while(returned<min || returned>max)
+                    {System.out.print("Invalid input need between :"+min+" and "+max+". Please try again.");
+                    returned=scanINT();}
+                break;
+         case 2: while(returned<min )
+                    {System.out.print("Invalid input need minimum :"+min+". Please try again.");
+                    returned=scanINT();}
+                break;
+         case 3:while(returned>max)
+                    {System.out.print("Invalid input need maximum :"+max+". Please try again.");
+                    returned=scanINT(); }
+                break;
+         default:break;
+        }
       return returned;
   }
 
-  /**
- *  scanDOUBLE
- "import java.util.*" at the begining and
- * @return the value DOUBLE selected
- */
+  /** @return the value DOUBLE selected
+   * */
  public  double scanDOUBLE()
   {
   double returned;
@@ -141,62 +119,42 @@ public class Scan {
     }
   }
 
-  /**
- *  scanDOUBLE
- "import java.util.*" at the begining and
- "Scanner Scan = new Scanner(System.in);" to define the Scan.
- * @param min the minimum point (useless with type 0 or 3)
- * @param max the maximum point (useless with type 0 or 3)
+  /** @param min the minimum point (useless with type 0 or 3)
+    * @param max the maximum point (useless with type 0 or 3)
          * @param type choose the type          <br/>
          *  type 0 = without less or more       <br/>
          *  type 1 = with less and  more        <br/>
          *  type 2 = with less no more          <br/>
          *  type 3 = no less but with more      <br/>
-  @see
-  *
- * @return the value integer selected
-     */
-    public  double scanDOUBLE(double min,double max,int type)
-  {
-     double returned=scanDOUBLE();
+ * @return the value integer selected */
+public  double scanDOUBLE(double min,double max,int type)
+  {double returned=scanDOUBLE();
 
     switch(type)
-    {
-        case 1:  
-         while(returned<min || returned>max)
-            {
-            System.out.print("Invalid input need between :");  
+    {   case 1:while(returned<min || returned>max)
+            {System.out.print("Invalid input need between :");
             System.out.println(min+" and "+max+". Please try again."); 
-            returned=scanDOUBLE();
-            }
+            returned=scanDOUBLE();}
             break;
-        case 2:
-            while(returned<min )
-            {
-            System.out.print("Invalid input need minimum :"+min+". Please try again.");  
-            returned=scanDOUBLE();
-            }
+        case 2:while(returned<min )
+            {System.out.print("Invalid input need minimum :"+min+". Please try again.");returned=scanDOUBLE();}
             break;    
-        case 3:
-              while(returned>max)
-            {
-            System.out.print("Invalid input need maximum :"+max+". Please try again.");  
-            returned=scanDOUBLE();
-            }
-            break; 
-            
+        case 3:while(returned>max)
+            {System.out.print("Invalid input need maximum :"+max+". Please try again.");
+            returned=scanDOUBLE();}
+            break;
         default: break;
-              
     }
       return returned;      
   }
+//---------------------------------------------------------------------------------------------------------------------
+//-------------------------       Scanner basic   ---------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
 
-    /**
-     *Scanner Scan = new Scanner(System.in);
-     */
-    public  String scannext()
-  {
-      String returned;
+    /** scanner next with a clear after
+     * */
+public  String scannext()
+  {String returned;
    while(true)
      {if (scan.hasNext())
         {returned=scan.next();
@@ -208,22 +166,17 @@ public class Scan {
       }
   }
 
-    /**
-     * Scanner Scan = new Scanner(System.in); */
-    public  String scanLine()
-  {
-    String returned;
-   while(true)
+    /**  */
+public  String scanLine()
+  {String returned;
+      while(true)
      {if (scan.hasNextLine())
              {returned=scan.nextLine();
-              return returned;
-             }
+              return returned;}
         else
              {System.out.println("Invalid input . Please try again.");
-              scan.nextLine();
-             }
+              scan.nextLine();}
       }
-
   }
 
     
