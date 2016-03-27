@@ -8,11 +8,10 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.util.ArrayList;
 
-/**
- * Created by mathieu on 11/03/2016.
- */
 public class Login extends JFrame {
 
+    private static final int Width=250;
+    private static final int Height=250;
 
     private Fenetre container    =new Fenetre();
     private Bouton[] bouton    =Bouton.Tableau_Bouton(1);
@@ -24,24 +23,17 @@ public class Login extends JFrame {
     public Login() {
         //----------------------------Creation de la fenetre global ---------------------------------------------------------
         this.setTitle(" Login ");
-        this.setSize(250, 250);
-        setMinimumSize(new Dimension(250, 250));
+        this.setSize(Width, Height);
+        setMinimumSize(new Dimension(Width,Height));
 
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.addWindowListener(new MyWindowListener());//ecoute sur les fenetres
 
-
-//-----------------------Definir pan comme fond et l'afficher--------------------------------------
-
-
-//---------------------------------------------------------------------------------------------
-
         container();
         this.setContentPane(container);
         this.setVisible(true);
     }
-
 
     private void container()
     {
@@ -68,35 +60,38 @@ public class Login extends JFrame {
         //ligne 3
 
         bouton[0].setPreferredSize(new Dimension(getWidth()/2,25));
-        bouton[0].addActionListener(new validation());
+        bouton[0].addActionListener(new Validation());
         lign[3].add(bouton[0]);
 
 // mise des lignes dans le container afin d'etre afficher
         container.add(lign,new Dimension(getWidth(), getHeight() / 5), 4);
-
-
-
     }
 
     public  boolean Authentification_utilisateur(String Utilisateur,String Mdp)
     {
-        System.out.println("Test d'Authentification a faire return true actuelment");
-        System.out.println("Utilisateur :"+Utilisateur+" Mdp: "+Mdp);
+        System.out.println("--------------------------------------------------");
+        System.out.println("Test d'Authentification a faire return true actuelment ");
+        System.out.println("Utilisateur :"+Utilisateur+"\nMdp: "+Mdp);
 
-        Menu Menu=new Menu();
-        setVisible(false);
-
-
-        return true;
+        if(Utilisateur.equals("u") && Mdp.equals("m"))
+            {
+                System.out.println("Correct utilisateur , mdp");
+                Menu Menu=new Menu();
+                setVisible(false);
+                return false;
+            }
+        else
+            {
+                System.out.println("Mauvais utilisateu/mdp");
+                return true;
+            }
     }
 
-    class validation implements ActionListener {
-        //Redéfinition de la méthode actionPerformed()
+    class Validation implements ActionListener {
         public void actionPerformed(ActionEvent arg0) {
             if(Authentification_utilisateur(""+form[0].getText(),""+form[1].getText()))
             {
-                System.out.println("Validation");
-
+                System.out.println("--------------------------------------------------");
             }
 
         }
@@ -116,7 +111,6 @@ public class Login extends JFrame {
         public void windowIconified (WindowEvent e) {}
         public void windowOpened (WindowEvent e) {}
     }
-
 
     public boolean isOuvert() {return ouvert;}
     public void setOuvert(boolean ouvert) {this.ouvert = ouvert;}

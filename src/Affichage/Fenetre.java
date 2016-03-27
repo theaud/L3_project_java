@@ -32,7 +32,9 @@ public class Fenetre extends JPanel {
     public static  Fenetre[] Tableau_Fenetre(int size)
     { Fenetre[] lign     =new Fenetre[size];
         for(int i=0;i<size;i++)
-        {lign[i]=new Fenetre();}
+        {lign[i]=new Fenetre();
+
+        }
         return lign;
     }
 
