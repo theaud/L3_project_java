@@ -1,12 +1,15 @@
 package Affichage;
 
+import Graphique.Bouton;
+import Graphique.Fenetre;
+import Graphique.Lign;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.util.ArrayList;
 
 public class Login extends JFrame {
 
@@ -17,7 +20,7 @@ public class Login extends JFrame {
     private Bouton[] bouton    =Bouton.Tableau_Bouton(1);
     private Form[]   form      =Form.Tableau_Form(2);
     private JLabel[] texte     =Fenetre.Tableau_JLabel(3);
-    private Fenetre[] lign     =Fenetre.Tableau_Fenetre(4);
+    private Lign[] lign     =Lign.assemblage_ligne(4);
     private boolean ouvert=true;
 
     public Login() {

@@ -1,5 +1,7 @@
 package Affichage;
 
+import Graphique.Bouton;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
