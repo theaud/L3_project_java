@@ -9,26 +9,26 @@ import javax.swing.*;
 import java.awt.*;
 
 
-public class Menu extends JFrame {
+public class Menu extends Panneau {
 
-    private static final int Width=500;
-    private static final int Height=500;
 
-    private Panneau Fenetre_menu    =new Panneau("Menu");
-    private Panneau Fenetre_active  ;
 
-    private Bouton[]  bouton    =Bouton.Tableau_Bouton(10);
-    private Form[]    form      =Form.Tableau_Form(10);
-    private JLabel[]  texte     = Fenetre.Tableau_JLabel(10);
-    private Lign[] lign      =Lign.assemblage_ligne(10);
+
+
 
     public Menu()
     { //----------------------------Creation de la fenetre global ---------------------------------------------------------
-        this.setSize(Width, Height);
-        setMinimumSize(new Dimension(Width, Height));
 
-        this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+
+
+
+
+    //---------------------------------------------------
+        bouton    =Bouton.Tableau_Bouton(10);
+        form      =Form.Tableau_Form(10);
+        texte     = Fenetre.Tableau_JLabel(10);
+        lign      =Lign.assemblage_ligne(10);
 
    //-------------------------------------------------------------------------------------------------------------------
    // --------------------------       on cree et on se place sur le menu  ---------------------------------------------
@@ -38,27 +38,9 @@ public class Menu extends JFrame {
 
     }
 
-    public void actualisation()
-    {System.out.println("Actualisation");
-     System.out.println(Fenetre_active.getName());
-        this.setTitle(Fenetre_active.getName());
-        this.setContentPane(Fenetre_active);
-        this.setVisible(true);
-    }
 
 
-    public void changement_fenetre(Panneau nouvelle_fenettre)
-    {
-        Fenetre_active=nouvelle_fenettre;
-        actualisation();
 
-    }
-
-    public void retour_Menu()
-    {
-        Fenetre_active=Fenetre_menu;
-        actualisation();
-    }
 
     private void Creation_menu()
     {

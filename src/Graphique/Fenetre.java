@@ -6,7 +6,14 @@ import java.awt.*;
 
 public class Fenetre extends JPanel {
 
+    public Fenetre(){
 
+
+
+
+
+
+    }
 
 
 

@@ -3,6 +3,7 @@ package Affichage;
 import Graphique.Bouton;
 import Graphique.Fenetre;
 import Graphique.Lign;
+import Graphique.Panneau;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,31 +12,20 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-public class Login extends JFrame {
+public class Login extends Panneau {
 
-    private static final int Width=250;
-    private static final int Height=250;
 
-    private Fenetre container    =new Fenetre();
-    private Bouton[] bouton    =Bouton.Tableau_Bouton(1);
-    private Form[]   form      =Form.Tableau_Form(2);
-    private JLabel[] texte     =Fenetre.Tableau_JLabel(3);
-    private Lign[] lign     =Lign.assemblage_ligne(4);
+
     private boolean ouvert=true;
 
-    public Login() {
-        //----------------------------Creation de la fenetre global ---------------------------------------------------------
-        this.setTitle(" Login ");
-        this.setSize(Width, Height);
-        setMinimumSize(new Dimension(Width,Height));
 
-        this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        this.addWindowListener(new MyWindowListener());//ecoute sur les fenetres
+
+
+    public Login() {
+
 
         container();
-        this.setContentPane(container);
-        this.setVisible(true);
+
     }
 
     private void container()
@@ -67,7 +57,7 @@ public class Login extends JFrame {
         lign[3].add(bouton[0]);
 
 // mise des lignes dans le container afin d'etre afficher
-        container.add(lign,new Dimension(getWidth(), getHeight() / 5), 4);
+        add(lign,new Dimension(getWidth(), getHeight() / 5), 4);
     }
 
     public  boolean Authentification_utilisateur(String Utilisateur,String Mdp)

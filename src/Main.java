@@ -19,10 +19,10 @@ public class Main {
 
         wait(2000000000);
 
-        wait(2000000000);
+
         menu.changement_fenetre(new Panneau());
 
-        wait(2000000000);
+
 
         wait(2000000000);
         menu.changement_fenetre(new Panneau());
