@@ -1,5 +1,8 @@
-import Affichage.*;
+import Graphique.Ecran;
+import Graphique.Login;
+import Graphique.Menu;
 import Graphique.Panneau;
+import sun.rmi.runtime.Log;
 
 public class Main {
 
@@ -10,27 +13,19 @@ public class Main {
         //Gestion_BDD.actualisation_annuaire_ajout("./src/BDD/test.txt",11);
 
 
+        Panneau Panneau=new Panneau();
+        Panneau.changement_Ecran(new Login());
 
 
-       Menu menu=new Menu();
-        System.out.println("-----------------------------------------------");
-        wait(2000000000);
-        menu.changement_fenetre(new Panneau());
-
-        wait(2000000000);
-
-
-        menu.changement_fenetre(new Panneau());
-
-
-
-        wait(2000000000);
-        menu.changement_fenetre(new Panneau());
-
-        wait(2000000000);
-        menu.retour_Menu();
+        //boucle principale
+        Panneau.gestion_fenetre();
 
     }
+
+
+
+
+
 
 
     public static void wait(int a)

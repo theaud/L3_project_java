@@ -6,13 +6,24 @@ import java.awt.*;
 
 public class Fenetre extends JPanel {
 
+    protected Dimension dim;
+    protected String name;
+    protected static int compteur=0;
+
+    protected int isopen=1;
+
     public Fenetre(){
+        name="fenetre initialiser";
 
 
 
 
 
 
+
+        //----------- detail ---------------------
+        name=""+compteur;
+        compteur++;
     }
 
 
@@ -32,27 +43,27 @@ public class Fenetre extends JPanel {
         return label;
     }
 
+//----------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------
 
+    @Override
+    public String getName() {
+        return name;
+    }
 
-
-
-
-    public void add(Fenetre[] list,Dimension dim,int size)
-    {
-        for(int i=0;i<size;i++)
-        {list[i].setPreferredSize(dim);
-         add(list[i]);
-        }
-
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 
 
-    public static Fenetre[] setsize(Fenetre[]list , Dimension dim,int size)
-    {
-        for(int i=0;i<4;i++)
-        {list[i].setPreferredSize(dim);}
-        return list;
-    }
+    public Dimension getDim() {   return dim;    }
+    public void setDim(Dimension dim) {        this.dim = dim;    }
 
+    public static int getCompteur() {        return compteur;    }
+    public static void setCompteur(int compteur) {        Fenetre.compteur = compteur;    }
 
+    public int getIsopen() {return isopen;    }
+    public void setIsopen(int isopen) {        this.isopen = isopen;    }
 }
