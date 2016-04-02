@@ -49,7 +49,6 @@ public class Choix_aide_a_retirer extends JFrame {
 
     }
 
-
     class choix implements ActionListener {
         //Redéfinition de la méthode actionPerformed()
         public void actionPerformed(ActionEvent arg0) {

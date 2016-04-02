@@ -4,8 +4,7 @@ package Graphique;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+
 
 public class Login extends Ecran {
 
@@ -53,14 +52,6 @@ public class Login extends Ecran {
         for(int i=0;i<4;i++) {add(lign[i]);}
 
     }
-
-
-
-
-
-
-
-
 
 
 

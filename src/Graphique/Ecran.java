@@ -3,7 +3,6 @@ package Graphique;
 import Affichage.Form;
 
 import javax.swing.*;
-import java.awt.*;
 
 
 public class Ecran extends Fenetre {

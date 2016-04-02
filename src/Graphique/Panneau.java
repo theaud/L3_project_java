@@ -1,12 +1,9 @@
 package Graphique;
 
-import Affichage.Form;
-
 import javax.swing.*;
 import java.awt.*;
 
 public class Panneau extends JFrame {
-
 
     protected Menu Ecran_menu    =new  Menu();
     protected Ecran Ecran_actif  ;
@@ -31,19 +28,14 @@ public class Panneau extends JFrame {
     }
 
     public void changement_Ecran(Ecran nouveau_Ecran)
-    {Ecran_actif=nouveau_Ecran;
-
+    {   Ecran_actif=nouveau_Ecran;
         actualisation();
-
         System.out.println("changement_Ecran        "+Ecran_actif.getName());
     }
 
     public void retour_Menu()
-    {
-        Ecran_actif=Ecran_menu;
-
+    {   Ecran_actif=Ecran_menu;
         System.out.println("retour_Menu       "+Ecran_actif.getName());
-
         actualisation();
     }
 
@@ -55,6 +47,9 @@ public class Panneau extends JFrame {
         repaint();
         revalidate();
     }
+//----------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------
 
     public void gestion_fenetre()
     {

@@ -1,8 +1,5 @@
 package Graphique;
 
-/**
- * Created by mathieu on 02/04/2016.
- */
 public class bordel {
 
 

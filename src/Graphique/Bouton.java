@@ -22,7 +22,7 @@ public class Bouton extends JButton {
     public static  Bouton[] Tableau_Bouton(int size)
     { Bouton[] Bouton     =new Bouton[size];
         for(int i=0;i<size;i++)
-        {Bouton[i]=new Bouton("bouton"+i);}
+        {Bouton[i]=new Bouton("Bouton "+i);}
         return Bouton;
     }
 

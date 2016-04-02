@@ -1,10 +1,9 @@
 package Graphique;
 
 import Affichage.Form;
-import Graphique.*;
-
-import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class Menu extends Ecran {
@@ -27,37 +26,53 @@ public class Menu extends Ecran {
         // --------------------------       on cree et on se place sur le menu  ---------------------------------------------
         // -------------------------------------------------------------------------------------------------------------------
 
-          initialisation();
+        initialiser(10,10,10,10);
 
-
+        initialisation_menu();
     }
 
 
 
-    private void initialisation()
-    {bouton    =Bouton.Tableau_Bouton(10);
-        form      = Form.Tableau_Form(10);
-        texte     = Fenetre.Tableau_JLabel(10);
-        lign      =Lign.assemblage_ligne(10);
+    private void initialisation_menu()
+    {int largeur=500;
 
+        for(int i=0;i<10;i++) {  form[i].setPreferredSize(new Dimension(largeur/4, 30));}
+
+//----------------------------------------------------------------------------------------------------
+        //ligne 0
         for(int i=0;i<10;i++)
-        {   texte[i].setText("Yolo 3"+i);
-            lign[i].setSize(500,33);
-
-
+        {   texte[i].setText("Ligne 1 blabla");
             lign[i].add(texte[i]);
 
-            lign[i].setBackground(Color.lightGray);
-           // add(lign[i]);
-            add(texte[i]);
+            lign[i].add(form[i]);
 
+            bouton[i].setName("Je met un texte "+i);
+            bouton[i].setText(""+i);
+            bouton[i].setPreferredSize(new Dimension(largeur/3, 30));
+            bouton[i].addActionListener(new Pression());
+            lign[i].add(bouton[i]);
         }
 
 
 
+
+
+//----------------------------------------------------------------------------------------------------
+            for(int i=0;i<10;i++) {add(lign[i]);}
+
+
+
+
     }
 
+    class Pression implements ActionListener {
+        public void actionPerformed(ActionEvent arg0) {
 
+                System.out.println(arg0);
+
+
+        }
+    }
 
 
 
