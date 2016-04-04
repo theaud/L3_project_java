@@ -58,14 +58,22 @@ public class Panneau extends JFrame {
         {
 
             switch (getEcran_actif().getIsopen())
-            {case 0:retour_Menu();
-                //on ferme la fenettre active et on retourne menu
+            {case 0:retour_Menu();                   //retour menu   1
                 break;
-                case 1://la fenetttre active reste ouverte a l'etat actuel
-                    break;
-                case 2:break;
-                case 3:break;
-                default:break;
+            case 1: changement_Ecran(new Login());  //deconnection  2
+
+                break;
+            case 2: System.out.println("bouton nom");
+                break;
+            case 3: System.out.println("bouton id");
+                break;
+            case 4: System.out.println("bouton vehicule");
+                break;
+            case 5: System.out.println("bouton location");
+                break;
+            case 6:
+                break;
+            default:break;
             }
 
 

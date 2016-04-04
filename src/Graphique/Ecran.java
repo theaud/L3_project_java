@@ -16,10 +16,6 @@ public class Ecran extends Fenetre {
 
     public Ecran() {
 
-
-
-
-
     }
 
 
@@ -32,38 +28,7 @@ public class Ecran extends Fenetre {
         form      = Form.Tableau_Form(nbForm);
         texte     = Fenetre.Tableau_JLabel(nbJpanel);
         lign      =Lign.assemblage_ligne(nbLign);
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

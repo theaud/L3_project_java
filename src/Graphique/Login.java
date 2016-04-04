@@ -11,6 +11,9 @@ public class Login extends Ecran {
 
 
     public Login() {
+        setSize(500, 300);
+        setMinimumSize(new Dimension(500, 300));
+
 
         name="Login initialiser";
         setBackground(Color.pink);
@@ -24,6 +27,8 @@ public class Login extends Ecran {
 
     private void Login_initialisation()
     {int largeur=500;
+        lign=Lign.assemblage_ligne(lign,4,60);
+
 
         //ligne 0
         texte[2].setText("Authentification");
