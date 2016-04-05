@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd101131-1de1-4493-bafc-6a1b4a09b567" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/consigne/Chose a faire" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Affichage/Fenetre_ajout.java" afterPath="$PROJECT_DIR$/src/Affichage/Fenetre_ajout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Affichage/Login.java" afterPath="$PROJECT_DIR$/src/Affichage/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Affichage/Menu.java" afterPath="$PROJECT_DIR$/src/Affichage/Menu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BDD/Gestion_BDD.java" afterPath="$PROJECT_DIR$/src/BDD/Gestion_BDD.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphique/Bouton.java" afterPath="$PROJECT_DIR$/src/Graphique/Bouton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphique/Fenetre.java" afterPath="$PROJECT_DIR$/src/Graphique/Fenetre.java" />
     </list>
     <ignored path="L3_projet_java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1055,7 +1048,7 @@
       <workItem from="1459777189553" duration="676000" />
       <workItem from="1459781625751" duration="3093000" />
       <workItem from="1459786466559" duration="3057000" />
-      <workItem from="1459872406619" duration="11706000" />
+      <workItem from="1459872406619" duration="12351000" />
     </task>
     <task id="LOCAL-00001" summary="fuck thomas">
       <created>1457702114212</created>
@@ -1159,11 +1152,17 @@
       <option name="project" value="LOCAL" />
       <updated>1459893120805</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Ajout : du chose a faire =&gt; penser a le completer&#10;&#10;optimisation et generalisation de plusieur fonction existante">
+      <created>1459897578723</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1459897578723</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75051000" />
+    <option name="totallyTimeSpent" value="75696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1222,7 +1221,8 @@
     <MESSAGE value="Ajoue diagrame UML des classes graphiques" />
     <MESSAGE value="gestion graphique fonctionnel" />
     <MESSAGE value="Ajout :&#10;       gestion ajout d'un utilisateur&#10;       gestion de la bdd&#10;       verification" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout :&#10;       gestion ajout d'un utilisateur&#10;       gestion de la bdd&#10;       verification" />
+    <MESSAGE value="Ajout : du chose a faire =&gt; penser a le completer&#10;&#10;optimisation et generalisation de plusieur fonction existante" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout : du chose a faire =&gt; penser a le completer&#10;&#10;optimisation et generalisation de plusieur fonction existante" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
