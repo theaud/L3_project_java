@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
+import java.util.List;
 
 import static java.lang.Integer.parseInt;
 
@@ -28,7 +29,27 @@ public class Gestion_BDD extends util3.fichier {
   }
 
 
+    public static void ajout(String chemin, LinkedList<String> texte)
+    {
+        int id=actualisation_annuaire_ajout(chemin+"Annuaire");
+        String Fichier="./src/BDD/Emprunteur/"+id+"";
 
+        try
+        { FileWriter fw = new FileWriter(Fichier, false);//on ecrase le fichier
+            BufferedWriter output = new BufferedWriter(fw);
+
+            writeln(output,""+id);
+            for(int i=0;i<texte.size();i++)
+            {
+                writeln(output,texte.get(i));
+            }
+
+
+            output.flush();
+            output.close();
+        }
+        catch(IOException ioe){ System.out.print("Erreur : ");   ioe.printStackTrace();}
+    }
 
 
 
@@ -58,6 +79,7 @@ public class Gestion_BDD extends util3.fichier {
 
         return true;
     }
+
 
 
 

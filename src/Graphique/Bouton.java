@@ -2,28 +2,25 @@ package Graphique;
 
 import javax.swing.*;
 import java.awt.*;
-
-/**
- * Created by mathieu on 24/02/2016.
- */
+import java.awt.event.ActionListener;
 
 
 public class Bouton extends JButton {
 
+    public Bouton(String str){super(str); }
 
 
-    public Bouton(String str){
-        super(str);
 
-        setBackground(Color.lightGray);
-    }
+//------------------------------------ set bouton  ----------------------------------------------------------------------------------------------------------------------------
+    public void setBouton(String text, ActionListener listener,int height ,int weight)    {setBouton(text,listener,new Dimension(height,weight)); }
 
-    public static  Bouton[] Tableau_Bouton(int size)
-    { Bouton[] Bouton     =new Bouton[size];
-        for(int i=0;i<size;i++)
-        {Bouton[i]=new Bouton("Bouton "+i);}
-        return Bouton;
-    }
+   // public void setBouton(String text, ActionListener listener,Dimension dim,Color color)    {setForeground(color);setSize(dim); setBouton( text,  listener); }
+
+    public void setBouton(String text, ActionListener listener,Dimension dim)    {setSize(dim); setBouton( text,  listener); }
+
+   // public void setBouton(String text, ActionListener listener,Color color)    {setForeground(color);setText(text); addActionListener(listener);}
+    public void setBouton(String text, ActionListener listener)    {setText(text); addActionListener(listener);}
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
     public void paintComponent(Graphics g){
@@ -34,6 +31,15 @@ public class Bouton extends JButton {
         g2d.setColor(Color.white);
         g2d.drawString(getText(), this.getWidth() / 2 - (this.getWidth()/ 2 /4), (this.getHeight() / 2) + 5);
     }
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    public static  Bouton[] Tableau_Bouton(int size)
+    { Bouton[] Bouton     =new Bouton[size];
+        for(int i=0;i<size;i++)
+        {Bouton[i]=new Bouton("Bouton "+i);}
+        return Bouton;
+    }
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 }

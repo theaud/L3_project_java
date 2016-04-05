@@ -56,7 +56,7 @@ public class Login extends Ecran {
         lign[3].add(texte[3]);
 
         //ligne 4
-        bouton[0].addActionListener(new Validation());
+        bouton[0].setBouton("Log in",new Validation());
         lign[4].add(bouton[0]);
 
 
@@ -81,9 +81,9 @@ public class Login extends Ecran {
     //------------------------------------------------------------------------------------------------------------
     public  boolean Authentification_utilisateur(String Utilisateur,String Mdp)
     {
-        System.out.println("--------------------------------------------------");
-        System.out.println("Test d'Authentification a faire return true actuelment ");
-        System.out.println("--------------------------------------------------");
+
+        System.out.println("-------------Test d'Authentification a faire return true actuelment------------- ");
+
         //on contourne pour pas remettrele mdp
 
         isopen=1;
@@ -109,7 +109,8 @@ public class Login extends Ecran {
         public void actionPerformed(ActionEvent arg0) {
             if(Authentification_utilisateur(""+form[0].getText(),""+form[1].getText()))
             {
-                System.out.println("---------------yolo--------------------------");
+                System.out.println("------------------------connection faite --------------------------------");
+
             }
 
         }

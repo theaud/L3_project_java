@@ -1,5 +1,7 @@
 package Graphique;
 
+import Affichage.Form;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -68,4 +70,13 @@ public class Fenetre extends JPanel {
     public int getIsopen() {return isopen;    }
     public void setIsopen(int isopen) {        this.isopen = isopen;    }
     public void stopIsopen(){this.isopen=0;}
+
+
+
+    public void add(JLabel text,Form formulaire)                {add(text); add(formulaire);}
+    public void add(JLabel text,Form formulaire,Bouton bouton)  {add(text); add(formulaire);    add(bouton);}
+
+
+
+
 }

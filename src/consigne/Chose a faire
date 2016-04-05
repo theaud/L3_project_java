@@ -1,0 +1,27 @@
+Bouton
+    gere les problemes de centrage
+Formulaire
+    generaliser les lignes => rectangle modulable
+BDD
+    faire Devis et vehicule
+    ajoue suppression
+    rendre un vehicule
+Affichage
+    Faire un affichage de la bdd vehicule etc
+recherche
+    rechercher un utilisateur
+    rechercher un vehicule
+Login
+    remettre le mdp => ajouter le mdp au read.me avec un cf readme lors d'erreur (voir tout le temp)
+
+
+
+Genereral
+    nettoyer le code
+    faire les graphes de class UML
+    separer les partits du projet avec celle reutilisable
+    generaliser le max de fonction
+
+
+Important
+    Faire ce que j'ai zap

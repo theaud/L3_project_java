@@ -46,6 +46,7 @@ public class Menu extends Ecran {
 //----------------------------------------------------------------------------------------------------
 
         //ligne 0
+
         texte[0].setText("Menu");
         lign[0].add(texte[0]);
 
@@ -55,47 +56,25 @@ public class Menu extends Ecran {
 
         //ligne 2
         texte[2].setText("Nom");
-        lign[2].add(texte[2]);
-
-        lign[2].add(form[0]);
-
-        bouton[0].setName("Connection nom");
-        bouton[0].setText("Nom");
-        bouton[0].setPreferredSize(new Dimension(largeur/3, 30));
-        bouton[0].addActionListener(new Pression());
-        lign[2].add(bouton[0]);
+        bouton[0].setBouton("Connection nom", new Pression());
+        lign[2].add(texte[2],form[0],bouton[0]);
 
         //ligne 3
         texte[3].setText("ID");
-        lign[3].add(texte[3]);
-
-        lign[3].add(form[1]);
-
-        bouton[1].setText("Connection Id");
-
-        bouton[1].setPreferredSize(new Dimension(largeur/3, 30));
-        bouton[1].addActionListener(new Pression());
-        lign[3].add(bouton[1]);
+        bouton[1].setBouton("Connection Id", new Pression());
+        lign[3].add(texte[3],form[1],bouton[1]);
 
 
         //ligne 4
-        bouton[2].setText("Location");
-
-        bouton[2].setPreferredSize(new Dimension(largeur/3, 30));
-        bouton[2].addActionListener(new Pression());
+        bouton[2].setBouton("Location", new Pression());
         lign[4].add(bouton[2]);
 
         //-------
-        bouton[3].setText("Retour vehicule");
-
-        bouton[3].setPreferredSize(new Dimension(largeur/3, 30));
-        bouton[3].addActionListener(new Pression());
+        bouton[3].setBouton("Retour vehicule", new Pression());
         lign[4].add(bouton[3]);
 
         //ligne 5
-        bouton[4].setText("Deconnection");
-        bouton[4].setPreferredSize(new Dimension(largeur/3, 30));
-        bouton[4].addActionListener(new Pression());
+        bouton[4].setBouton("Deconnection", new Pression());
         lign[5].add(bouton[4]);
 
         //on met les differentes lignes dans la fenetre
@@ -107,11 +86,11 @@ public class Menu extends Ecran {
     class Pression implements ActionListener {
         public void actionPerformed(ActionEvent arg0)
         {String press=arg0.getActionCommand();
-            if     (press.equals("Nom"))         {setIsopen(3);}
-            else if(press.equals("Connection Id"))          {setIsopen(4);}
-            else if(press.equals("Retour vehicule"))    {setIsopen(5);}
-            else if(press.equals("Location"))    {setIsopen(6);}
-            else if(press.equals("Deconnection")){setIsopen(2);}
+            if     (press.equals("Connection nom"))            {setIsopen(3);}
+            else if(press.equals("Connection Id"))  {setIsopen(4);}
+            else if(press.equals("Retour vehicule")){setIsopen(5);}
+            else if(press.equals("Location"))       {setIsopen(6);}
+            else if(press.equals("Deconnection"))   {setIsopen(2);}
         }
     }
 
