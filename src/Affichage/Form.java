@@ -8,7 +8,7 @@ public class Form extends JTextField {
 
     Form()
     {
-     setPreferredSize(new Dimension(50, 30));
+     setPreferredSize(new Dimension(100, 30));
 
     }
 

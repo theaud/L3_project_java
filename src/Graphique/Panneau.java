@@ -1,11 +1,13 @@
 package Graphique;
 
+import Affichage.*;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class Panneau extends JFrame {
 
-    protected Menu Ecran_menu    =new  Menu();
+    protected Affichage.Menu Ecran_menu    =new Affichage.Menu();
     protected Ecran Ecran_actif  ;
 
     public Panneau() {   Ecran_actif = Ecran_menu;
@@ -34,14 +36,14 @@ public class Panneau extends JFrame {
     }
 
     public void retour_Menu()
-    {   Ecran_actif=Ecran_menu;
+    {   Ecran_actif=Ecran_menu; getEcran_actif().setIsopen(0);
         System.out.println("retour_Menu       "+Ecran_actif.getName());
         actualisation();
     }
 
 
     public void actualisation()
-    {
+    {   stopIsopen();
         this.setContentPane(Ecran_actif);
         this.setTitle(Ecran_actif.getName());
         repaint();
@@ -56,22 +58,25 @@ public class Panneau extends JFrame {
         //on reste dans la boucle en permanence , on peut tout de meme quitter le programme par la croix rouge
         while(true)
         {
-
             switch (getEcran_actif().getIsopen())
-            {case 0:retour_Menu();                   //retour menu   1
+            {case 1:getEcran_actif().setIsopen(1);stopIsopen();
+                    retour_Menu();                   //retour menu   0
                 break;
-            case 1: changement_Ecran(new Login());  //deconnection  2
+            case 2: getEcran_actif().setIsopen(1);stopIsopen();
+                    changement_Ecran(new Login());  //deconnection  1
 
                 break;
-            case 2: System.out.println("bouton nom");
+            case 3: System.out.println("bouton nom");stopIsopen();
                 break;
-            case 3: System.out.println("bouton id");
+            case 4: System.out.println("bouton id");stopIsopen();
                 break;
-            case 4: System.out.println("bouton vehicule");
+            case 5: System.out.println("(bouton vehicule)=test");
+                changement_Ecran(new Fenetre_ajout(0));
+                stopIsopen();
                 break;
-            case 5: System.out.println("bouton location");
+            case 6: System.out.println("bouton location");stopIsopen();
                 break;
-            case 6:
+            case 7:stopIsopen();
                 break;
             default:break;
             }
@@ -84,6 +89,9 @@ public class Panneau extends JFrame {
 
 
 
+
+
+
 //----------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------
@@ -92,6 +100,10 @@ public class Panneau extends JFrame {
     public Ecran getEcran_actif() {        return Ecran_actif;    }
     public void setEcran_actif(Ecran ecran_actif) {        Ecran_actif = ecran_actif;    }
 
-    public Menu getEcran_menu() {        return Ecran_menu;    }
-    public void setEcran_menu(Menu ecran_menu) {        Ecran_menu = ecran_menu;    }
+    public Affichage.Menu getEcran_menu() {        return Ecran_menu;    }
+    public void setEcran_menu(Affichage.Menu ecran_menu) {        Ecran_menu = ecran_menu;    }
+
+    public void stopIsopen(){Ecran_actif.isopen=0;}
+
+
 }

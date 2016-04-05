@@ -1,6 +1,8 @@
-package Graphique;
+package Affichage;
 
 import Affichage.Form;
+import Graphique.Ecran;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -69,42 +71,35 @@ public class Menu extends Ecran {
 
         lign[3].add(form[1]);
 
-        bouton[1].setName("Connection Id");
-        bouton[1].setText("Id");
+        bouton[1].setText("Connection Id");
+
         bouton[1].setPreferredSize(new Dimension(largeur/3, 30));
         bouton[1].addActionListener(new Pression());
         lign[3].add(bouton[1]);
 
 
         //ligne 4
-        bouton[2].setName("Location");
         bouton[2].setText("Location");
+
         bouton[2].setPreferredSize(new Dimension(largeur/3, 30));
         bouton[2].addActionListener(new Pression());
         lign[4].add(bouton[2]);
 
-        bouton[3].setName("Retour vehicule");
-        bouton[3].setText("vehicule");
+        //-------
+        bouton[3].setText("Retour vehicule");
+
         bouton[3].setPreferredSize(new Dimension(largeur/3, 30));
         bouton[3].addActionListener(new Pression());
         lign[4].add(bouton[3]);
 
         //ligne 5
-
-        bouton[4].setName("Deconnection");
         bouton[4].setText("Deconnection");
         bouton[4].setPreferredSize(new Dimension(largeur/3, 30));
         bouton[4].addActionListener(new Pression());
         lign[5].add(bouton[4]);
 
-
-
-
-
-//----------------------------------------------------------------------------------------------------
-            for(int i=0;i<6;i++) {add(lign[i]);}
-
-
+        //on met les differentes lignes dans la fenetre
+        add(lign,6);
 
 
     }
@@ -112,11 +107,11 @@ public class Menu extends Ecran {
     class Pression implements ActionListener {
         public void actionPerformed(ActionEvent arg0)
         {String press=arg0.getActionCommand();
-            if     (press.equals("Nom"))         {setIsopen(2);}
-            else if(press.equals("Id"))          {setIsopen(3);}
-            else if(press.equals("vehicule"))    {setIsopen(4);}
-            else if(press.equals("Location"))    {setIsopen(5);}
-            else if(press.equals("Deconnection")){setIsopen(1);}
+            if     (press.equals("Nom"))         {setIsopen(3);}
+            else if(press.equals("Connection Id"))          {setIsopen(4);}
+            else if(press.equals("Retour vehicule"))    {setIsopen(5);}
+            else if(press.equals("Location"))    {setIsopen(6);}
+            else if(press.equals("Deconnection")){setIsopen(2);}
         }
     }
 

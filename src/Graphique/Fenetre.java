@@ -10,7 +10,7 @@ public class Fenetre extends JPanel {
     protected String name;
     protected static int compteur=0;
 
-    protected int isopen=1;
+    protected int isopen=0;
 
     public Fenetre(){
         name="fenetre initialiser";
@@ -34,6 +34,7 @@ public class Fenetre extends JPanel {
         {add(list[i]);}
 
     }
+
 
 
     public static  JLabel[] Tableau_JLabel(int size)
@@ -66,4 +67,5 @@ public class Fenetre extends JPanel {
 
     public int getIsopen() {return isopen;    }
     public void setIsopen(int isopen) {        this.isopen = isopen;    }
+    public void stopIsopen(){this.isopen=0;}
 }

@@ -1,5 +1,8 @@
-package Graphique;
+package Affichage;
 
+
+import Graphique.Ecran;
+import Graphique.Lign;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -19,16 +22,17 @@ public class Login extends Ecran {
         setBackground(Color.pink);
 
 
-        initialiser(1,2,3,4);
+        initialiser(1,2,4,5);
         Login_initialisation();
 
     }
 
 
     private void Login_initialisation()
-    {int largeur=500;
-        lign=Lign.assemblage_ligne(lign,4,60);
-
+    {
+        //on modifie la taille des ligne
+        lign= Lign.assemblage_ligne(lign,4,60);
+//--------------------------------------------------------------------------------------------------------------
 
         //ligne 0
         texte[2].setText("Authentification");
@@ -37,24 +41,27 @@ public class Login extends Ecran {
         //ligne 1
         texte[0].setText("Utilisateur");
 
-        form[0].setPreferredSize(new Dimension(largeur/3, 30));
-
         lign[1].add(texte[0]);
         lign[1].add(form[0]);
 
         //ligne 2
         texte[1].setText("Mot de passe");
 
-        form[1].setPreferredSize(new Dimension(largeur/3, 30));
         lign[2].add(texte[1]);
         lign[2].add(form[1]);
 
+
         //ligne 3
+        texte[3].setText("");
+        lign[3].add(texte[3]);
+
+        //ligne 4
         bouton[0].addActionListener(new Validation());
-        lign[3].add(bouton[0]);
+        lign[4].add(bouton[0]);
 
 
-        for(int i=0;i<4;i++) {add(lign[i]);}
+        //on met les differentes lignes dans la fenetre
+        add(lign,5);
 
     }
 
@@ -76,20 +83,26 @@ public class Login extends Ecran {
     {
         System.out.println("--------------------------------------------------");
         System.out.println("Test d'Authentification a faire return true actuelment ");
-        System.out.println("Utilisateur :|"+Utilisateur+"|\nMdp: |"+Mdp+"|");
+        System.out.println("--------------------------------------------------");
+        //on contourne pour pas remettrele mdp
 
+        isopen=1;
+        return true;
+        /*
         if(Utilisateur.equals("u") && Mdp.equals("m"))
             {
                 System.out.println("Correct utilisateur , mdp");
-                isopen=0;
+                isopen=1;
 
                 return true;
             }
         else
             {
+                texte[3].setText("Mauvais utilisateu/mdp");
                 System.out.println("Mauvais utilisateu/mdp");
                 return false;
             }
+            */
     }
 
     class Validation implements ActionListener {

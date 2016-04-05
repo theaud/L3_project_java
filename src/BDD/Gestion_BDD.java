@@ -12,19 +12,19 @@ public class Gestion_BDD extends util3.fichier {
 
 
 
-  public static boolean actualisation_annuaire_ajout(String chemin,int Id_nouveau)
+  private static int actualisation_annuaire_ajout(String chemin)
   {
       LinkedList<String> listLign=lectureFichier(chemin);
 
       int rang=parseInt(listLign.getFirst())+1;
+      int Id_nouveau=parseInt(listLign.getLast())+1;
       listLign.set(0,""+rang);
-      System.out.println("ligne 1="+rang);
+      System.out.println("ligne 1="+rang+"  nouveau ="+Id_nouveau );
+
       listLign.add(""+Id_nouveau);
 
       ecrire(chemin,listLign);
-
-
-      return true;
+      return Id_nouveau;
   }
 
 
@@ -35,7 +35,7 @@ public class Gestion_BDD extends util3.fichier {
 
 
     public static boolean ajout_vehicule(String nomFic, String texte)
-    {String Fichier="/src/BDD/vehicule/"+nomFic;
+    {String Fichier="./src/BDD/vehicule/"+nomFic;
 
         try
         { FileWriter fw = new FileWriter(Fichier, false);//on ecrase le fichier
@@ -59,10 +59,16 @@ public class Gestion_BDD extends util3.fichier {
         return true;
     }
 
-    public static boolean ajout_Eprunteur(String nomFic, int ID,String Nom,String Prenom,String Adresse,boolean Assurance,int Nb_devis,int[]devis)
-    {
-        String Fichier="/src/BDD/Emprunteur/"+nomFic;
 
+
+    public static boolean ajout_Eprunteur(String Nom,String Prenom,String Adresse,boolean Assurance)
+    {   int Id=actualisation_annuaire_ajout("./src/BDD/Emprunteur/Annuaire");
+        return ajout_Eprunteur(Id, Nom, Prenom, Adresse, Assurance);
+    }
+
+    private static boolean ajout_Eprunteur( int ID,String Nom,String Prenom,String Adresse,boolean Assurance)
+    {
+        String Fichier="./src/BDD/Emprunteur/"+ID+"";
         try
         { FileWriter fw = new FileWriter(Fichier, false);//on ecrase le fichier
           BufferedWriter output = new BufferedWriter(fw);
@@ -72,10 +78,7 @@ public class Gestion_BDD extends util3.fichier {
             writeln(output,Prenom);
             writeln(output,Adresse);
             writeln(output,""+Assurance);
-            writeln(output,""+Nb_devis);
-            for(int i=0;i<Nb_devis;i++)
-                {writeln(output,""+devis[i]);}
-
+            writeln(output,""+0);// = Nb_devis soit 0 a la creation
 
             output.flush();
             output.close();
