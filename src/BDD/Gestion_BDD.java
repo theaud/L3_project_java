@@ -1,16 +1,18 @@
 package BDD;
 
+import util3.Util3;
+
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
-import java.util.List;
+
 
 import static java.lang.Integer.parseInt;
 
 
 public class Gestion_BDD extends util3.fichier {
-
 
 
   private static int actualisation_annuaire_ajout(String chemin)
@@ -20,19 +22,38 @@ public class Gestion_BDD extends util3.fichier {
       int rang=parseInt(listLign.getFirst())+1;
       int Id_nouveau=parseInt(listLign.getLast())+1;
       listLign.set(0,""+rang);
-      System.out.println("ligne 1="+rang+"  nouveau ="+Id_nouveau );
-
       listLign.add(""+Id_nouveau);
-
       ecrire(chemin,listLign);
       return Id_nouveau;
   }
+
+    public static void clear_bdd(String chemin)
+    {
+        LinkedList<String> texte=lectureFichier(chemin+"Annuaire");
+        for (int i=1;i<texte.size();i++)
+        {
+            suppression(chemin,i);
+        }
+        try
+        {
+        String Fichier=chemin+"Annuaire";
+        FileWriter fw = new FileWriter(Fichier, false);//on ecrase le fichier
+        BufferedWriter output = new BufferedWriter(fw);
+
+        writeln(output,""+0);
+            output.flush();
+            output.close();
+        }
+        catch(IOException ioe){ System.out.print("Erreur clear_bdd: ");   ioe.printStackTrace();}
+
+    }
+
 
 
     public static void ajout(String chemin, LinkedList<String> texte)
     {
         int id=actualisation_annuaire_ajout(chemin+"Annuaire");
-        String Fichier="./src/BDD/Emprunteur/"+id+"";
+        String Fichier=chemin+id+"";// exemple chemin = "./src/BDD/Emprunteur/"
 
         try
         { FileWriter fw = new FileWriter(Fichier, false);//on ecrase le fichier
@@ -40,76 +61,84 @@ public class Gestion_BDD extends util3.fichier {
 
             writeln(output,""+id);
             for(int i=0;i<texte.size();i++)
-            {
-                writeln(output,texte.get(i));
+                {writeln(output,texte.get(i));}
+
+            output.flush();
+            output.close();
+        }
+        catch(IOException ioe){ System.out.print("Erreur ajout: ");   ioe.printStackTrace();}
+    }
+    public static void suppression(String chemin,int id)
+    {  if(id>=0 )
+        {   LinkedList<String> listLign=lectureFichier(chemin+"Annuaire");
+            int compteur=0;
+
+            for(int i=0;i<listLign.size();i++)
+            {if(listLign.get(i).equals(""+id))
+                {compteur++;
+                listLign.remove();
+                i--;
+                }
             }
 
+            //------------------------------------
+            int rang=parseInt(listLign.getFirst())-compteur;
+            listLign.set(0,""+rang);
 
-            output.flush();
-            output.close();
+            ecrire(chemin+"/Annuaire",listLign);
+
+    //------------------------------------------------------
+            File MyFile = new File(chemin+id);
+            MyFile.delete();
         }
-        catch(IOException ioe){ System.out.print("Erreur : ");   ioe.printStackTrace();}
+    }
+
+    private static  boolean existe(String chemin,int id)
+    { LinkedList<String> listLign=lectureFichier(chemin+"Annuaire");
+        for(int i=1;i<listLign.size();i++)
+            {if(listLign.get(i).equals(""+id))
+                {return true;}
+            }
+        return false;
     }
 
 
+    public static  LinkedList<String> lecture(String chemin,int id)
+    {  if(id>=0 && existe( chemin, id))
+        {return lectureFichier(chemin+id);}
+      return new LinkedList<String>();
+    }
 
-
-
-    public static boolean ajout_vehicule(String nomFic, String texte)
-    {String Fichier="./src/BDD/vehicule/"+nomFic;
-
-        try
-        { FileWriter fw = new FileWriter(Fichier, false);//on ecrase le fichier
-            BufferedWriter output = new BufferedWriter(fw);
-            /* version a mettre a jour avec variable de vehicule
-            writeln(output,""+ID);
-            writeln(output,Nom);
-            writeln(output,Prenom);
-            writeln(output,Adresse);
-            writeln(output,""+Assurance);
-            writeln(output,""+Nb_devis);
-            for(int i=0;i<Nb_devis;i++)
-            {writeln(output,""+devis[i]);}
-            */
-
-            output.flush();
-            output.close();
-        }
-        catch(IOException ioe){ System.out.print("Erreur : ");   ioe.printStackTrace();}
-
-        return true;
+    public static  void afficher(String chemin,int id)
+    {Util3.afficher(lecture(chemin,id));
     }
 
 
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//---------------------------------    fonction a deplacer              ------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
 
 
-    public static boolean ajout_Eprunteur(String Nom,String Prenom,String Adresse,boolean Assurance)
-    {   int Id=actualisation_annuaire_ajout("./src/BDD/Emprunteur/Annuaire");
-        return ajout_Eprunteur(Id, Nom, Prenom, Adresse, Assurance);
+    public static  void afficher_utilisateur_console(int id)
+    {String chemin="./src/BDD/Emprunteur/";
+        LinkedList<String> texte=lecture(chemin,id);
+        System.out.println("--------------------------------------------------");
+        System.out.println("A faire le mettre en graphique");
+        System.out.println("Id de l'utilisateur :"+texte.get(0));
+        System.out.println("Nom  :"+texte.get(1));
+        System.out.println("Prenom :"+texte.get(2));
+        System.out.println("Adresse :"+texte.get(3));
+        System.out.println("A souscrit à l'assurance :"+texte.get(4));
+
+        if(texte.get(5).equals(""+0))
+             {System.out.println("L'emprunteur a actuellment louer aucun vehicules");}
+        else
+            {System.out.println("L'emprunteur a actuellment louer :"+texte.get(5)+" vehicules");
+            for(int i=0;i<texte.size()-6;i++)
+            {System.out.println("devis numero :"+texte.get(i+6));}
+            }
+        System.out.println("--------------------------------------------------");
     }
-
-    private static boolean ajout_Eprunteur( int ID,String Nom,String Prenom,String Adresse,boolean Assurance)
-    {
-        String Fichier="./src/BDD/Emprunteur/"+ID+"";
-        try
-        { FileWriter fw = new FileWriter(Fichier, false);//on ecrase le fichier
-          BufferedWriter output = new BufferedWriter(fw);
-
-            writeln(output,""+ID);
-            writeln(output,Nom);
-            writeln(output,Prenom);
-            writeln(output,Adresse);
-            writeln(output,""+Assurance);
-            writeln(output,""+0);// = Nb_devis soit 0 a la creation
-
-            output.flush();
-            output.close();
-        }
-        catch(IOException ioe){ System.out.print("Erreur : ");   ioe.printStackTrace();}
-
-        return true;
-    }
-
 
 
 }

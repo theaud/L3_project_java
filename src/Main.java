@@ -1,6 +1,7 @@
 
-import Affichage.Login;
+import BDD.Gestion_BDD;
 import Graphique.Panneau;
+
 
 
 public class Main {
@@ -12,10 +13,12 @@ public class Main {
         //Gestion_BDD.actualisation_annuaire_ajout("./src/BDD/test.txt",11);
 
 
+
+
+        //Gestion_BDD.afficher_utilisateur_console(3);
+
+        Gestion_BDD.clear_bdd("src/BDD/Emprunteur/");
         Panneau Panneau=new Panneau();
-        Panneau.changement_Ecran(new Login());
-
-
         //boucle principale
         Panneau.gestion_fenetre();
 

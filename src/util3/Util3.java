@@ -114,6 +114,8 @@ public static  int[][] InitiateTableInt(int x,int y)
     public static void line(int x){for(int i=0;i<x;i++) {System.out.println();}}
 
 
+    public static void afficher(LinkedList<String> texte)
+    {for (int i=0;i<texte.size();i++) {System.out.println(texte.get(i));}}
     
 
 

@@ -6,8 +6,10 @@ BDD
     faire Devis et vehicule
     ajoue suppression
     rendre un vehicule
+        a voir si suppression => archivage dans un autre dossier
 Affichage
     Faire un affichage de la bdd vehicule etc
+    faire une fenettre descriptif d'un client => passer en graphique la fonction afficher_utilisateur_console dans Gestion_BDD
 recherche
     rechercher un utilisateur
     rechercher un vehicule

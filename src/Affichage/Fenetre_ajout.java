@@ -86,9 +86,9 @@ public class Fenetre_ajout extends Ecran {
  }
 
 
-    public static  LinkedList<String> add(String t1,String t2,String t3,String t4)
+    public static  LinkedList<String> add(String t1,String t2,String t3,String t4,String t5)
     {LinkedList<String> text=new LinkedList<String>();
-        text.add(t1);        text.add(t2);        text.add(t3);        text.add(t4);
+        text.add(t1);        text.add(t2);        text.add(t3);        text.add(t4);    text.add(t5);
         return text;
     }
     public static void ajout_Eprunteur(LinkedList<String> texte)    {   Gestion_BDD. ajout("./src/BDD/Emprunteur/",  texte);}
@@ -104,7 +104,7 @@ public class Fenetre_ajout extends Ecran {
             if(test)
                 {
                     texte[4].setText("nouveau user cree");
-                    LinkedList<String> text=add(form[0].getText(),form[1].getText(),form[2].getText(),""+form[3].getText().equals(""));
+                    LinkedList<String> text=add(form[0].getText(),form[1].getText(),form[2].getText(),""+form[3].getText().equals(""),""+0);
 
                     ajout_Eprunteur(text);
                    // Gestion_BDD. ajout_Eprunteur(LinkedList<String> texte); =>>> a integrer c'est plus reutilisable

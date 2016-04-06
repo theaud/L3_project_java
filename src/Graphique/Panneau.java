@@ -24,6 +24,7 @@ public class Panneau extends JFrame {
         Ecran_menu.setBackground(Color.LIGHT_GRAY);
 
 //--------------------------------------------
+        changement_Ecran(new Login());//on se place a la connection sur la page login
 
         this.setContentPane(Ecran_actif);
         setVisible(true);

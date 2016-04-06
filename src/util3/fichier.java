@@ -11,27 +11,23 @@ public class fichier {
 
 
     //------------------------------------------------------------------------------------------------------------------------
-    public static void ecrire(String nomFic, LinkedList<String> texte)
-    {
-String adressedufichier = System.getProperty("user.dir") + "/"+ nomFic;
+    public static void ecrire(String chemin, LinkedList<String> texte)
+    {   String adressedufichier = System.getProperty("user.dir") + "/"+ chemin;
 
         try
         {FileWriter fw = new FileWriter(adressedufichier, false);//on ecrase le fichier
-         // FileWriter fw = new FileWriter(adressedufichier, true);//on ecrit a la suite du fichier
 
          BufferedWriter output = new BufferedWriter(fw);
 
             for(int i=0;i<texte.size();i++)
-                {
-                    write(output,texte.get(i)+"\n");
-                }
+                {write(output,texte.get(i)+"\n");}
 
             output.flush();
             output.close();
 
         }
         catch(IOException ioe){
-            System.out.print("Erreur : ");
+            System.out.print("Erreur : "+chemin+" . ");
             ioe.printStackTrace();
         }
     }
@@ -40,20 +36,16 @@ String adressedufichier = System.getProperty("user.dir") + "/"+ nomFic;
     public static void ecrire(String nomFic, String texte)
     {String adressedufichier = System.getProperty("user.dir") + "/"+ nomFic;
 
-        try
-        {FileWriter fw = new FileWriter(adressedufichier, false);//on ecrase le fichier
+        try {
+         FileWriter fw = new FileWriter(adressedufichier, false);//on ecrase le fichier
 
-            BufferedWriter output = new BufferedWriter(fw);
+         BufferedWriter output = new BufferedWriter(fw);
 
-            write(output,texte);
-            output.flush();
-            output.close();
-
+         write(output,texte);
+         output.flush();
+         output.close();
         }
-        catch(IOException ioe){
-            System.out.print("Erreur : ");
-            ioe.printStackTrace();
-        }
+        catch(IOException ioe){System.out.print("Erreur : ");   ioe.printStackTrace();}
     }
 
     public static void write(BufferedWriter output,String texte)
@@ -106,7 +98,6 @@ public static void writeFile(String fileContent, String filePathOutput) {
                 + " au niveau de la méthode " + "readFile(...) : ");
         e.printStackTrace();
     }
-
     return listLign;
 }
 
