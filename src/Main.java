@@ -3,9 +3,6 @@ import BDD.Gestion_BDD;
 import Graphique.Panneau;
 import Graphique.test;
 
-import javax.swing.*;
-import java.awt.*;
-
 
 public class Main {
 

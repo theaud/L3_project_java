@@ -63,45 +63,40 @@ public class Fenetre_ajout extends Ecran {
 
  private void nouveau_Emprunteur()
  {name="Nouveau Emprunteur";
-     initialiser(1,5,1,6);
+     initialiser(2,5,1);
+
+     GridLayout Layout=new GridLayout(7, 1);
+     Layout.setVgap(10);
+     setLayout(Layout);
+
 
      //ligne 0
-     form[0].setTexteString("Nom");
-     lign[0].add(form[0]);
+     form[0].setTexteString("Nom");add(form[0]);
 
      //ligne 1
-     form[1].setTexteString("Prenom");
-     lign[1].add(form[1]);
+     form[1].setTexteString("Prenom");     add(form[1]);
 
      //ligne 2
-     form[2].setTexteString("Adresse");
-     lign[2].add(form[2]);
+     form[2].setTexteString("Adresse");     add(form[2]);
 
      //ligne 3
      form[3].setTexteString("Assurance");// =>  JCheckBox premier = new JCheckBox("Nom check box");
-     lign[3].add(form[3]);
+     add(form[3]);
 
      //ligne 4
-     texte[0].setText("");
-     lign[4].add(texte[0]);
+     texte[0].setText("");     add(texte[0]);
 
      //ligne 5
-     bouton[0].setBouton(" nom a trouver",new Validation());
-     lign[5].add(bouton[0]);
+     bouton[0].setBouton(" nom a trouver",new Validation());    add(bouton[0]);
 
-    //on met les differentes lignes dans la fenetre
-     add(lign,6);
+     //ligne 6
+     bouton[1].setBouton("Retour",new Retour());     add(bouton[1]);
 
  }
 
     private void afficher_emprunteurtest()
-    {
-        name="Nouveau Emprunteur";
+    {   name="Nouveau Emprunteur";
         add(Gestion_BDD.afficher_utilisateur_console(2));
-
-
-
-
     }
 
 
@@ -119,28 +114,24 @@ public class Fenetre_ajout extends Ecran {
         public void actionPerformed(ActionEvent arg0) {
             boolean test=true;
 
-            for(int i=0;i<3;i++) { if(form[i].getForm().getText().equals("")) {test=false;}}
+            for(int i=0;i<3;i++) { if(form[i].getContain().equals("")) {test=false;}}
         //--------------------------------------------------------------------------------------------------------------
             if(test)
-                {
-                    texte[4].setText("nouveau user cree");
+                {   texte[0].setText("nouveau user cree");
                     LinkedList<String> text=add(form[0].getContain(),form[1].getContain(),form[2].getContain(),""+form[3].getContain().equals(""),""+0);
 
                     ajout_Eprunteur(text);
                    // Gestion_BDD. ajout_Eprunteur(LinkedList<String> texte); =>>> a integrer c'est plus reutilisable
                 }
             else
-                {
-                    texte[4].setText("(erreur) pas tous les champ remplie");
-                }
+                {texte[0].setText("(erreur) pas tous les champ remplie");}
             System.out.println(" confirmation ");
-
         }
     }
 
 
 
-
+    class Retour implements ActionListener { public void actionPerformed(ActionEvent arg0) {setIsopen(1);}  }
 
 
 

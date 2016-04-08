@@ -2,9 +2,6 @@ package Affichage;
 
 
 import Graphique.Ecran;
-import Graphique.Lign;
-
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,38 +9,16 @@ import java.awt.event.ActionListener;
 
 public class Login extends Ecran {
 
-
-
-    public Login() {
-
-
-
-
-        name="Login initialiser";
+    public Login() {name="Login initialiser";
         setBackground(Color.pink);
 
-
-
-
-
-        setLayout( new GridLayout(1,1));
-      //  applyComponentOrientation( ComponentOrientation.RIGHT_TO_LEFT);
-
-
-        initialiser(1,2,2,0);
+        initialiser(2,2,2);
         Login_initialisation();
-
     }
 
 
     private void Login_initialisation()
-    {
-
-//--------------------------------------------------------------------------------------------------------------
-
-
-
-        setLayout(new GridLayout(10, 1));
+    {setLayout(new GridLayout(10, 0));
 
         //ligne 0
         texte[0].setText("Authentification");
@@ -65,31 +40,15 @@ public class Login extends Ecran {
         bouton[0].setBouton("Log in",new Validation());
         add(bouton[0]);
 
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
 
 
     //------------------------------------------------------------------------------------------------------------
     //------------------------------------------------------------------------------------------------------------
     //------------------------------------------------------------------------------------------------------------
     public  boolean Authentification_utilisateur(String Utilisateur,String Mdp)
-    {
-
-        System.out.println("-------------Test d'Authentification a faire return true actuelment------------- ");
-
-        //on contourne pour pas remettrele mdp
+    {System.out.println("-------------Test d'Authentification a faire return true actuelment------------- ");
+    //on contourne pour pas remettrele mdp
 
         isopen=1;
         return true;
@@ -113,15 +72,6 @@ public class Login extends Ecran {
     class Validation implements ActionListener {
         public void actionPerformed(ActionEvent arg0) {
             if(Authentification_utilisateur(""+form[0].getContain(),""+form[1].getContain()))
-            {
-                System.out.println("------------------------connection faite --------------------------------");
-
-            }
-
-        }
+            {System.out.println("------------------------connection faite --------------------------------");}}
     }
-
-
-
-
 }

@@ -13,8 +13,8 @@ public class Panneau extends JFrame {
 
     public Panneau() {   Ecran_actif = Ecran_menu;
 
-        this.setSize(500, 500);
-        setMinimumSize(new Dimension(500, 500));
+        this.setSize(1000, 1000);
+        setMinimumSize(new Dimension(1000, 1000));
 
         this.setTitle(Ecran_actif.getName());
 

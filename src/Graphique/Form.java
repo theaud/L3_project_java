@@ -8,11 +8,13 @@ public class Form  {
 
    protected JLabel     texte;
    protected JTextField form;
+   protected Bouton bouton;
+   protected boolean withBouton=false;
 
 
     public Form()
     {texte=new JLabel("no texte2");
-     texte.setPreferredSize(new Dimension(100, 25));
+
      texte.setLayout(new BorderLayout());
         constructeur();
     }
@@ -21,21 +23,18 @@ public class Form  {
     {texte=new JLabel(Texte);
         constructeur();
     }
+    public Form(String Texte,Bouton b1)
+    {texte=new JLabel(Texte);
+        constructeur();
+        bouton=b1;
+        withBouton=true;
+    }
+
     private void constructeur()
     {  form=new JTextField();
         form.setPreferredSize(new Dimension(100, 25));
         form.setLayout(new BorderLayout());
     }
-
-/*
-    setSize(500, 300);
-    setMinimumSize(new Dimension(500, 300));
-    set
-
-    name="Login initialiser";
-    setBackground(Color.pink);
- */
-
 
 
     public static  Form[] Tableau_Form(int size)
@@ -45,7 +44,12 @@ public class Form  {
         return form;
     }
 
-
+    public void addBouton(Bouton added){
+        if(!withBouton){
+            withBouton=true;
+            bouton=added;
+        }
+    }
 
 
     public JLabel getTexte() {return texte;}
@@ -60,13 +64,29 @@ public class Form  {
     public String getContain() {return form.getText();}
     public void setContain(String Contain) {this.form.setText(Contain) ;}
 
-    public  JPanel getOnPanel() {JPanel returned=new JPanel();
+
+    public Fenetre getOnPanel() {
+        Fenetre returned=new Fenetre();
         returned.add(texte);
         returned.add(form);
-        returned.setBackground(Color.lightGray);
-
-
+        if(withBouton){returned.add(bouton);}
         return returned;}
 
 
+
+    public boolean isWithBouton() {
+        return withBouton;
+    }
+
+    public void setWithBouton(boolean withBouton) {
+        this.withBouton = withBouton;
+    }
+
+    public Bouton getBouton() {
+        return bouton;
+    }
+
+    public void setBouton(Bouton bouton) {
+        this.bouton = bouton;
+    }
 }

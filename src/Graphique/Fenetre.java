@@ -9,7 +9,6 @@ public class Fenetre extends JPanel {
     protected Dimension dim;
     protected String name;
     protected static int compteur=0;
-
     protected int isopen=0;
 
     public Fenetre(){
@@ -17,13 +16,13 @@ public class Fenetre extends JPanel {
 
 
 
-
-
-
-
         //----------- detail ---------------------
         name=""+compteur;
         compteur++;
+    }
+
+    public Fenetre(Color color){
+    setBackground(color);
     }
 
 
@@ -47,7 +46,6 @@ public class Fenetre extends JPanel {
 //----------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------
-
     @Override
     public String getName() {
         return name;
@@ -57,7 +55,6 @@ public class Fenetre extends JPanel {
     public void setName(String name) {
         this.name = name;
     }
-
 
     public Dimension getDim() {   return dim;    }
     public void setDim(Dimension dim) {        this.dim = dim;    }
@@ -69,12 +66,6 @@ public class Fenetre extends JPanel {
     public void setIsopen(int isopen) {        this.isopen = isopen;    }
     public void stopIsopen(){this.isopen=0;}
 
-
-
     public void add(Form formulaire)                { add(formulaire.getOnPanel());}
-    public void add(Form formulaire,Bouton bouton)  { add(formulaire.getOnPanel());    add(bouton);}
-
-
-
 
 }
