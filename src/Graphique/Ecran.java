@@ -1,7 +1,5 @@
 package Graphique;
 
-import Affichage.Form;
-
 import javax.swing.*;
 
 

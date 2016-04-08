@@ -1,7 +1,10 @@
 
 import BDD.Gestion_BDD;
 import Graphique.Panneau;
+import Graphique.test;
 
+import javax.swing.*;
+import java.awt.*;
 
 
 public class Main {
@@ -10,14 +13,8 @@ public class Main {
        // System.out.println("Hello World!");
 
 
-        //Gestion_BDD.actualisation_annuaire_ajout("./src/BDD/test.txt",11);
 
 
-
-
-        //Gestion_BDD.afficher_utilisateur_console(3);
-
-        Gestion_BDD.clear_bdd("src/BDD/Emprunteur/");
         Panneau Panneau=new Panneau();
         //boucle principale
         Panneau.gestion_fenetre();

@@ -1,7 +1,9 @@
 package Graphique;
 
 
+import javax.swing.*;
 import java.awt.*;
+import java.util.LinkedList;
 
 public class Lign extends Fenetre {
 
@@ -16,7 +18,7 @@ public class Lign extends Fenetre {
     { Lign[] lign     =new Lign[size];
         for(int i=0;i<size;i++)
         {lign[i]=new Lign();
-         lign[i].setPreferredSize(new Dimension(5000, 30));
+         lign[i].setPreferredSize(new Dimension(5000, 35));
 
         }
         return lign;
@@ -28,6 +30,27 @@ public class Lign extends Fenetre {
         {lign[i].setPreferredSize(new Dimension(5000, height));}
         return lign;
     }
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------   gestion texte html des Jpanel -----------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+    public static JLabel mise_en_forme_ligne_jpanel(LinkedList<String> texte)
+    {
+        String traduction="<html><div>";
+
+        for(int i=0;i<texte.size();i++)
+        {traduction+=texte.get(i)+"<br>";}
+        traduction+="</div></html>";
+        JLabel returned=new JLabel(traduction) ;
+
+        return returned;
+    }
+
+
+
+
 
 
 

@@ -4,6 +4,7 @@ package Affichage;
 import Graphique.Ecran;
 import Graphique.Lign;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,15 +15,22 @@ public class Login extends Ecran {
 
 
     public Login() {
-        setSize(500, 300);
-        setMinimumSize(new Dimension(500, 300));
+
+
 
 
         name="Login initialiser";
         setBackground(Color.pink);
 
 
-        initialiser(1,2,4,5);
+
+
+
+        setLayout( new GridLayout(1,1));
+      //  applyComponentOrientation( ComponentOrientation.RIGHT_TO_LEFT);
+
+
+        initialiser(1,2,2,0);
         Login_initialisation();
 
     }
@@ -30,38 +38,35 @@ public class Login extends Ecran {
 
     private void Login_initialisation()
     {
-        //on modifie la taille des ligne
-        lign= Lign.assemblage_ligne(lign,4,60);
+
 //--------------------------------------------------------------------------------------------------------------
 
+
+
+        setLayout(new GridLayout(10, 1));
+
         //ligne 0
-        texte[2].setText("Authentification");
-        lign[0].add(texte[2]);
+        texte[0].setText("Authentification");
+        add(texte[0]);
 
         //ligne 1
-        texte[0].setText("Utilisateur");
-
-        lign[1].add(texte[0]);
-        lign[1].add(form[0]);
+        form[0].setTexteString("Utilisateur");
+        add(form[0].getOnPanel());
 
         //ligne 2
-        texte[1].setText("Mot de passe");
-
-        lign[2].add(texte[1]);
-        lign[2].add(form[1]);
-
+        form[1].setTexteString("Mot de passe");
+        add(form[1].getOnPanel());
 
         //ligne 3
-        texte[3].setText("");
-        lign[3].add(texte[3]);
+        texte[1].setText("");
+        add(texte[1]);
 
         //ligne 4
         bouton[0].setBouton("Log in",new Validation());
-        lign[4].add(bouton[0]);
+        add(bouton[0]);
 
 
-        //on met les differentes lignes dans la fenetre
-        add(lign,5);
+
 
     }
 
@@ -107,7 +112,7 @@ public class Login extends Ecran {
 
     class Validation implements ActionListener {
         public void actionPerformed(ActionEvent arg0) {
-            if(Authentification_utilisateur(""+form[0].getText(),""+form[1].getText()))
+            if(Authentification_utilisateur(""+form[0].getContain(),""+form[1].getContain()))
             {
                 System.out.println("------------------------connection faite --------------------------------");
 

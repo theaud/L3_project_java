@@ -3,6 +3,7 @@ package Affichage;
 import BDD.Gestion_BDD;
 import Graphique.Ecran;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -48,33 +49,41 @@ public class Fenetre_ajout extends Ecran {
             //Nouveau devis
          case 2:break;
 
+         case 3:
+
+             afficher_emprunteurtest();
+             break;
+
 
         }
     }
 
+
+
+
  private void nouveau_Emprunteur()
  {name="Nouveau Emprunteur";
-     initialiser(1,5,5,6);
+     initialiser(1,5,1,6);
 
      //ligne 0
-     texte[0].setText("Nom");
-     lign[0].add(texte[0],form[0]);
+     form[0].setTexteString("Nom");
+     lign[0].add(form[0]);
 
      //ligne 1
-     texte[1].setText("Prenom");
-     lign[1].add(texte[1],form[1]);
+     form[1].setTexteString("Prenom");
+     lign[1].add(form[1]);
 
      //ligne 2
-     texte[2].setText("Adresse");
-     lign[2].add(texte[2],form[2]);
+     form[2].setTexteString("Adresse");
+     lign[2].add(form[2]);
 
      //ligne 3
-     texte[3].setText("Assurance");
-     lign[3].add(texte[3],form[3]);
+     form[3].setTexteString("Assurance");// =>  JCheckBox premier = new JCheckBox("Nom check box");
+     lign[3].add(form[3]);
 
      //ligne 4
-     texte[4].setText("");
-     lign[4].add(texte[4]);
+     texte[0].setText("");
+     lign[4].add(texte[0]);
 
      //ligne 5
      bouton[0].setBouton(" nom a trouver",new Validation());
@@ -84,6 +93,17 @@ public class Fenetre_ajout extends Ecran {
      add(lign,6);
 
  }
+
+    private void afficher_emprunteurtest()
+    {
+        name="Nouveau Emprunteur";
+        add(Gestion_BDD.afficher_utilisateur_console(2));
+
+
+
+
+    }
+
 
 
     public static  LinkedList<String> add(String t1,String t2,String t3,String t4,String t5)
@@ -99,12 +119,12 @@ public class Fenetre_ajout extends Ecran {
         public void actionPerformed(ActionEvent arg0) {
             boolean test=true;
 
-            for(int i=0;i<3;i++) { if(form[i].getText().equals("")) {test=false;}}
+            for(int i=0;i<3;i++) { if(form[i].getForm().getText().equals("")) {test=false;}}
         //--------------------------------------------------------------------------------------------------------------
             if(test)
                 {
                     texte[4].setText("nouveau user cree");
-                    LinkedList<String> text=add(form[0].getText(),form[1].getText(),form[2].getText(),""+form[3].getText().equals(""),""+0);
+                    LinkedList<String> text=add(form[0].getContain(),form[1].getContain(),form[2].getContain(),""+form[3].getContain().equals(""),""+0);
 
                     ajout_Eprunteur(text);
                    // Gestion_BDD. ajout_Eprunteur(LinkedList<String> texte); =>>> a integrer c'est plus reutilisable

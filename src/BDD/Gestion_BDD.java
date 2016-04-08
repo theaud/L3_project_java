@@ -1,7 +1,9 @@
 package BDD;
 
+import Graphique.Lign;
 import util3.Util3;
 
+import javax.swing.*;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -119,25 +121,34 @@ public class Gestion_BDD extends util3.fichier {
 //----------------------------------------------------------------------------------------------------------------------------------------------
 
 
-    public static  void afficher_utilisateur_console(int id)
+    public static JLabel afficher_utilisateur_console(int id)
     {String chemin="./src/BDD/Emprunteur/";
+        JPanel container=new JPanel();
+
+
+
+
         LinkedList<String> texte=lecture(chemin,id);
-        System.out.println("--------------------------------------------------");
-        System.out.println("A faire le mettre en graphique");
-        System.out.println("Id de l'utilisateur :"+texte.get(0));
-        System.out.println("Nom  :"+texte.get(1));
-        System.out.println("Prenom :"+texte.get(2));
-        System.out.println("Adresse :"+texte.get(3));
-        System.out.println("A souscrit à l'assurance :"+texte.get(4));
+        LinkedList<String> texte_ajout=new LinkedList<String>();
+
+        texte_ajout.add("--------------------------------------------------");
+        texte_ajout.add("Fiche emprunteur");
+        texte_ajout.add("Id de l'utilisateur :"+texte.get(0));
+        texte_ajout.add("Nom  :"+texte.get(1));
+        texte_ajout.add("Prenom :"+texte.get(2));
+        texte_ajout.add("Adresse :"+texte.get(3));
+        texte_ajout.add("A souscrit à l'assurance :"+texte.get(4));
 
         if(texte.get(5).equals(""+0))
-             {System.out.println("L'emprunteur a actuellment louer aucun vehicules");}
+             {texte_ajout.add("L'emprunteur a actuellment louer aucun vehicules");}
         else
-            {System.out.println("L'emprunteur a actuellment louer :"+texte.get(5)+" vehicules");
+            {texte_ajout.add("\nL'emprunteur a actuellment louer :"+texte.get(5)+" vehicules");
             for(int i=0;i<texte.size()-6;i++)
-            {System.out.println("devis numero :"+texte.get(i+6));}
+                {texte_ajout.add("\ndevis numero :"+texte.get(i+6));}
             }
-        System.out.println("--------------------------------------------------");
+        texte_ajout.add("--------------------------------------------------");
+
+        return Lign.mise_en_forme_ligne_jpanel(texte_ajout);
     }
 
 

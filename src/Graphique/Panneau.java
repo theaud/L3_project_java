@@ -1,6 +1,7 @@
 package Graphique;
 
 import Affichage.*;
+import BDD.Gestion_BDD;
 
 import javax.swing.*;
 import java.awt.*;
@@ -75,7 +76,11 @@ public class Panneau extends JFrame {
                 changement_Ecran(new Fenetre_ajout(0));
                 stopIsopen();
                 break;
-            case 6: System.out.println("bouton location");stopIsopen();
+            case 6:   Ecran test=new Fenetre_ajout(3);
+
+                changement_Ecran(test);
+
+                System.out.println("bouton location");stopIsopen();
                 break;
             case 7:stopIsopen();
                 break;

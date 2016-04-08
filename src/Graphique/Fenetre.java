@@ -1,7 +1,5 @@
 package Graphique;
 
-import Affichage.Form;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -73,8 +71,8 @@ public class Fenetre extends JPanel {
 
 
 
-    public void add(JLabel text,Form formulaire)                {add(text); add(formulaire);}
-    public void add(JLabel text,Form formulaire,Bouton bouton)  {add(text); add(formulaire);    add(bouton);}
+    public void add(Form formulaire)                { add(formulaire.getOnPanel());}
+    public void add(Form formulaire,Bouton bouton)  { add(formulaire.getOnPanel());    add(bouton);}
 
 
 

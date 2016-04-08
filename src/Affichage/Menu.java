@@ -1,6 +1,5 @@
 package Affichage;
 
-import Affichage.Form;
 import Graphique.Ecran;
 
 import java.awt.*;
@@ -31,7 +30,7 @@ public class Menu extends Ecran {
         // --------------------------       on cree et on se place sur le menu  ---------------------------------------------
         // -------------------------------------------------------------------------------------------------------------------
 
-        initialiser(5,2,4,6);
+        initialiser(5,2,2,6);
 
         initialisation_menu();
     }
@@ -39,9 +38,8 @@ public class Menu extends Ecran {
 
 
     private void initialisation_menu()
-    {int largeur=500;
+    {
 
-        for(int i=0;i<2;i++) {  form[i].setPreferredSize(new Dimension(largeur/4, 30));}
 
 //----------------------------------------------------------------------------------------------------
 
@@ -55,14 +53,18 @@ public class Menu extends Ecran {
         lign[1].add(texte[1]);
 
         //ligne 2
-        texte[2].setText("Nom");
+        form[0].setTexteString("Nom");
         bouton[0].setBouton("Connection nom", new Pression());
-        lign[2].add(texte[2],form[0],bouton[0]);
+        //lign[2].add(texte[2],form[0],bouton[0]);texte[2],
+
+        lign[2].add(form[0],bouton[0]);
+
 
         //ligne 3
-        texte[3].setText("ID");
+        form[1].setTexteString("ID");
         bouton[1].setBouton("Connection Id", new Pression());
-        lign[3].add(texte[3],form[1],bouton[1]);
+      //  texte[3]
+       lign[3].add(form[1],bouton[1]);
 
 
         //ligne 4
