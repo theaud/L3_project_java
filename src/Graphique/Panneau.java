@@ -77,8 +77,7 @@ public class Panneau extends JFrame {
                 stopIsopen();
                 break;
             case 6:   Ecran test=new Fenetre_ajout(3);
-
-                changement_Ecran(test);
+                         changement_Ecran(test);
 
                 System.out.println("bouton location");stopIsopen();
                 break;
@@ -86,11 +85,7 @@ public class Panneau extends JFrame {
                 break;
             default:break;
             }
-
-
         }
-
-
     }
 
 

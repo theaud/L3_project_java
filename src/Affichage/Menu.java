@@ -95,9 +95,6 @@ public class Menu extends Ecran {
 
         container1.add(new Form().getOnPanel());
         container1.add(new Form().getOnPanel());
-        container1.add(new Form().getOnPanel());
-        container1.add(new Form().getOnPanel());
-        container1.add(new Form().getOnPanel());
 
         return(container1);
     }

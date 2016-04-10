@@ -1,6 +1,7 @@
 package Affichage;
 
 import BDD.Gestion_BDD;
+import Graphique.Bouton;
 import Graphique.Ecran;
 
 import javax.swing.*;
@@ -51,7 +52,7 @@ public class Fenetre_ajout extends Ecran {
 
          case 3:
 
-             afficher_emprunteurtest();
+             afficher_emprunteur_test();
              break;
 
 
@@ -94,9 +95,13 @@ public class Fenetre_ajout extends Ecran {
 
  }
 
-    private void afficher_emprunteurtest()
-    {   name="Nouveau Emprunteur";
+    private void afficher_emprunteur_test()
+    {   name="afficher_emprunteur Emprunteur";
         add(Gestion_BDD.afficher_utilisateur_console(2));
+        add(new Bouton("retour",new Retour()));
+        Bouton retour= new Bouton("retour",new Retour());
+
+
     }
 
 
