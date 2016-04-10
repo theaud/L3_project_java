@@ -1,6 +1,7 @@
 package Affichage;
 
 
+import Graphique.Bouton;
 import Graphique.Ecran;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,7 +13,7 @@ public class Login extends Ecran {
     public Login() {name="Login initialiser";
         setBackground(Color.pink);
 
-        initialiser(2,2,2);
+        initialiser(2,2);
         Login_initialisation();
     }
 
@@ -37,8 +38,7 @@ public class Login extends Ecran {
         add(texte[1]);
 
         //ligne 4
-        bouton[0].setBouton("Log in",new Validation());
-        add(bouton[0]);
+        add(new Bouton("Log in",new Validation()));
 
     }
 
@@ -50,7 +50,7 @@ public class Login extends Ecran {
     {System.out.println("-------------Test d'Authentification a faire return true actuelment------------- ");
     //on contourne pour pas remettrele mdp
 
-        isopen=1;
+        isopen=3;
         return true;
         /*
         if(Utilisateur.equals("u") && Mdp.equals("m"))
@@ -72,6 +72,6 @@ public class Login extends Ecran {
     class Validation implements ActionListener {
         public void actionPerformed(ActionEvent arg0) {
             if(Authentification_utilisateur(""+form[0].getContain(),""+form[1].getContain()))
-            {System.out.println("------------------------connection faite --------------------------------");}}
+            {System.out.println("§§§§§§§§§§§§§§§§§§§§§§§§§§§§§-----connection faite ---------§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§");}}
     }
 }

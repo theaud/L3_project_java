@@ -63,7 +63,7 @@ public class Fenetre extends JPanel {
     public static void setCompteur(int compteur) {        Fenetre.compteur = compteur;    }
 
     public int getIsopen() {return isopen;    }
-    public void setIsopen(int isopen) {        this.isopen = isopen;    }
+    public void setIsopen(int Isopen) {        this.isopen = Isopen;    }
     public void stopIsopen(){this.isopen=0;}
 
     public void add(Form formulaire)                { add(formulaire.getOnPanel());}

@@ -95,7 +95,7 @@ public class Gestion_BDD extends util3.fichier {
         }
     }
 
-    private static  boolean existe(String chemin,int id)
+    public static  boolean existe(String chemin,int id)
     { LinkedList<String> listLign=lectureFichier(chemin+"Annuaire");
         for(int i=1;i<listLign.size();i++)
             {if(listLign.get(i).equals(""+id))

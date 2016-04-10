@@ -34,12 +34,12 @@ public class Panneau extends JFrame {
     public void changement_Ecran(Ecran nouveau_Ecran)
     {   Ecran_actif=nouveau_Ecran;
         actualisation();
-        System.out.println("changement_Ecran        "+Ecran_actif.getName());
+        System.out.println("§§§ =>Changement_Ecran        "+Ecran_actif.getName());
     }
 
     public void retour_Menu()
     {   Ecran_actif=Ecran_menu; getEcran_actif().setIsopen(0);
-        System.out.println("retour_Menu       "+Ecran_actif.getName());
+        System.out.println("§§§ =>retour_Menu       "+Ecran_actif.getName());
         actualisation();
     }
 
@@ -60,30 +60,52 @@ public class Panneau extends JFrame {
         //on reste dans la boucle en permanence , on peut tout de meme quitter le programme par la croix rouge
         while(true)
         {
+
+            if(getEcran_actif().getIsopen()!=0){
+                System.out.println("valeur =" +getEcran_actif().getIsopen());
+            }
             switch (getEcran_actif().getIsopen())
-            {case 1:getEcran_actif().setIsopen(1);stopIsopen();
-                    retour_Menu();                   //retour menu   0
+            {case 0://No move
                 break;
-            case 2: getEcran_actif().setIsopen(1);stopIsopen();
-                    changement_Ecran(new Login());  //deconnection  1
 
+            case 2://Login
+                System.out.println("Login");
+                getEcran_actif().setIsopen(3);stopIsopen();
+                changement_Ecran(new Login());
                 break;
-            case 3: System.out.println("bouton nom");stopIsopen();
+            case 3://Menu
+                System.out.println("Menu");
+                getEcran_actif().setIsopen(2);stopIsopen();
+                retour_Menu();
                 break;
-            case 4: System.out.println("bouton id");stopIsopen();
-                break;
-            case 5: System.out.println("(bouton vehicule)=test");
-                changement_Ecran(new Fenetre_ajout(0));
+            case 4://Emprunteur
                 stopIsopen();
-                break;
-            case 6:   Ecran test=new Fenetre_ajout(3);
-                         changement_Ecran(test);
-
-                System.out.println("bouton location");stopIsopen();
-                break;
-            case 7:stopIsopen();
-                break;
-            default:break;
+                    break;
+            case 5://Devis
+                System.out.println("Devis");
+                changement_Ecran(new Fenetre_ajout(2,2));// a verif si au bon endroit 2,2 mauvais
+                stopIsopen();
+                    break;
+            case 6://Vehicule
+                stopIsopen();
+                    break;
+            case 7://Catalogue
+                stopIsopen();
+                    break;
+            case 8://Formulmaire Emprunteur
+                Ecran test=new Fenetre_ajout(1,2);// a verif si au bon endroit
+                changement_Ecran(test);
+                System.out.println("bouton location");
+                stopIsopen();
+                    break;
+            case 9://Formulmaire Vehicule
+                stopIsopen();
+                    break;
+            case 10://Formulmaire Devis
+                stopIsopen();
+                    break;
+                default:  System.out.println("default");  stopIsopen();
+                    break;
             }
         }
     }

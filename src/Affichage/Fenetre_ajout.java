@@ -14,7 +14,7 @@ public class Fenetre_ajout extends Ecran {
 
 
 
-    public Fenetre_ajout(int type){
+    public Fenetre_ajout(int type,int id){
 
         //----------------------------Creation de la fenetre global ---------------------------------------------------------
         this.setSize(500, 500);
@@ -34,12 +34,12 @@ public class Fenetre_ajout extends Ecran {
 
 
 
-        initialisation_formulaire(type);
+        initialisation_formulaire(type,id);
 
     }
 
 
-    private void initialisation_formulaire(int type)
+    private void initialisation_formulaire(int type,int id)
     {
         switch (type)
         {//Nouveau Emprunteur
@@ -52,7 +52,7 @@ public class Fenetre_ajout extends Ecran {
 
          case 3:
 
-             afficher_emprunteur_test();
+             afficher_emprunteur_test(id);
              break;
 
 
@@ -64,7 +64,7 @@ public class Fenetre_ajout extends Ecran {
 
  private void nouveau_Emprunteur()
  {name="Nouveau Emprunteur";
-     initialiser(2,5,1);
+     initialiser(5,1);
 
      GridLayout Layout=new GridLayout(7, 1);
      Layout.setVgap(10);
@@ -88,16 +88,16 @@ public class Fenetre_ajout extends Ecran {
      texte[0].setText("");     add(texte[0]);
 
      //ligne 5
-     bouton[0].setBouton(" nom a trouver",new Validation());    add(bouton[0]);
+    add(new Bouton("nom a trouver",new Validation()));
 
      //ligne 6
-     bouton[1].setBouton("Retour",new Retour());     add(bouton[1]);
+    add(new Bouton("Retour",new Validation()));
 
  }
 
-    private void afficher_emprunteur_test()
+    private void afficher_emprunteur_test(int Id)
     {   name="afficher_emprunteur Emprunteur";
-        add(Gestion_BDD.afficher_utilisateur_console(2));
+        add(Gestion_BDD.afficher_utilisateur_console(Id));
         add(new Bouton("retour",new Retour()));
         Bouton retour= new Bouton("retour",new Retour());
 
@@ -136,7 +136,7 @@ public class Fenetre_ajout extends Ecran {
 
 
 
-    class Retour implements ActionListener { public void actionPerformed(ActionEvent arg0) {setIsopen(1);}  }
+    class Retour implements ActionListener { public void actionPerformed(ActionEvent arg0) {setIsopen(3);}  }
 
 
 
