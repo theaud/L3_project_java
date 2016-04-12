@@ -56,63 +56,44 @@ public class Panneau extends JFrame {
 //----------------------------------------------------------------------------------------------------------------
 
     public void gestion_fenetre()
-    {
-        //on reste dans la boucle en permanence , on peut tout de meme quitter le programme par la croix rouge
+    {//on reste dans la boucle en permanence , on peut tout de meme quitter le programme par la croix rouge
+       int Isopen;
+
         while(true)
         {
+            Isopen=getEcran_actif().getIsopen();
 
-            if(getEcran_actif().getIsopen()!=0){
-                System.out.println("valeur =" +getEcran_actif().getIsopen());
-            }
-            switch (getEcran_actif().getIsopen())
-            {case 0://No move
-                break;
+            if(Isopen!=0)
+            {
+                System.out.println("gestion_fenetre getIsopen :"+Isopen);
+            if((4<=Isopen && Isopen<=6) || (8<=Isopen && Isopen<=10))
+                {int type=Isopen;
 
-            case 2://Login
-                System.out.println("Login");
-                getEcran_actif().setIsopen(3);stopIsopen();
-                changement_Ecran(new Login());
-                break;
-            case 3://Menu
-                System.out.println("Menu");
-                getEcran_actif().setIsopen(2);stopIsopen();
-                retour_Menu();
-                break;
-            case 4://Emprunteur
-                stopIsopen();
-                    break;
-            case 5://Devis
-                System.out.println("Devis");
-                changement_Ecran(new Fenetre_ajout(2,2));// a verif si au bon endroit 2,2 mauvais
-                stopIsopen();
-                    break;
-            case 6://Vehicule
-                stopIsopen();
-                    break;
-            case 7://Catalogue
-                stopIsopen();
-                    break;
-            case 8://Formulmaire Emprunteur
-                changement_Ecran(new Fenetre_ajout(0,2));// a verif si au bon endroit
-                stopIsopen();
-                    break;
-            case 9://Formulmaire Vehicule
-                changement_Ecran(new Fenetre_ajout(1,2));// a verif si au bon endroit
-                stopIsopen();
-                    break;
-            case 10://Formulmaire Devis
-                changement_Ecran(new Fenetre_ajout(2,2));// a verif si au bon endroit
-                stopIsopen();
-                    break;
-                default:  System.out.println("default");  stopIsopen();
-                    break;
+                    changement_Ecran(new Fenetre_ajout(type,getEcran_menu().getId()));
+                stopIsopen();}
+            else
+                {switch (Isopen)
+                    {case 0:break;//No move
+                        //------------------------------------------------------------------------------------------------------------------
+                    case 2://-----------------------Login--------------------------------
+                            getEcran_actif().setIsopen(3);
+                            changement_Ecran(new Login());
+                            break;
+                    case 3://------------------------Menu--------------------------------
+                            getEcran_actif().setIsopen(2);
+                            retour_Menu();
+                            break;
+                    case 7://---------------------Catalogue------------------------------------
+
+                            break;
+                    default:System.out.println("default");
+                            break;
+                    }
+                    stopIsopen();
+                }
             }
         }
     }
-
-
-
-
 
 
 //----------------------------------------------------------------------------------------------------------------

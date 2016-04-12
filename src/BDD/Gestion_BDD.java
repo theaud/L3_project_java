@@ -119,7 +119,6 @@ public class Gestion_BDD extends util3.fichier {
 
     public static JLabel afficher_utilisateur_console(int id)
     {String chemin="./src/BDD/Emprunteur/";
-        JPanel container=new JPanel();
 
         LinkedList<String> texte=lecture(chemin,id);
         LinkedList<String> texte_ajout=new LinkedList<String>();
@@ -146,7 +145,6 @@ public class Gestion_BDD extends util3.fichier {
 
     public static JLabel afficher_Devis_console(int id)
     {String chemin="./src/BDD/Devis/";
-        JPanel container=new JPanel();
 
         LinkedList<String> texte=lecture(chemin,id);
         LinkedList<String> texte_ajout=new LinkedList<String>();

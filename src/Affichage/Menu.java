@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 
 public class Menu extends Ecran {
 
+    protected int id=1;
 
     public  Menu()
     {//----------------------------Creation de la fenetre global ---------------------------------------------------------
@@ -152,9 +153,9 @@ public class Menu extends Ecran {
             else if(press.equals("Voir le Catalogue"))  {setIsopen(7);}
             else if(press.equals("Retour vehicule"))    {System.out.println("Retour vehicule a ajouter");}
 
-            else if(press.equals("Nouveau Emprunteur")) {setIsopen(8);}
-            else if(press.equals("Nouveau vehicule"))   {setIsopen(9);}
-            else if(press.equals("Nouveau devis"))      {setIsopen(10);}
+            else if(press.equals("Nouveau Emprunteur ")) {setIsopen(8);id=Integer.parseInt(form[0].getContain());}
+            else if(press.equals("Nouveau vehicule"))   {setIsopen(9);id=Integer.parseInt(form[1].getContain());}
+            else if(press.equals("Nouveau devis"))      {setIsopen(10);id=Integer.parseInt(form[2].getContain());}
 
             else if(press.equals("Deconnection"))   {setIsopen(2);}
         }
@@ -191,7 +192,7 @@ public class Menu extends Ecran {
 
         }
     }
-
-
-
+//-----------------------------------------------------------------------------------------------------------------------
+    public int getId() {return id;}
+    public void setId(int id) {this.id = id;}
 }
