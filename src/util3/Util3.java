@@ -2,12 +2,7 @@
 package util3;
 import java.util.*;
 
-/**
- * this class is a class with utility fonction.
- * @version Util 3.1
- * @author  Brion Mathieu
 
- */
 public class Util3 {
 
  

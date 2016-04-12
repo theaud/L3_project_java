@@ -33,12 +33,9 @@ public class Gestion_BDD extends util3.fichier {
     {
         LinkedList<String> texte=lectureFichier(chemin+"Annuaire");
         for (int i=1;i<texte.size();i++)
-        {
-            suppression(chemin,i);
-        }
+            {suppression(chemin,i);}
         try
-        {
-        String Fichier=chemin+"Annuaire";
+        {String Fichier=chemin+"Annuaire";
         FileWriter fw = new FileWriter(Fichier, false);//on ecrase le fichier
         BufferedWriter output = new BufferedWriter(fw);
 
@@ -49,7 +46,6 @@ public class Gestion_BDD extends util3.fichier {
         catch(IOException ioe){ System.out.print("Erreur clear_bdd: ");   ioe.printStackTrace();}
 
     }
-
 
 
     public static void ajout(String chemin, LinkedList<String> texte)
@@ -149,6 +145,17 @@ public class Gestion_BDD extends util3.fichier {
         texte_ajout.add("--------------------------------------------------");
 
         return Lign.mise_en_forme_ligne_jpanel(texte_ajout);
+    }
+
+    public static LinkedList<JLabel> lecture_ecran(String chemin, int id)
+    {   LinkedList<String> texte= lecture(chemin,id);
+        LinkedList<JLabel> returned=new LinkedList<JLabel>();
+
+        for(int i=0;i<texte.size();i++)
+            {returned.add(new JLabel());
+            returned.getLast().setText(texte.get(i));}
+
+        return returned;
     }
 
 
