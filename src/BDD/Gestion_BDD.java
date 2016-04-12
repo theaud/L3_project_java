@@ -121,9 +121,6 @@ public class Gestion_BDD extends util3.fichier {
     {String chemin="./src/BDD/Emprunteur/";
         JPanel container=new JPanel();
 
-
-
-
         LinkedList<String> texte=lecture(chemin,id);
         LinkedList<String> texte_ajout=new LinkedList<String>();
 
@@ -147,6 +144,25 @@ public class Gestion_BDD extends util3.fichier {
         return Lign.mise_en_forme_ligne_jpanel(texte_ajout);
     }
 
+    public static JLabel afficher_Devis_console(int id)
+    {String chemin="./src/BDD/Devis/";
+        JPanel container=new JPanel();
+
+        LinkedList<String> texte=lecture(chemin,id);
+        LinkedList<String> texte_ajout=new LinkedList<String>();
+
+        texte_ajout.add("--------------------------------------------------");
+        texte_ajout.add("Fiche Devis");
+        texte_ajout.add("Id du Devis :"+texte.get(0));
+        texte_ajout.add("Id_emprunteur  :"+texte.get(1));
+        texte_ajout.add("Id_vehicule :"+texte.get(2));
+        texte_ajout.add("Date_debut :"+texte.get(3));
+        texte_ajout.add("Date_fin"+texte.get(4));
+        texte_ajout.add("Tarif"+texte.get(5));
+        texte_ajout.add("--------------------------------------------------");
+
+        return Lign.mise_en_forme_ligne_jpanel(texte_ajout);
+    }
     public static LinkedList<JLabel> lecture_ecran(String chemin, int id)
     {   LinkedList<String> texte= lecture(chemin,id);
         LinkedList<JLabel> returned=new LinkedList<JLabel>();

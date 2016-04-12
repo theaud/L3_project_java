@@ -93,15 +93,15 @@ public class Panneau extends JFrame {
                 stopIsopen();
                     break;
             case 8://Formulmaire Emprunteur
-                Ecran test=new Fenetre_ajout(1,2);// a verif si au bon endroit
-                changement_Ecran(test);
-                System.out.println("bouton location");
+                changement_Ecran(new Fenetre_ajout(0,2));// a verif si au bon endroit
                 stopIsopen();
                     break;
             case 9://Formulmaire Vehicule
+                changement_Ecran(new Fenetre_ajout(1,2));// a verif si au bon endroit
                 stopIsopen();
                     break;
             case 10://Formulmaire Devis
+                changement_Ecran(new Fenetre_ajout(2,2));// a verif si au bon endroit
                 stopIsopen();
                     break;
                 default:  System.out.println("default");  stopIsopen();

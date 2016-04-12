@@ -2,6 +2,7 @@ package Affichage;
 
 import BDD.Gestion_BDD;
 import Graphique.Ecran;
+import Graphique.Fenetre;
 import Graphique.Lign;
 
 import javax.swing.*;
@@ -22,7 +23,7 @@ public class affichage_utilisateur extends Ecran {
 
 
 
-        initialiser(0,0,6,6);
+        initialiser(6,6);
         Login_initialisation();
 
     }
@@ -31,20 +32,20 @@ public class affichage_utilisateur extends Ecran {
     private void Login_initialisation()
     {
         //on modifie la taille des ligne
-        lign= Lign.assemblage_ligne(lign,4,60);
+
 //--------------------------------------------------------------------------------------------------------------
 
         LinkedList<JLabel> text= Gestion_BDD.lecture_ecran("src/BDD/Emprunteur/",1);
 
-
+        Fenetre container=new Fenetre();
     for(int i=0;i<6;i++)
         {texte[i]=text.get(i);
-        lign[i].add(texte[i]);}
+            container.add(texte[i]);}
 
 
 //--------------------------------------------------------------------------------------------------------------
         //on met les differentes lignes dans la fenetre
-        add(lign,6);
+        add(container);
     }
 
 

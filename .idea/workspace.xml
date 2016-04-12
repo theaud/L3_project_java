@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/BDD/Devis/modele.txt" description="Id_emprunteur" line="1" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd101131-1de1-4493-bafc-6a1b4a09b567" name="Default" comment="Ajoue visuel des differentes fenetre&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Layout/Visuel_ecran.pptx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Affichage/affichage_utilisateur.java" />
+    <list default="true" id="fd101131-1de1-4493-bafc-6a1b4a09b567" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BDD/Devis/1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Affichage/Fenetre_ajout.java" afterPath="$PROJECT_DIR$/src/Affichage/Fenetre_ajout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Affichage/Menu.java" afterPath="$PROJECT_DIR$/src/Affichage/Menu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Affichage/affichage_utilisateur.java" afterPath="$PROJECT_DIR$/src/Affichage/affichage_utilisateur.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BDD/Devis/Annuaire" afterPath="$PROJECT_DIR$/src/BDD/Devis/Annuaire" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BDD/Emprunteur/Annuaire" afterPath="$PROJECT_DIR$/src/BDD/Emprunteur/Annuaire" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BDD/Gestion_BDD.java" afterPath="$PROJECT_DIR$/src/BDD/Gestion_BDD.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util3/Util3.java" afterPath="$PROJECT_DIR$/src/util3/Util3.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphique/Panneau.java" afterPath="$PROJECT_DIR$/src/Graphique/Panneau.java" />
     </list>
     <ignored path="L3_projet_java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +40,17 @@
         <entry file="file://$PROJECT_DIR$/src/Graphique/Panneau.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="85" column="97" selection-start-line="85" selection-start-column="97" selection-end-line="85" selection-end-column="97" />
+              <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="affichage_utilisateur.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Affichage/affichage_utilisateur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -43,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/src/Affichage/Fenetre_ajout.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,53 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fenetre.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graphique/Fenetre.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Affichage/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Affichage/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36455983">
-              <caret line="161" column="0" selection-start-line="167" selection-start-column="87" selection-end-line="167" selection-end-column="88" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ecran.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graphique/Ecran.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bouton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="41" selection-end-column="0" />
+              <caret line="154" column="71" selection-start-line="154" selection-start-column="71" selection-end-line="154" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -107,7 +82,37 @@
         <entry file="file://$PROJECT_DIR$/src/BDD/Gestion_BDD.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="114" column="27" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="27" />
+              <caret line="146" column="47" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modele.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BDD/Devis/modele.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Annuaire" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BDD/Devis/Annuaire">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/BDD/Devis/1">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1241535">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -133,9 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Authentification/Authentification.java" />
-        <option value="$PROJECT_DIR$/src/Affichage/Bouton.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Affichage/test.java" />
         <option value="$PROJECT_DIR$/src/Utilitaire.java" />
         <option value="$PROJECT_DIR$/src/util3/util3/test.java" />
@@ -165,7 +167,6 @@
         <option value="$PROJECT_DIR$/src/Affichage/Base_donne.java" />
         <option value="$PROJECT_DIR$/src/BDD/Emprunteur/3" />
         <option value="$PROJECT_DIR$/src/consigne/Chose a faire" />
-        <option value="$PROJECT_DIR$/src/BDD/Emprunteur/Annuaire" />
         <option value="$PROJECT_DIR$/src/util3/fichier.java" />
         <option value="$PROJECT_DIR$/src/util3/Util3.java" />
         <option value="$PROJECT_DIR$/src/BDD/Emprunteur/2" />
@@ -176,14 +177,18 @@
         <option value="$PROJECT_DIR$/src/Graphique/Form.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Bouton.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Fenetre.java" />
-        <option value="$PROJECT_DIR$/src/BDD/Gestion_BDD.java" />
         <option value="$PROJECT_DIR$/src/BDD/Devis/Annuaire.txt" />
         <option value="$PROJECT_DIR$/src/BDD/vehicule/Annuaire" />
         <option value="$PROJECT_DIR$/src/Graphique/Ecran.java" />
         <option value="$PROJECT_DIR$/src/Affichage/Login.java" />
+        <option value="$PROJECT_DIR$/src/Affichage/affichage_utilisateur.java" />
         <option value="$PROJECT_DIR$/src/Affichage/Menu.java" />
-        <option value="$PROJECT_DIR$/src/Affichage/Fenetre_ajout.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Panneau.java" />
+        <option value="$PROJECT_DIR$/src/BDD/Emprunteur/Annuaire" />
+        <option value="$PROJECT_DIR$/src/BDD/Gestion_BDD.java" />
+        <option value="$PROJECT_DIR$/src/Affichage/Fenetre_ajout.java" />
+        <option value="$PROJECT_DIR$/src/BDD/Devis/Annuaire" />
+        <option value="$PROJECT_DIR$/src/BDD/Devis/1" />
       </list>
     </option>
   </component>
@@ -245,7 +250,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -473,6 +477,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -895,7 +900,8 @@
       <workItem from="1460107560352" duration="18793000" />
       <workItem from="1460204429773" duration="599000" />
       <workItem from="1460286022333" duration="15237000" />
-      <workItem from="1460455536606" duration="75000" />
+      <workItem from="1460455536606" duration="2300000" />
+      <workItem from="1460477822249" duration="57000" />
     </task>
     <task id="LOCAL-00001" summary="fuck thomas">
       <created>1457702114212</created>
@@ -1023,11 +1029,17 @@
       <option name="project" value="LOCAL" />
       <updated>1460292279325</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Ajoue visuel des differentes fenetre&#10;">
+      <created>1460455641463</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1460455641463</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119662000" />
+    <option name="totallyTimeSpent" value="121944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -1040,21 +1052,21 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18854167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18854167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32346722" sideWeight="0.48333332" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32317737" sideWeight="0.48333332" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955604" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33403805" sideWeight="0.6901042" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297062" sideWeight="0.6901042" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32241014" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32208923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3996194" sideWeight="0.4957627" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1097,7 +1109,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Affichage/Menu.java</url>
-          <line>119</line>
+          <line>120</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -1117,24 +1129,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Fenetre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Affichage/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Affichage/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1252,13 +1246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BDD/Devis/modele.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BDD/vehicule/modele.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1344,7 +1331,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1627,13 +1614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BDD/Devis/Annuaire">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BDD/vehicule/Annuaire">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1641,26 +1621,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BDD/Emprunteur/Annuaire">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Fenetre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1675,9 +1639,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Ecran.java">
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Fenetre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26551723">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BDD/Emprunteur/Annuaire">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3413793">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Affichage/affichage_utilisateur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Panneau.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Ecran.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0620689">
           <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
           <folding />
         </state>
@@ -1686,15 +1681,15 @@
     <entry file="file://$PROJECT_DIR$/src/BDD/Gestion_BDD.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="27" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="27" />
+          <caret line="146" column="47" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Panneau.java">
+    <entry file="file://$PROJECT_DIR$/src/Affichage/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="97" selection-start-line="85" selection-start-column="97" selection-end-line="85" selection-end-column="97" />
+          <caret line="154" column="71" selection-start-line="154" selection-start-column="71" selection-end-line="154" selection-end-column="71" />
           <folding />
         </state>
       </provider>
@@ -1702,17 +1697,33 @@
     <entry file="file://$PROJECT_DIR$/src/Affichage/Fenetre_ajout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Affichage/Menu.java">
+    <entry file="file://$PROJECT_DIR$/src/BDD/Devis/modele.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36455983">
-          <caret line="161" column="0" selection-start-line="167" selection-start-column="87" selection-end-line="167" selection-end-column="88" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BDD/Devis/Annuaire">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BDD/Devis/1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1241535">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
           <folding />
         </state>
       </provider>

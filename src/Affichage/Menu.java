@@ -102,16 +102,17 @@ public class Menu extends Ecran {
         Fenetre container1 =new Fenetre();
         container1.setLayout(new GridLayout(10, 1));
         container1.setBackground(Color.red);
+
         container1.add(new JLabel("Nouveau"));
 
-        //ligne 4
-        container1.add(new Bouton("Nouveau devis", new Pression()));
 
-        //ligne 5
+
+        container1.add(new Bouton("Nouveau Emprunteur", new Pression()));
+        container1.add(new Bouton("Nouveau devis", new Pression()));
         container1.add(new Bouton("Nouveau vehicule", new Pression()));
 
-        //ligne 6
-        container1.add(new Bouton("Nouveau Emprunteur", new Pression()));
+
+
 
         return(container1);
     }
@@ -151,9 +152,9 @@ public class Menu extends Ecran {
             else if(press.equals("Voir le Catalogue"))  {setIsopen(7);}
             else if(press.equals("Retour vehicule"))    {System.out.println("Retour vehicule a ajouter");}
 
-            else if(press.equals("Nouveau devis"))      {setIsopen(8);}
+            else if(press.equals("Nouveau Emprunteur")) {setIsopen(8);}
             else if(press.equals("Nouveau vehicule"))   {setIsopen(9);}
-            else if(press.equals("Nouveau Emprunteur")) {setIsopen(10);}
+            else if(press.equals("Nouveau devis"))      {setIsopen(10);}
 
             else if(press.equals("Deconnection"))   {setIsopen(2);}
         }

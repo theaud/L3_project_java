@@ -21,7 +21,7 @@ public class Fenetre_ajout extends Ecran {
         setMinimumSize(new Dimension(500, 500));
 
 
-        name="Fenetre_ajout";
+        name="Fenetre_ajout 1";
         setBackground(Color.pink);
 
 
@@ -36,24 +36,39 @@ public class Fenetre_ajout extends Ecran {
 
         initialisation_formulaire(type,id);
 
+        add(new Bouton("Retour",new Retour()));
     }
 
 
     private void initialisation_formulaire(int type,int id)
     {
-        switch (type)
-        {//Nouveau Emprunteur
-         case 0:nouveau_Emprunteur();
+        switch (type) {
+//------------------------------------------------------------------------------------
+
+         case 0://Nouveau Emprunteur
+              nouveau_Emprunteur();
+             name="nouveau_Emprunteur()";
              break;
             //Nouveau vehicule
-         case 1:break;
-            //Nouveau devis
-         case 2:break;
-
-         case 3:
-
-             afficher_emprunteur_test(id);
+         case 1: //Nouveau devis
+             name="nouveau_Devis()";
              break;
+
+         case 2:
+             name="nouveau_Vehicule()";
+             break;
+//------------------------------------------------------------------------------------
+         case 3:name="afficher_emprunteur_test(id);";
+
+             break;
+
+         case 4:name="afficher_emprunteur_test(id);";
+                break;
+         case 5:name="afficher_emprunteur_test(id);";
+                break;
+
+
+
 
 
         }
@@ -65,44 +80,35 @@ public class Fenetre_ajout extends Ecran {
  private void nouveau_Emprunteur()
  {name="Nouveau Emprunteur";
      initialiser(5,1);
-
-     GridLayout Layout=new GridLayout(7, 1);
-     Layout.setVgap(10);
-     setLayout(Layout);
-
+     GridLayout Layout=new GridLayout(7, 1);    Layout.setVgap(10);     setLayout(Layout);
 
      //ligne 0
-     form[0].setTexteString("Nom");add(form[0]);
-
-     //ligne 1
-     form[1].setTexteString("Prenom");     add(form[1]);
-
-     //ligne 2
+     form[0].setTexteString("Nom");         add(form[0]);
+     form[1].setTexteString("Prenom");      add(form[1]);
      form[2].setTexteString("Adresse");     add(form[2]);
+     form[3].setTexteString("Assurance");   add(form[3]);// =>  JCheckBox premier = new JCheckBox("Nom check box");
 
-     //ligne 3
-     form[3].setTexteString("Assurance");// =>  JCheckBox premier = new JCheckBox("Nom check box");
-     add(form[3]);
-
-     //ligne 4
      texte[0].setText("");     add(texte[0]);
 
-     //ligne 5
-    add(new Bouton("nom a trouver",new Validation()));
-
-     //ligne 6
-    add(new Bouton("Retour",new Validation()));
-
+     add(new Bouton("Validation",new Validation()));
  }
 
-    private void afficher_emprunteur_test(int Id)
+
+    private void afficher_emprunteur(int Id)
     {   name="afficher_emprunteur Emprunteur";
         add(Gestion_BDD.afficher_utilisateur_console(Id));
-        add(new Bouton("retour",new Retour()));
-        Bouton retour= new Bouton("retour",new Retour());
-
-
     }
+
+    private void afficher_devis(int Id)
+    {   name="afficher_devis ";
+        add(Gestion_BDD.afficher_Devis_console(Id));
+    }
+
+    private void afficher_vehicule(int Id)
+    {   name="afficher_vehicule ";
+        add(Gestion_BDD.afficher_utilisateur_console(Id));
+    }
+
 
 
 
@@ -135,10 +141,7 @@ public class Fenetre_ajout extends Ecran {
     }
 
 
-
     class Retour implements ActionListener { public void actionPerformed(ActionEvent arg0) {setIsopen(3);}  }
-
-
 
 
 }
