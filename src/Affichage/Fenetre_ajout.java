@@ -4,6 +4,7 @@ import BDD.Gestion_BDD;
 import Graphique.Bouton;
 import Graphique.Ecran;
 import Graphique.Fenetre;
+import Location.Emprunteur;
 
 import javax.swing.*;
 import java.awt.*;
@@ -47,7 +48,7 @@ public class Fenetre_ajout extends Ecran {
     }
 
  private void nouveau_Emprunteur()
- {name="Nouveau Emprunteur";
+ {name="Nouveau Emprunteur1";
      initialiser(5,1);split(7);
 
      form[0].setTexteString("Nom");         add(form[0]);
@@ -60,7 +61,7 @@ public class Fenetre_ajout extends Ecran {
  }
 
     private void nouveau_Devis()
-    {name="Nouveau Devis";      initialiser(5,1);
+    {name="Nouveau Devis1";      initialiser(5,1);
     split(8);
 
         form[0].setTexteString("Id_emprunteur");    add(form[0]);
@@ -74,7 +75,7 @@ public class Fenetre_ajout extends Ecran {
     }
 
     private void nouveau_Vehicule()
-    {name="Nouveau Vehicule";initialiser(9,1);
+    {name="Nouveau Vehicule1";initialiser(9,1);
         split(10);
 
         form[0].setTexteString("Nom");             add(form[0]);
@@ -91,9 +92,25 @@ public class Fenetre_ajout extends Ecran {
         add(new Bouton("Validation",new Validation()));
     }
 
-    private void afficher_emprunteur(int Id){name="afficher_emprunteur Emprunteur";  split(4); add(Gestion_BDD.afficher_utilisateur_console(Id));}
+    private void afficher_emprunteur(int Id){name="afficher_emprunteur Emprunteur";  split(4); add(Emprunteur.afficher_utilisateur_console(Id));}
     private void afficher_devis(int Id)     {name="afficher_devis ";                add(Gestion_BDD.afficher_Devis_console(Id));      }
-    private void afficher_vehicule(int Id)  {name="afficher_vehicule ";             add(Gestion_BDD.afficher_utilisateur_console(Id));}
+    private void afficher_vehicule(int Id)  {name="afficher_vehicule "; System.out.println("afficher_vehicule pas coder");            add(Emprunteur.afficher_utilisateur_console(Id));}
+
+
+
+    private void Catalogue()
+    {name="Nouveau Emprunteur1";
+        initialiser(5,1);split(7);
+
+        form[0].setTexteString("Nom");         add(form[0]);
+        form[1].setTexteString("Prenom");      add(form[1]);
+        form[2].setTexteString("Adresse");     add(form[2]);
+        form[3].setTexteString("Assurance");   add(form[3]);// =>  JCheckBox premier = new JCheckBox("Nom check box");
+        texte[0].setText("");     add(texte[0]);
+
+        add(new Bouton("Validation",new Validation()));
+    }
+
 
 
 

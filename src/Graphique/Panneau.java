@@ -65,11 +65,11 @@ public class Panneau extends JFrame {
 
             if(Isopen!=0)
             {
-                System.out.println("gestion_fenetre getIsopen :"+Isopen);
+                System.out.println("\ngestion_fenetre getIsopen :"+Isopen);
             if((4<=Isopen && Isopen<=6) || (8<=Isopen && Isopen<=10))
                 {int type=Isopen;
 
-                    changement_Ecran(new Fenetre_ajout(type,getEcran_menu().getId()));
+                    changement_Ecran(new Fenetre_ajout(type,getEcran_menu().getIsopen()));
                 stopIsopen();}
             else
                 {switch (Isopen)
@@ -84,7 +84,7 @@ public class Panneau extends JFrame {
                             retour_Menu();
                             break;
                     case 7://---------------------Catalogue------------------------------------
-
+                        System.out.println("Catalogue");
                             break;
                     default:System.out.println("default");
                             break;

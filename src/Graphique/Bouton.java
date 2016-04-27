@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 public class Bouton extends JButton {
 
     public Bouton(String str){super(str); }
-    public Bouton(String str, ActionListener listener){super(str); addActionListener(listener); }
+    public Bouton(String str, ActionListener listener){super(str+"      "); addActionListener(listener); }
 
 
 

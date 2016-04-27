@@ -29,7 +29,7 @@ public class Login extends Ecran {
         form[0].setTexteString("Utilisateur");
         add(form[0].getOnPanel());
 
-        //ligne 2
+        //ligne 0
         form[1].setTexteString("Mot de passe");
         add(form[1].getOnPanel());
 

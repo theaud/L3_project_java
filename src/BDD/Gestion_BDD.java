@@ -1,6 +1,7 @@
 package BDD;
 
 import Graphique.Lign;
+import Location.Emprunteur;
 import util3.Util3;
 
 import javax.swing.*;
@@ -117,31 +118,7 @@ public class Gestion_BDD extends util3.fichier {
 //----------------------------------------------------------------------------------------------------------------------------------------------
 
 
-    public static JLabel afficher_utilisateur_console(int id)
-    {String chemin="./src/BDD/Emprunteur/";
 
-        LinkedList<String> texte=lecture(chemin,id);
-        LinkedList<String> texte_ajout=new LinkedList<String>();
-
-        texte_ajout.add("--------------------------------------------------");
-        texte_ajout.add("Fiche emprunteur");
-        texte_ajout.add("Id de l'utilisateur :"+texte.get(0));
-        texte_ajout.add("Nom  :"+texte.get(1));
-        texte_ajout.add("Prenom :"+texte.get(2));
-        texte_ajout.add("Adresse :"+texte.get(3));
-        texte_ajout.add("A souscrit à l'assurance :"+texte.get(4));
-
-        if(texte.get(5).equals(""+0))
-             {texte_ajout.add("L'emprunteur a actuellment louer aucun vehicules");}
-        else
-            {texte_ajout.add("\nL'emprunteur a actuellment louer :"+texte.get(5)+" vehicules");
-            for(int i=0;i<texte.size()-6;i++)
-                {texte_ajout.add("\ndevis numero :"+texte.get(i+6));}
-            }
-        texte_ajout.add("--------------------------------------------------");
-
-        return Lign.mise_en_forme_ligne_jpanel(texte_ajout);
-    }
 
     public static JLabel afficher_Devis_console(int id)
     {String chemin="./src/BDD/Devis/";

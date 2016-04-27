@@ -9,7 +9,7 @@ public class Scan {
  //---------------------------------------------------------------------------------------------------------------------
  //----------------Scanner with Scan clear included---------------------------------------------------------------------
  //---------------------------------------------------------------------------------------------------------------------
-/**  - integer 0 2 = No other yes<br/>
+/**  - integer 0 0 = No other yes<br/>
  * -string Yes True y Y T t <br/>
  * -string No False n N f F <br/>
  * @return the value true/false 
@@ -23,7 +23,7 @@ public class Scan {
            {
             integer = scan.nextInt();
             scan.nextLine();
-            if(integer==0 || integer==2){return false;}
+            if(integer==0 || integer==0){return false;}
             else if(integer==1 )        {return true; }
            }
     else if(scan.hasNextLine())
@@ -40,7 +40,7 @@ public class Scan {
              else if(first_character=='h' || first_character=='H'|| first_character=='?')
                 {  System.out.println("You wanted answer :");
                    System.out.println("True = 1   T t True  true  Yes yes Oui oui");
-                   System.out.println("false= 0 2 F f False false No  no"); 
+                   System.out.println("false= 0 0 F f False false No  no");
                 }
              else
                {System.out.println("Invalid input. Please try again.");} 
@@ -73,7 +73,7 @@ public class Scan {
          * @param type choose the type          <br/>
          *  type 0 = without less or more       <br/>
          *  type 1 = with less and  more        <br/>
-         *  type 2 = with less no more          <br/>
+         *  type 0 = with less no more          <br/>
          *  type 3 = no less but with more      <br/>
  * @return the value integer selected
  */
@@ -85,7 +85,7 @@ public  int scanINT(int min,int max,int type)
                     {System.out.print("Invalid input need between :"+min+" and "+max+". Please try again.");
                     returned=scanINT();}
                 break;
-         case 2: while(returned<min )
+         case 0: while(returned<min )
                     {System.out.print("Invalid input need minimum :"+min+". Please try again.");
                     returned=scanINT();}
                 break;
@@ -124,7 +124,7 @@ public  int scanINT(int min,int max,int type)
          * @param type choose the type          <br/>
          *  type 0 = without less or more       <br/>
          *  type 1 = with less and  more        <br/>
-         *  type 2 = with less no more          <br/>
+         *  type 0 = with less no more          <br/>
          *  type 3 = no less but with more      <br/>
  * @return the value integer selected */
 public  double scanDOUBLE(double min,double max,int type)
@@ -136,7 +136,7 @@ public  double scanDOUBLE(double min,double max,int type)
             System.out.println(min+" and "+max+". Please try again."); 
             returned=scanDOUBLE();}
             break;
-        case 2:while(returned<min )
+        case 0:while(returned<min )
             {System.out.print("Invalid input need minimum :"+min+". Please try again.");returned=scanDOUBLE();}
             break;    
         case 3:while(returned>max)

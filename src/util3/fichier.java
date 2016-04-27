@@ -86,7 +86,7 @@ public static void writeFile(String fileContent, String filePathOutput) {
         // On boucle sur chaque champ detecté
         while (scanner.hasNextLine()) {
             line = scanner.nextLine();
-
+            System.out.println("add(line); "+line);///§§§§
             listLign.add(line);
             if (line != null)
                 str.append(line + "\r\n");

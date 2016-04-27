@@ -1,13 +1,12 @@
 
-import BDD.Gestion_BDD;
 import Graphique.Panneau;
-import Graphique.test;
 
 
 public class Main {
 
     public static void main(String[] args) {
        // System.out.println("Hello World!");
+
 
 
 

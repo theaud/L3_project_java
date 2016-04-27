@@ -1,4 +1,4 @@
-package Location;
+package Vehicule;
 
 /**
  * Created by mathieu on 11/03/2016.
