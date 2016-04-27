@@ -20,120 +20,70 @@ public class Menu extends Ecran {
         setBackground(Color.green);
 
         //---------------------
-        JPanel Panneau = new JPanel();
-        Panneau.setPreferredSize(new Dimension(1000, 1000));
-        Panneau.setLayout(new GridBagLayout());
+        setLayout(new GridLayout(10, 0));
 
 
-        GridBagConstraints gbc = new GridBagConstraints();
 
         initialiser(4,0);
 
         setBackground(Color.red);
-        //On positionne la case de départ du composant
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        //La taille en hauteur et en largeur
-
-        gbc.gridwidth = GridBagConstraints.REMAINDER;
-
-        Panneau.add(initialisation_top(), gbc);
-        //---------------------------------------------
-        gbc.gridy = 1;
-        gbc.gridheight = 0;
-        Panneau. add(Center(), gbc);
-        //---------------------------------------------
-
-        //---------------------------------------------
-
-        gbc.gridy = 4;
-        gbc.gridheight = 1;
-        gbc.gridwidth = GridBagConstraints.REMAINDER;
-        Panneau.add(initialisation_bot(), gbc);
-        //---------------------------------------------
-
-        add(Panneau);
-    }
 
 
-    private Fenetre Center()
-    {   Ecran Center =new Ecran();
-        Center.setPreferredSize(new Dimension(950, 750));
-        Center.setLayout(new GridLayout(1, 0));
-        Center.add(initialisation_menu_recherche());
-        Center.add(initialisation_menu_creation());
+        Ecran[] liste =new Ecran[10];
+        for(int i=0;i<10;i++){
+            liste[i]=new Ecran();
+            if(i!=0 &&i!=9){
+                liste[i].setLayout(new GridLayout(0, 2));
+                liste[i].setBackground(Color.orange);
+                 }
+            add(liste[i]);
+        }
 
-        return(Center);
-    }
 
-    private Fenetre initialisation_menu_recherche()
-    {        Fenetre container1 =new Fenetre();
-
-        container1.setLayout(new GridLayout(10, 1));
-        container1.setBackground(Color.cyan);
-        container1.add(new JLabel("Recherche"));
-
-        //ligne 1
-        form[0].setTexteString("Emprunteur ID");
-        form[0].addBouton(new Bouton("Validation 1", new Validation()));
-        container1.add(form[0].getOnPanel());
 
         //ligne 0
+        liste[0].add(new JLabel("Menu"));
+
+
+        //ligne 1
+
+        liste[1].add(new JLabel("Recherche"));
+         liste[1].add(new JLabel("Nouveau"));
+
+        //ligne 2
+        form[0].setTexteString("Emprunteur ID");
+        form[0].addBouton(new Bouton("Validation 1", new Validation()));
+        liste[2].add(form[0].getOnPanel());
+
+        liste[2].add(new Bouton("Nouveau Emprunteur", new Pression()));
+        //ligne 3
         form[1].setTexteString("Devis ID");
         form[1].addBouton(new Bouton("Validation 0", new Validation()));
-        container1.add(form[1].getOnPanel());
+        liste[3].add(form[1].getOnPanel());
 
-        //ligne 3.1
+        liste[3].add(new Bouton("Nouveau devis", new Pression()));
+        //ligne 4
         form[2].setTexteString("Vehicule ID");
         form[2].addBouton(new Bouton("Validation 3", new Validation()));
-        container1.add(form[2].getOnPanel());
+        liste[4].add(form[2].getOnPanel());
 
+        liste[4].add(new Bouton("Nouveau Vehicule", new Pression()));
+        //ligne 5
 
         texte.setText("");
-        container1.add(texte);
+        liste[5].add(texte);
+        //ligne 6
+        liste[6].add(new Bouton("Voir le Catalogue", new Pression()));
+        //ligne 7
+        liste[7].add(new Bouton("Retour Vehicule", new Pression()));
+        //ligne 8
 
-        //ligne 4
-        container1.add(new Bouton("Voir le Catalogue", new Pression()));
 
-        //ligne 5
-        container1.add(new Bouton("Retour Vehicule", new Pression()));
-        return(container1);
+        //ligne 9
+        liste[9].add(new Bouton("Deconnection", new Pression()));
+
+
     }
-
-    private Fenetre initialisation_menu_creation()
-    {
-        Fenetre container1 =new Fenetre();
-        container1.setLayout(new GridLayout(10, 1));
-        container1.setBackground(Color.red);
-
-        container1.add(new JLabel("Nouveau"));
-
-        container1.add(new Bouton("Nouveau Emprunteur", new Pression()));
-        container1.add(new Bouton("Nouveau devis", new Pression()));
-        container1.add(new Bouton("Nouveau Vehicule", new Pression()));
-
-        return(container1);
-    }
-
-    private Fenetre initialisation_top()
-    {   Fenetre Top =new Fenetre();
-        Top.setPreferredSize(new Dimension(1000, 100));
-        setName("Menu");
-
-        Top.setBackground(Color.orange);
-        return (Top);
-    }
-    private Fenetre initialisation_bot()
-    {   Fenetre bottom =new Fenetre();
-        bottom.setPreferredSize(new Dimension(1000, 100));
-        bottom.setBackground(Color.BLACK);
-
-
-        bottom.add(new Bouton("Deconnection", new Pression()));
-        return(bottom);
-    }
-
-
 
 
 
