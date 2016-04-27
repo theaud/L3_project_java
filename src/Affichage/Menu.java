@@ -23,6 +23,8 @@ public class Menu extends Ecran {
         JPanel Panneau = new JPanel();
         Panneau.setPreferredSize(new Dimension(1000, 1000));
         Panneau.setLayout(new GridBagLayout());
+
+
         GridBagConstraints gbc = new GridBagConstraints();
 
         initialiser(4,0);
@@ -37,14 +39,13 @@ public class Menu extends Ecran {
 
         Panneau.add(initialisation_top(), gbc);
         //---------------------------------------------
-        gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.gridheight = 0;
         Panneau. add(Center(), gbc);
         //---------------------------------------------
 
         //---------------------------------------------
-        gbc.gridx = 0;
+
         gbc.gridy = 4;
         gbc.gridheight = 1;
         gbc.gridwidth = GridBagConstraints.REMAINDER;
