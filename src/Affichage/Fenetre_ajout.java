@@ -37,7 +37,8 @@ public class Fenetre_ajout extends Ecran {
     }
 
     private void initialisation_formulaire(int type,int id)
-    {switch (type) {
+    {
+        switch (type) {
          case 4:name="afficher_emprunteur(id);";    afficher_emprunteur( id);   break;
          case 5:name="afficher_devis(id);";         afficher_devis(id);         break;
          case 6:name="afficher_vehicule(id);";      afficher_vehicule(id);      break;
@@ -76,7 +77,7 @@ public class Fenetre_ajout extends Ecran {
 
     private void nouveau_Vehicule()
     {name="Nouveau Vehicule1";initialiser(9,1);
-        split(10);
+        split(12);
 
         form[0].setTexteString("Nom");             add(form[0]);
         form[1].setTexteString("Marque");          add(form[1]);
@@ -92,24 +93,23 @@ public class Fenetre_ajout extends Ecran {
         add(new Bouton("Validation",new Validation()));
     }
 
-    private void afficher_emprunteur(int Id){name="afficher_emprunteur Emprunteur";  split(4); add(Emprunteur.afficher_utilisateur_console(Id));}
-    private void afficher_devis(int Id)     {name="afficher_devis ";                add(Gestion_BDD.afficher_Devis_console(Id));      }
-    private void afficher_vehicule(int Id)  {name="afficher_vehicule "; System.out.println("afficher_vehicule pas coder");            add(Emprunteur.afficher_utilisateur_console(Id));}
+    private void afficher_emprunteur(int Id)
+            {name="afficher_emprunteur Emprunteur";
+                split(2);
+                add(Emprunteur.afficher_utilisateur_console(Id));}
 
+    private void afficher_devis(int Id)
+        {name="afficher_devis ";split(2);
+        add(Gestion_BDD.afficher_Devis_console(Id));}
 
+    private void afficher_vehicule(int Id)
+        {name="afficher_vehicule ";
+        System.out.println("afficher_vehicule pas coder WARNING on envoie rien actuelment");
+        split(2);
+        add(Emprunteur.afficher_utilisateur_console(Id));
 
-    private void Catalogue()
-    {name="Nouveau Emprunteur1";
-        initialiser(5,1);split(7);
+        }
 
-        form[0].setTexteString("Nom");         add(form[0]);
-        form[1].setTexteString("Prenom");      add(form[1]);
-        form[2].setTexteString("Adresse");     add(form[2]);
-        form[3].setTexteString("Assurance");   add(form[3]);// =>  JCheckBox premier = new JCheckBox("Nom check box");
-        texte[0].setText("");     add(texte[0]);
-
-        add(new Bouton("Validation",new Validation()));
-    }
 
 
 
@@ -124,7 +124,7 @@ public class Fenetre_ajout extends Ecran {
         text.add(t1);        text.add(t2);        text.add(t3);        text.add(t4);    text.add(t5);
         return text;
     }
-    public static void ajout_Eprunteur(LinkedList<String> texte)    {   Gestion_BDD. ajout("./src/BDD/Emprunteur/",  texte);}
+
 
 
     class Validation implements ActionListener {
@@ -134,20 +134,32 @@ public class Fenetre_ajout extends Ecran {
             for(int i=0;i<3;i++) { if(form[i].getContain().equals("")) {test=false;}}
         //--------------------------------------------------------------------------------------------------------------
             if(test)
-                {   texte[0].setText("nouveau user cree");
+                {
                     LinkedList<String> text=add(form[0].getContain(),form[1].getContain(),form[2].getContain(),""+form[3].getContain().equals(""),""+0);
+                    if(name=="Nouveau Emprunteur1")
+                        {texte[0].setText("Nouveau Emprunteur cree");
+                            Gestion_BDD. ajout("./src/BDD/Emprunteur/",text);
+                        }
+                    else if(name=="Nouveau Devis1")
+                        {texte[0].setText("Nouveau Devis cree");
+                            Gestion_BDD. ajout("./src/BDD/Devis/",text);
+                        }
+                    else
+                        {texte[0].setText("Nouveau Vehicule cree");
+                            Gestion_BDD.ajout("./src/BDD/Vehicule/",text);
+                        }
 
-                    ajout_Eprunteur(text);
-                   // Gestion_BDD. ajout_Eprunteur(LinkedList<String> texte); =>>> a integrer c'est plus reutilisable
                 }
             else
                 {texte[0].setText("(erreur) pas tous les champ remplie");}
-            System.out.println(" confirmation ");
+
         }
     }
 
 
-    class Retour implements ActionListener { public void actionPerformed(ActionEvent arg0) {setIsopen(3);}  }
+    class Retour implements ActionListener {
+        public void actionPerformed(ActionEvent arg0)
+        {setIsopen(3);}  }
 
 
 }

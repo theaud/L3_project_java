@@ -20,7 +20,7 @@ public class Menu extends Ecran {
         setBackground(Color.green);
 
         //---------------------
-        setLayout(new GridLayout(10, 0));
+        setLayout(new GridLayout(11, 0));
 
 
 
@@ -29,10 +29,10 @@ public class Menu extends Ecran {
         setBackground(Color.red);
 
 
-        Ecran[] liste =new Ecran[10];
-        for(int i=0;i<10;i++){
+        Ecran[] liste =new Ecran[11];
+        for(int i=0;i<11;i++){
             liste[i]=new Ecran();
-            if(i!=0 &&i!=9){
+            if(i!=0 &&i!=10){
                 liste[i].setLayout(new GridLayout(0, 2));
                 liste[i].setBackground(Color.orange);
                  }
@@ -52,35 +52,42 @@ public class Menu extends Ecran {
 
         //ligne 2
         form[0].setTexteString("Emprunteur ID");
-        form[0].addBouton(new Bouton("Validation 1", new Validation()));
+        form[0].addBouton(new Bouton("Validation 0", new Validation()));
         liste[2].add(form[0].getOnPanel());
 
-        liste[2].add(new Bouton("Nouveau Emprunteur", new Pression()));
+
         //ligne 3
         form[1].setTexteString("Devis ID");
-        form[1].addBouton(new Bouton("Validation 0", new Validation()));
+        form[1].addBouton(new Bouton("Validation 1", new Validation()));
         liste[3].add(form[1].getOnPanel());
 
-        liste[3].add(new Bouton("Nouveau devis", new Pression()));
+        liste[3].add(new Bouton("Nouveau Emprunteur", new Pression()));
         //ligne 4
         form[2].setTexteString("Vehicule ID");
-        form[2].addBouton(new Bouton("Validation 3", new Validation()));
+        form[2].addBouton(new Bouton("Validation 2", new Validation()));
         liste[4].add(form[2].getOnPanel());
 
-        liste[4].add(new Bouton("Nouveau Vehicule", new Pression()));
+
         //ligne 5
 
         texte.setText("");
         liste[5].add(texte);
+        liste[5].add(new Bouton("Nouveau devis", new Pression()));
         //ligne 6
         liste[6].add(new Bouton("Voir le Catalogue", new Pression()));
-        //ligne 7
-        liste[7].add(new Bouton("Retour Vehicule", new Pression()));
-        //ligne 8
 
+
+        //ligne 7
+        liste[7].add(new Ecran());
+
+        liste[7].add(new Bouton("Nouveau Vehicule", new Pression()));
+        //ligne 8
+        liste[8].add(new Bouton("Retour Vehicule", new Pression()));
 
         //ligne 9
-        liste[9].add(new Bouton("Deconnection", new Pression()));
+
+        //ligne 10
+        liste[10].add(new Bouton("Deconnection", new Pression()));
 
 
     }
@@ -106,7 +113,7 @@ class Pression implements ActionListener {
             else if(press.equals("Nouveau Vehicule"))    {setIsopen(10);}
 
 
-            else if(press.equals("Deconnection"))   {setIsopen(0);}
+            else if(press.equals("Deconnection"))   {setIsopen(2);}
         }
     }
     class Validation implements ActionListener {
@@ -116,14 +123,13 @@ class Pression implements ActionListener {
             String chemin="";
             int test=0;
             String press=arg0.getActionCommand();
-            if     (press.equals("Validation 1")) {chemin="./src/BDD/Emprunteur/";test=4;}
-            else if(press.equals("Validation 0")) {chemin="./src/BDD/Devis/";     test=5;}
-            else if(press.equals("Validation 3")) {chemin="./src/BDD/Vehicule/";  test=6;}
-            else {System.out.println("Erreur Menu validation");}
+            if     (press.equals("Validation 0")) {chemin="./src/BDD/Emprunteur/";test=4;}
+            else if(press.equals("Validation 1")) {chemin="./src/BDD/Devis/";     test=5;}
+            else if(press.equals("Validation 2")) {chemin="./src/BDD/Vehicule/";  test=6;}
+            else {System.out.println("§§ WARNING §§ Erreur Menu validation :|"+press+"| "+press.equals("Validation 0"));return;}
 
             int  id=Integer.parseInt("0"+form[test-4].getContain());
-            System.out.println("chemin ="+chemin+" id= "+id);
-            System.out.println(Gestion_BDD.existe( chemin, id));
+
 
             if(test!=0  && Gestion_BDD.existe( chemin, id) )
             {   texte.setText("22");

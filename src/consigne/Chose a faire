@@ -2,6 +2,8 @@ Bouton
     gere les problemes de centrage
 Formulaire
     generaliser les lignes => rectangle modulable
+    faire les tests boolean
+    mettre limitation => int => date au entre (strict minimum)
 BDD
     faire Devis et vehicule
     ajoue suppression

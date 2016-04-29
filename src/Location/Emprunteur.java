@@ -31,10 +31,10 @@ public class Emprunteur {
     }
 
     public Emprunteur(int id)
-    {String chemin="./src/BDD/Devis/";
+    {String chemin="./src/BDD/Emprunteur/";
 
     LinkedList<String> texte= Gestion_BDD.lecture(chemin,id);
-    LinkedList<String> texte_ajout=new LinkedList<String>();
+    util3.Util3.afficher(texte);
 
     Id = id;
     Nom=texte.get(1);
@@ -54,7 +54,7 @@ public class Emprunteur {
     public static JLabel afficher_utilisateur_console(int id)
         {Emprunteur current=new Emprunteur(id);
         LinkedList<String> texte_ajout=new LinkedList<String>();
-        texte_ajout.add("--------------------------------------------------");
+
         texte_ajout.add("Fiche emprunteur");
         texte_ajout.add("Id de l'utilisateur :"+id);
         texte_ajout.add("Nom  :"+current.getNom());
@@ -69,7 +69,7 @@ public class Emprunteur {
                 for(int i=0;i<current.getNb_devis()-6;i++)
                 {texte_ajout.add("\ndevis numero :"+current.getReference_Devis()[i+6]);}
             }
-        texte_ajout.add("--------------------------------------------------");
+
 
         util3.Util3.afficher(texte_ajout);
         return Lign.mise_en_forme_ligne_jpanel(texte_ajout);

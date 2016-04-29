@@ -14,7 +14,6 @@ public class Ecran extends Fenetre {
 
     }
 
-
     /**@param nbForm   form
      * @param nbJpanel texte*/
     public void initialiser(int nbForm,int nbJpanel)

@@ -1,7 +1,8 @@
-package Graphique;
+package Affichage;
 
 import Affichage.*;
 import BDD.Gestion_BDD;
+import Graphique.Ecran;
 
 import javax.swing.*;
 import java.awt.*;
@@ -65,7 +66,7 @@ public class Panneau extends JFrame {
 
             if(Isopen!=0)
             {
-                System.out.println("\ngestion_fenetre getIsopen :"+Isopen);
+
             if((4<=Isopen && Isopen<=6) || (8<=Isopen && Isopen<=10))
                 {int type=Isopen;
 
@@ -84,9 +85,9 @@ public class Panneau extends JFrame {
                             retour_Menu();
                             break;
                     case 7://---------------------Catalogue------------------------------------
-                        System.out.println("Catalogue");
+
                             break;
-                    default:System.out.println("default");
+                    default:
                             break;
                     }
                     stopIsopen();
@@ -107,7 +108,7 @@ public class Panneau extends JFrame {
     public Affichage.Menu getEcran_menu() {        return Ecran_menu;    }
     public void setEcran_menu(Affichage.Menu ecran_menu) {        Ecran_menu = ecran_menu;    }
 
-    public void stopIsopen(){Ecran_actif.isopen=0;}
+    public void stopIsopen(){Ecran_actif.setIsopen(0);}
 
 
 }

@@ -44,7 +44,7 @@ public class Gestion_BDD extends util3.fichier {
             output.flush();
             output.close();
         }
-        catch(IOException ioe){ System.out.print("Erreur clear_bdd: ");   ioe.printStackTrace();}
+        catch(IOException ioe){    ioe.printStackTrace();}
 
     }
 
@@ -65,7 +65,7 @@ public class Gestion_BDD extends util3.fichier {
             output.flush();
             output.close();
         }
-        catch(IOException ioe){ System.out.print("Erreur ajout: ");   ioe.printStackTrace();}
+        catch(IOException ioe){  ioe.printStackTrace();}
     }
     public static void suppression(String chemin,int id)
     {  if(id>=0 )
@@ -138,6 +138,8 @@ public class Gestion_BDD extends util3.fichier {
 
         return Lign.mise_en_forme_ligne_jpanel(texte_ajout);
     }
+
+    /*
     public static LinkedList<JLabel> lecture_ecran(String chemin, int id)
     {   LinkedList<String> texte= lecture(chemin,id);
         LinkedList<JLabel> returned=new LinkedList<JLabel>();
@@ -148,6 +150,6 @@ public class Gestion_BDD extends util3.fichier {
 
         return returned;
     }
-
+*/
 
 }

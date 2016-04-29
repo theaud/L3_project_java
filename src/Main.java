@@ -1,10 +1,5 @@
 
-import Graphique.Panneau;
-import util3.Temp;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import Affichage.Panneau;
 
 
 public class Main {
@@ -24,15 +19,6 @@ public class Main {
 
 
 
-
-    public static void wait(int a)
-    {
-
-        long start=System.nanoTime();
-
-        while((System.nanoTime()-start)<a);
-        System.out.println("----------------");
-    }
 
 
 
