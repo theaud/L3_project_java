@@ -138,7 +138,7 @@ class Pression implements ActionListener {
                 setIsopen(test);
             }
             else
-            {texte.setText("L'entrer selectionner est incorecte où n'a pas ete trouver dans la bese de donnee ");}
+            {texte.setText("L'entree selectionnee est incorrecte ou n'a pas ete trouver dans la base de donnees ");}
 
 
         }
