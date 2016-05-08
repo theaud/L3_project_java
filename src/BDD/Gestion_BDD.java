@@ -127,35 +127,41 @@ public class Gestion_BDD extends util3.fichier {
         return Base_donner;
     }
 
-    public static JLabel affichage_Bdd(String chemin,int max)
+
+
+
+    public static String affichage_Bdd_entete(String chemin,int max)
     {
         LinkedList<String> annuaire=lectureFichier(chemin+"modele");
-        LinkedList<LinkedList<String>> CopieBdd=CopieBdd(chemin);
-
-
-        String tableau="<html><span style='font-size:20px'><table>";
-
-
+        String tableau="";
         tableau+="<tr>";
-            for(int j=0;j<annuaire.size() &&j<max;j++)
-            {
-                tableau+="<th>"+annuaire.get(j)+"</th>";
-            }
-        tableau+="</tr></span> <span style='font-size:20px'>";
+        for(int j=0;j<annuaire.size() &&j<max;j++)
+        {
+            tableau+="<th>"+annuaire.get(j)+"</th>";
+        }
+        tableau+="</tr>";
+        return tableau;
+    }
 
+
+    public static JLabel affichage_Bdd(String chemin,int max,LinkedList<String> contrainte)
+    {
+        LinkedList<LinkedList<String>> CopieBdd=CopieBdd(chemin);
+        String tableau="<html><table>";
+        tableau+=affichage_Bdd_entete(chemin, max);
 
         for(int i=0;i<CopieBdd.size() ;i++)
-        { tableau+="<tr>";
-            for(int j=0;j<CopieBdd.get(i).size()&&j<max;j++)
+        {
+            if(contrainte(CopieBdd.get(i) , contrainte))
             {
-                tableau+="<td>"+CopieBdd.get(i).get(j)+"</td>";
+                tableau+="<tr>";
+                for(int j=0;j<CopieBdd.get(i).size()&&j<max;j++)
+                    {tableau+="<td>"+CopieBdd.get(i).get(j)+"</td>"; }
+                tableau+="</tr>";
             }
-            tableau+="</tr>";
         }
 
-
         tableau+="</table><span></html>";
-
 
         JLabel returned= new JLabel(tableau);
         returned.setForeground(Color.RED);
@@ -165,9 +171,26 @@ public class Gestion_BDD extends util3.fichier {
 
 
 
+
+
+
     public static  void afficher(String chemin,int id)
     {Util3.afficher(lecture(chemin,id));
     }
+
+
+    public static  boolean contrainte(LinkedList<String> entrer ,LinkedList<String> contrainte)
+    {for(int j=0;j<entrer.size();j++) {
+        for (int i = 0; i < contrainte.size(); i++) {
+            if (entrer.get(j).equals(contrainte.get(i))) {
+                return true;
+            }
+        }
+    }
+        return false;
+    }
+
+
 
 
 //----------------------------------------------------------------------------------------------------------------------------------------------

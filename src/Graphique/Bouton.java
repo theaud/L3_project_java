@@ -23,7 +23,7 @@ public class Bouton extends JButton {
     public void setBouton(String text, ActionListener listener)    {setText(text); addActionListener(listener);}
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+/*
     public void paintComponent(Graphics g){
         Graphics2D g2d = (Graphics2D)g;
         GradientPaint gp = new GradientPaint(0, 0, Color.blue, 0, 20, Color.cyan, true);
@@ -31,7 +31,7 @@ public class Bouton extends JButton {
         g2d.fillRect(0, 0, this.getWidth(), this.getHeight());
         g2d.setColor(Color.white);
         g2d.drawString(getText(), this.getWidth() / 2 - (this.getWidth()/ 2 /4), (this.getHeight() / 2) + 5);
-    }
+    }*/
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static  Bouton[] Tableau_Bouton(int size)
     { Bouton[] Bouton     =new Bouton[size];

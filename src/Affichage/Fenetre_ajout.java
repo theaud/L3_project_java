@@ -4,13 +4,18 @@ import BDD.Gestion_BDD;
 import Graphique.Bouton;
 import Graphique.Ecran;
 import Graphique.Fenetre;
+import Graphique.Form;
 import Location.Emprunteur;
 
 
 import javax.swing.*;
+import javax.swing.event.CaretEvent;
+import javax.swing.event.CaretListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.LinkedList;
 
 public class Fenetre_ajout extends Ecran {
@@ -112,29 +117,134 @@ public class Fenetre_ajout extends Ecran {
             }
 
     private void afficher_devis(int Id)
-        {name="afficher_devis ";
+        {
             add(new JLabel("afficher_devis"),BorderLayout.NORTH);
 
         add(Gestion_BDD.afficher_Devis_console(Id));}
 
     private void afficher_vehicule(int Id)//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
-        {name="afficher_vehicule ";
+        {
         System.out.println("afficher_vehicule pas coder WARNING on envoie rien actuelment");
         split(2);
         add(Emprunteur.afficher_utilisateur_console(Id));
 
         }
     private void Catalogue()//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
-    {name="Cataloguue";
-        add(new JLabel("Cataloguue"),BorderLayout.NORTH);
+    {add(new JLabel("Cataloguue 22"),BorderLayout.NORTH);
 
         JPanel p1=new JPanel();
-        p1.setBackground(Color.cyan);
-        p1.add(Gestion_BDD.affichage_Bdd("./src/BDD/Devis/",6));//a changer de bdd quand elle sera faite
+        p1.setLayout(new BorderLayout());p1.setBackground(Color.cyan);
+
+
+        JPanel p2=new JPanel(); p2.setLayout( new GridLayout(5, 2));
+
+        JTextField recherche1=new JTextField();
+
+        JTextField recherche2=new JTextField();
+        p2.add(new JLabel("Barre de recherche"));   p2.add(new JLabel(""));
+        p2.add(new JLabel("filtre 1:"));       p2.add(recherche1);
+        p2.add(new JLabel("filtre 2:"));        p2.add(recherche2);
+        JLabel a=new JLabel("vide");        JLabel z=new JLabel("vide");
+        p2.add(a);        p2.add(z);
+
+        recherche1.addKeyListener(new KeyAdapter(){public void keyPressed(KeyEvent ke)
+            {if(!(ke.getKeyChar()==27||ke.getKeyChar()==65535))
+                {System.out.println("User is editing something in TextField:"+recherche1.getText());
+                a.setText(recherche1.getText());
+                    System.out.println("contrainte1 :|"+recherche1.getText()+"| contrainte2= |"+recherche2.getText()+"|");
+                }
+            }
+        });
+        recherche2.addKeyListener(new KeyAdapter(){public void keyPressed(KeyEvent ke)
+            {if(!(ke.getKeyChar()==27||ke.getKeyChar()==65535))
+                { System.out.println("User is editing something in TextField :"+recherche2.getText()+" ");
+                   z.setText(recherche1.getText());
+
+                    System.out.println("contrainte1 :|"+recherche1.getText()+"| contrainte2= |"+recherche2.getText()+"|");
+                }
+            }
+        });
+
+
+
+
+        p1.add(p2,BorderLayout.SOUTH);
+
+        LinkedList<String>contrainte=new LinkedList<String>();
+        System.out.println("contrainte1 :|"+recherche1.getText()+"| contrainte2= |"+recherche2.getText()+"|");
+        JLabel tableau;
+        contrainte.add(recherche1.getText());///§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+        contrainte.add(recherche2.getText());
+        contrainte.add("j");
+
+         tableau=Catalogue_voiture(contrainte);
+
+        p1.add(tableau,BorderLayout.NORTH);
+
+
         add(p1,BorderLayout.WEST);
-        add(new JLabel("Cataloguue"),BorderLayout.EAST);
-        add(new JLabel("Cataloguue"),BorderLayout.CENTER);
+
+        JPanel droite=new JPanel();
+        droite.setLayout(new GridLayout(8,1));
+        droite.add(new Bouton("Ajout véhicule", new Pression())); droite.add(new JLabel(""));
+        droite.add(new Bouton("Modifier un vehicule", new Pression()));droite.add(new JLabel(""));
+        droite.add(new Bouton("Louer un vehicule", new Pression()));droite.add(new JLabel(""));
+        droite.add(new Bouton("Supprimer un vehicule", new Pression()));droite.add(new JLabel(""));
+        add(droite,BorderLayout.CENTER);
+
     }
+
+    private void retour_vehicule()//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
+    { add(new JLabel("retour_vehicule"),BorderLayout.NORTH);
+
+
+
+    }
+
+
+
+    private JLabel Catalogue_voiture(LinkedList<String>contrainte)//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
+    { int max =12;
+        String chemin="./src/BDD/Vehicule/";
+
+        LinkedList<LinkedList<String>> CopieBdd=Gestion_BDD.CopieBdd(chemin);
+
+        String tableau="<html><table>";
+
+        tableau+=Gestion_BDD.affichage_Bdd_entete(chemin,12);
+
+
+
+
+
+        for(int i=0;i<CopieBdd.size() ;i++)
+        { System.out.println(Gestion_BDD.contrainte(CopieBdd.get(i) ,contrainte) +" "+(contrainte.size()==0));
+
+
+            if(Gestion_BDD.contrainte(CopieBdd.get(i) , contrainte)||contrainte.size()==0)
+            {System.out.println("Hello World!");
+                tableau+="<tr>";
+                for(int j=0;j<CopieBdd.get(i).size()&&j<max;j++)
+                    {if(j==112)
+                        {}
+                     else if(i==11)
+                        {}
+                    else
+                        {tableau+="<td>"+CopieBdd.get(i).get(j)+"</td>";}
+                    }
+                tableau+="</tr>";
+            }
+        }
+        tableau+="</table></html>";
+
+
+        JLabel returned= new JLabel(tableau);
+        returned.setForeground(Color.RED);
+        return returned;
+
+    }
+
+
 
 
     private void split(int i){GridLayout Layout=new GridLayout(i, 1);    Layout.setVgap(10);     setLayout(Layout);}
@@ -149,6 +259,38 @@ public class Fenetre_ajout extends Ecran {
 
 
 
+
+
+
+
+
+    public void keyPressed(KeyEvent e) {
+        // TODO Auto-generated method stub
+        if((e.getKeyCode()==KeyEvent.VK_ENTER))
+            System.out.println("vous avez apuyer sur entrer");
+    }
+
+
+
+    public void keyReleased(KeyEvent e) {        // TODO Auto-generated method stub
+    }
+
+    public void keyTyped(KeyEvent e) {        // TODO Auto-generated method stub
+    }
+
+
+    class Pression implements ActionListener {
+        public void actionPerformed(ActionEvent arg0)
+        {String press=arg0.getActionCommand();
+
+            if      (press.equals("Emprunteur ID"))      {setIsopen(4);}
+            else if(press.equals("Devis ID"))           {setIsopen(5);}
+            else if(press.equals("Vehicule ID"))        {setIsopen(6);}
+
+            else if(press.equals("Voir le Catalogue"))  {setIsopen(7);}
+        }
+    }
+
     class Validation implements ActionListener {
         public void actionPerformed(ActionEvent arg0) {
             boolean test=true;
@@ -157,17 +299,25 @@ public class Fenetre_ajout extends Ecran {
         //--------------------------------------------------------------------------------------------------------------
             if(test)
                 {
-                    LinkedList<String> text=add(form[0].getContain(),form[1].getContain(),form[2].getContain(),""+form[3].getContain().equals(""),""+0);
+                    LinkedList<String> text=new LinkedList<String>();
+
                     if(name=="Nouveau Emprunteur1")
                         {texte[0].setText("Nouveau Emprunteur cree");
+                            for(int i=0;i<4;i++){text.add(form[i].getContain());}
+
                             Gestion_BDD. ajout("./src/BDD/Emprunteur/",text);
                         }
                     else if(name=="Nouveau Devis1")
                         {texte[0].setText("Nouveau Devis cree");
+                            for(int i=0;i<5;i++){text.add(form[i].getContain());}
                             Gestion_BDD. ajout("./src/BDD/Devis/",text);
                         }
                     else
-                        {texte[0].setText("Nouveau Vehicule cree");
+                        {  texte[0].setText("Nouveau Vehicule cree");
+                            for(int i=0;i<9;i++){text.add(form[i].getContain());}
+                            text.add("0");
+                            text.add("0");
+
                             Gestion_BDD.ajout("./src/BDD/Vehicule/",text);
                         }
 
