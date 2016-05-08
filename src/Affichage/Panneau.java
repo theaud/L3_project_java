@@ -30,6 +30,9 @@ public class Panneau extends JFrame {
 
         this.setContentPane(Ecran_actif);
         setVisible(true);
+
+
+        gestion_fenetre();
     }
 
     public void changement_Ecran(Ecran nouveau_Ecran)
@@ -67,7 +70,7 @@ public class Panneau extends JFrame {
             if(Isopen!=0)
             {
 
-            if((4<=Isopen && Isopen<=6) || (8<=Isopen && Isopen<=10))
+            if((4<=Isopen && Isopen<=6) || (8<=Isopen && Isopen<=10) || Isopen==7)
                 {int type=Isopen;
 
                     changement_Ecran(new Fenetre_ajout(type,getEcran_menu().getIsopen()));
@@ -84,9 +87,7 @@ public class Panneau extends JFrame {
                             getEcran_actif().setIsopen(2);
                             retour_Menu();
                             break;
-                    case 7://---------------------Catalogue------------------------------------
 
-                            break;
                     default:
                             break;
                     }

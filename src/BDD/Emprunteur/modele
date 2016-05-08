@@ -1,9 +1,9 @@
-ID        int
-Nom       string
-Prenom    string
-Adresse   string
-Assurance boolean
-Nb_devis  int
+ID
+Nom
+Prenom
+Adresse
+Assurance
+Nb_devis
 1
 9
 5

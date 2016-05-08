@@ -6,6 +6,7 @@ import Graphique.Ecran;
 import Graphique.Fenetre;
 import Location.Emprunteur;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -20,19 +21,25 @@ public class Fenetre_ajout extends Ecran {
         name="Fenetre_ajout 1";
         setBackground(Color.pink);
 
+        if((4<=type && type <=6) ||type==7){setLayout(new BorderLayout());}
+                                     else{split(10);}
 
-        split(10);
         initialisation_formulaire(type,id);
-        add(Bouton_retour(new Bouton("Retour",new Retour())));
+
+        if((4<=type && type <=6) ||type==7)             {add(Bouton_retour(new Bouton("Retour",new Retour())),BorderLayout.SOUTH);}
+                                      else            { add(Bouton_retour(new Bouton("Retour",new Retour())));}
+
     }
 
 
     private JPanel Bouton_retour(Bouton b)
     {   Fenetre panneau=new Fenetre();
-        panneau.setLayout(new GridLayout(3, 3));
-        for(int i=0;i<4;i++){panneau.add(new Label(""));}
-        panneau.add(b);
-        for(int i=0;i<4;i++){panneau.add(new Label(""));}
+
+        panneau.setLayout(new BorderLayout());
+
+        panneau.add(b,BorderLayout.SOUTH);
+
+
         return panneau;
     }
 
@@ -42,6 +49,8 @@ public class Fenetre_ajout extends Ecran {
          case 4:name="afficher_emprunteur(id);";    afficher_emprunteur( id);   break;
          case 5:name="afficher_devis(id);";         afficher_devis(id);         break;
          case 6:name="afficher_vehicule(id);";      afficher_vehicule(id);      break;
+
+         case 7:name="Catalogue;";      Catalogue();      break;
 
          case 8:name="nouveau_Emprunteur()";     nouveau_Emprunteur();          break;
          case 9: name="nouveau_Devis 1";         nouveau_Devis();               break;
@@ -95,24 +104,37 @@ public class Fenetre_ajout extends Ecran {
 
     private void afficher_emprunteur(int Id)
             {name="afficher_emprunteur Emprunteur";
-                split(2);
-                add(Emprunteur.afficher_utilisateur_console(Id));}
+
+                add(new JLabel("afficher_emprunteur Emprunteur"),BorderLayout.NORTH);
+                add(Emprunteur.afficher_utilisateur_console(Id),BorderLayout.WEST);
+                add(new JLabel("Le reste a remplir"),BorderLayout.EAST);
+
+            }
 
     private void afficher_devis(int Id)
-        {name="afficher_devis ";split(2);
+        {name="afficher_devis ";
+            add(new JLabel("afficher_devis"),BorderLayout.NORTH);
+
         add(Gestion_BDD.afficher_Devis_console(Id));}
 
-    private void afficher_vehicule(int Id)
+    private void afficher_vehicule(int Id)//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
         {name="afficher_vehicule ";
         System.out.println("afficher_vehicule pas coder WARNING on envoie rien actuelment");
         split(2);
         add(Emprunteur.afficher_utilisateur_console(Id));
 
         }
+    private void Catalogue()//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
+    {name="Cataloguue";
+        add(new JLabel("Cataloguue"),BorderLayout.NORTH);
 
-
-
-
+        JPanel p1=new JPanel();
+        p1.setBackground(Color.cyan);
+        p1.add(Gestion_BDD.affichage_Bdd("./src/BDD/Devis/",6));//a changer de bdd quand elle sera faite
+        add(p1,BorderLayout.WEST);
+        add(new JLabel("Cataloguue"),BorderLayout.EAST);
+        add(new JLabel("Cataloguue"),BorderLayout.CENTER);
+    }
 
 
     private void split(int i){GridLayout Layout=new GridLayout(i, 1);    Layout.setVgap(10);     setLayout(Layout);}

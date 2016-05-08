@@ -1,8 +1,11 @@
 package Affichage;
 
 
+import BDD.Gestion_BDD;
 import Graphique.Bouton;
 import Graphique.Ecran;
+
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,6 +39,11 @@ public class Login extends Ecran {
         //ligne 3
         texte[1].setText("");
         add(texte[1]);
+
+
+
+
+
 
         //ligne 4
         add(new Bouton("Log in",new Validation()));

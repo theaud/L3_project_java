@@ -1,6 +1,5 @@
-
 import Affichage.Panneau;
-
+import Affichage.test1;
 
 public class Main {
 
@@ -8,9 +7,9 @@ public class Main {
        // System.out.println("Hello World!");
 
 
-        Panneau Panneau=new Panneau();
-        //boucle principale
-        Panneau.gestion_fenetre();
+        //on ouvre la fenetre principale
+    Panneau Panneau=new Panneau();
+
 
     }
 

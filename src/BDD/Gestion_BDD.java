@@ -5,6 +5,7 @@ import Location.Emprunteur;
 import util3.Util3;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -107,6 +108,62 @@ public class Gestion_BDD extends util3.fichier {
         {return lectureFichier(chemin+id);}
       return new LinkedList<String>();
     }
+
+
+    public static  LinkedList<LinkedList<String>> CopieBdd(String chemin)
+    {
+        LinkedList<LinkedList<String>> Base_donner=new LinkedList<LinkedList<String>>();
+
+
+        LinkedList<String> Annuaire=lectureFichier(chemin+"Annuaire");
+
+        for (int i=1;i<Annuaire.size();i++)
+        {
+
+            System.out.println(lecture( chemin, Integer.parseInt(Annuaire.get(i))));
+            Base_donner.add(lecture( chemin, Integer.parseInt(Annuaire.get(i))));
+        }
+
+        return Base_donner;
+    }
+
+    public static JLabel affichage_Bdd(String chemin,int max)
+    {
+        LinkedList<String> annuaire=lectureFichier(chemin+"modele");
+        LinkedList<LinkedList<String>> CopieBdd=CopieBdd(chemin);
+
+
+        String tableau="<html><span style='font-size:20px'><table>";
+
+
+        tableau+="<tr>";
+            for(int j=0;j<annuaire.size() &&j<max;j++)
+            {
+                tableau+="<th>"+annuaire.get(j)+"</th>";
+            }
+        tableau+="</tr></span> <span style='font-size:20px'>";
+
+
+        for(int i=0;i<CopieBdd.size() ;i++)
+        { tableau+="<tr>";
+            for(int j=0;j<CopieBdd.get(i).size()&&j<max;j++)
+            {
+                tableau+="<td>"+CopieBdd.get(i).get(j)+"</td>";
+            }
+            tableau+="</tr>";
+        }
+
+
+        tableau+="</table><span></html>";
+
+
+        JLabel returned= new JLabel(tableau);
+        returned.setForeground(Color.RED);
+        return returned;
+    }
+
+
+
 
     public static  void afficher(String chemin,int id)
     {Util3.afficher(lecture(chemin,id));
