@@ -10,8 +10,6 @@ public class Bouton extends JButton {
     public Bouton(String str){super(str);setPreferredSize(new Dimension(200,50)); }
     public Bouton(String str, ActionListener listener){super(str); addActionListener(listener); setPreferredSize(new Dimension(200,50));}
 
-
-
 //------------------------------------ set bouton  ----------------------------------------------------------------------------------------------------------------------------
     public void setBouton(String text, ActionListener listener,int height ,int weight)    {setBouton(text,listener,new Dimension(height,weight)); }
 

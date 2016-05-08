@@ -6,9 +6,6 @@ import Graphique.Lign;
 import javax.swing.*;
 import java.util.LinkedList;
 
-/**
- * Created by mathieu on 11/03/2016.
- */
 public class Emprunteur {
 
     private int Id=0;

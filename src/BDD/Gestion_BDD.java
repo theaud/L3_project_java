@@ -119,8 +119,6 @@ public class Gestion_BDD extends util3.fichier {
 
         for (int i=1;i<Annuaire.size();i++)
         {
-
-            System.out.println(lecture( chemin, Integer.parseInt(Annuaire.get(i))));
             Base_donner.add(lecture( chemin, Integer.parseInt(Annuaire.get(i))));
         }
 
@@ -160,19 +158,12 @@ public class Gestion_BDD extends util3.fichier {
                 tableau+="</tr>";
             }
         }
-
         tableau+="</table><span></html>";
 
         JLabel returned= new JLabel(tableau);
         returned.setForeground(Color.RED);
         return returned;
     }
-
-
-
-
-
-
 
     public static  void afficher(String chemin,int id)
     {Util3.afficher(lecture(chemin,id));
@@ -196,6 +187,10 @@ public class Gestion_BDD extends util3.fichier {
 //----------------------------------------------------------------------------------------------------------------------------------------------
 //---------------------------------    fonction a deplacer              ------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 

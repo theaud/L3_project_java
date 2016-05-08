@@ -90,20 +90,18 @@ class Pression implements ActionListener {
     else if(press.equals("Vehicule ID"))        {setIsopen(6);id=Integer.parseInt("0"+form[2].getContain());}
 
     else if(press.equals("Voir le Catalogue"))  {setIsopen(7);}
-    else if(press.equals("Retour Vehicule"))    {System.out.println("Retour Vehicule a ajouter");}
+    else if(press.equals("Retour Vehicule"))    {setIsopen(11);}
 
-    else if(press.equals("Nouveau Emprunteur")) {setIsopen(8);  System.out.println("Pression effectuer "+press);
-            }
-            else if(press.equals("Nouveau devis"))       {setIsopen(9);}
-            else if(press.equals("Nouveau Vehicule"))    {setIsopen(10);}
+    else if(press.equals("Nouveau Emprunteur")) {setIsopen(8);}
+    else if(press.equals("Nouveau devis"))       {setIsopen(9);}
+    else if(press.equals("Nouveau Vehicule"))    {setIsopen(10);}
 
-
-            else if(press.equals("Deconnection"))   {setIsopen(2);}
+     else if(press.equals("Deconnection"))   {setIsopen(2);}
         }
     }
     class Validation implements ActionListener {
         public void actionPerformed(ActionEvent arg0)
-        {System.out.println("\npression validation");
+        {
 
             String chemin="";
             int test=0;
@@ -111,7 +109,9 @@ class Pression implements ActionListener {
             if     (press.equals("Validation 0")) {chemin="./src/BDD/Emprunteur/";test=4;}
             else if(press.equals("Validation 1")) {chemin="./src/BDD/Devis/";     test=5;}
             else if(press.equals("Validation 2")) {chemin="./src/BDD/Vehicule/";  test=6;}
-            else {System.out.println("§§ WARNING §§ Erreur Menu validation :|"+press+"| "+press.equals("Validation 0"));return;}
+            else {JOptionPane jop = new JOptionPane();
+                jop.showMessageDialog(null, "§§ WARNING §§ Erreur Menu validation :|"+press+"| "+press.equals("Validation 0"), "Erreur", JOptionPane.ERROR_MESSAGE);
+                return;}
 
             int  id=Integer.parseInt("0"+form[test-4].getContain());
 

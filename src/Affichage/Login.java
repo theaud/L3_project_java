@@ -37,7 +37,7 @@ public class Login extends Ecran {
         add(form[1].getOnPanel());
 
         //ligne 3
-        texte[1].setText("");
+        texte[1].setText("(utilisateur ='u' et mdp='m'");
         add(texte[1]);
 
 
@@ -63,15 +63,15 @@ public class Login extends Ecran {
         /*
         if(Utilisateur.equals("u") && Mdp.equals("m"))
             {
-                System.out.println("Correct utilisateur , mdp");
+
                 isopen=1;
 
                 return true;
             }
         else
             {
-                texte[3].setText("Mauvais utilisateu/mdp");
-                System.out.println("Mauvais utilisateu/mdp");
+             JOptionPane jop1 = new JOptionPane();
+                jop1.showMessageDialog(null, "Mauvais utilisateu/mdp", "Information", JOptionPane.INFORMATION_MESSAGE);
                 return false;
             }
             */
@@ -79,7 +79,5 @@ public class Login extends Ecran {
 
     class Validation implements ActionListener {
         public void actionPerformed(ActionEvent arg0) {
-            if(Authentification_utilisateur(""+form[0].getContain(),""+form[1].getContain()))
-            {System.out.println("§§§§§§§§§§§§§§§§§§§§§§§§§§§§§-----connection faite ---------§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§");}}
-    }
+            if(Authentification_utilisateur(""+form[0].getContain(),""+form[1].getContain())) {}}}
 }

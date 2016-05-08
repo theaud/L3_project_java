@@ -38,12 +38,12 @@ public class Panneau extends JFrame {
     public void changement_Ecran(Ecran nouveau_Ecran)
     {   Ecran_actif=nouveau_Ecran;
         actualisation();
-        System.out.println("§§§ =>Changement_Ecran        "+Ecran_actif.getName());
+
     }
 
     public void retour_Menu()
     {   Ecran_actif=Ecran_menu; getEcran_actif().setIsopen(0);
-        System.out.println("§§§ =>retour_Menu       "+Ecran_actif.getName());
+
         actualisation();
     }
 
@@ -70,7 +70,7 @@ public class Panneau extends JFrame {
             if(Isopen!=0)
             {
 
-            if((4<=Isopen && Isopen<=6) || (8<=Isopen && Isopen<=10) || Isopen==7)
+            if((4<=Isopen && Isopen<=6) || (8<=Isopen && Isopen<=10) || Isopen==7 || (11<=Isopen && Isopen<=13))
                 {int type=Isopen;
 
                     changement_Ecran(new Fenetre_ajout(type,getEcran_menu().getIsopen()));

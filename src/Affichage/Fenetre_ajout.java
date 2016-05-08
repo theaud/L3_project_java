@@ -9,8 +9,6 @@ import Location.Emprunteur;
 
 
 import javax.swing.*;
-import javax.swing.event.CaretEvent;
-import javax.swing.event.CaretListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,13 +16,15 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.LinkedList;
 
+import static java.lang.Integer.parseInt;
+
 public class Fenetre_ajout extends Ecran {
 
 
 
     public Fenetre_ajout(int type,int id){
         name="Fenetre_ajout 1";
-        setBackground(Color.pink);
+        setBackground(Color.lightGray);
 
         if((4<=type && type <=6) ||type==7){setLayout(new BorderLayout());}
                                      else{split(10);}
@@ -59,7 +59,13 @@ public class Fenetre_ajout extends Ecran {
 
          case 8:name="nouveau_Emprunteur()";     nouveau_Emprunteur();          break;
          case 9: name="nouveau_Devis 1";         nouveau_Devis();               break;
-         case 10:name="nouveau_Vehicule()";      nouveau_Vehicule();            break;}
+         case 10:name="nouveau_Vehicule()";      nouveau_Vehicule();            break;
+
+         case 11:name="retour_vehicule()";     retour_vehicule();          break;
+         case 12: name="louer_vehicule";         louer_vehicule();               break;
+         case 13:name="supprimer_vehicule()";      supprimer_vehicule();            break;
+
+        }
     }
 
  private void nouveau_Emprunteur()
@@ -126,63 +132,17 @@ public class Fenetre_ajout extends Ecran {
         {
         System.out.println("afficher_vehicule pas coder WARNING on envoie rien actuelment");
         split(2);
-        add(Emprunteur.afficher_utilisateur_console(Id));
+        add(new JLabel("afficher_vehicule pas coder WARNING on envoie rien actuelment"));
 
         }
+
     private void Catalogue()//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
-    {add(new JLabel("Cataloguue 22"),BorderLayout.NORTH);
-
-        JPanel p1=new JPanel();
-        p1.setLayout(new BorderLayout());p1.setBackground(Color.cyan);
-
-
-        JPanel p2=new JPanel(); p2.setLayout( new GridLayout(5, 2));
-
-        JTextField recherche1=new JTextField();
-
-        JTextField recherche2=new JTextField();
-        p2.add(new JLabel("Barre de recherche"));   p2.add(new JLabel(""));
-        p2.add(new JLabel("filtre 1:"));       p2.add(recherche1);
-        p2.add(new JLabel("filtre 2:"));        p2.add(recherche2);
-        JLabel a=new JLabel("vide");        JLabel z=new JLabel("vide");
-        p2.add(a);        p2.add(z);
-
-        recherche1.addKeyListener(new KeyAdapter(){public void keyPressed(KeyEvent ke)
-            {if(!(ke.getKeyChar()==27||ke.getKeyChar()==65535))
-                {System.out.println("User is editing something in TextField:"+recherche1.getText());
-                a.setText(recherche1.getText());
-                    System.out.println("contrainte1 :|"+recherche1.getText()+"| contrainte2= |"+recherche2.getText()+"|");
-                }
-            }
-        });
-        recherche2.addKeyListener(new KeyAdapter(){public void keyPressed(KeyEvent ke)
-            {if(!(ke.getKeyChar()==27||ke.getKeyChar()==65535))
-                { System.out.println("User is editing something in TextField :"+recherche2.getText()+" ");
-                   z.setText(recherche1.getText());
-
-                    System.out.println("contrainte1 :|"+recherche1.getText()+"| contrainte2= |"+recherche2.getText()+"|");
-                }
-            }
-        });
+    {add(new JLabel("Catalogue"),BorderLayout.NORTH);
 
 
 
 
-        p1.add(p2,BorderLayout.SOUTH);
-
-        LinkedList<String>contrainte=new LinkedList<String>();
-        System.out.println("contrainte1 :|"+recherche1.getText()+"| contrainte2= |"+recherche2.getText()+"|");
-        JLabel tableau;
-        contrainte.add(recherche1.getText());///§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
-        contrainte.add(recherche2.getText());
-        contrainte.add("j");
-
-         tableau=Catalogue_voiture(contrainte);
-
-        p1.add(tableau,BorderLayout.NORTH);
-
-
-        add(p1,BorderLayout.WEST);
+        add(Catalogue_tableau(),BorderLayout.WEST);
 
         JPanel droite=new JPanel();
         droite.setLayout(new GridLayout(8,1));
@@ -193,15 +153,77 @@ public class Fenetre_ajout extends Ecran {
         add(droite,BorderLayout.CENTER);
 
     }
+    private JPanel Catalogue_tableau()
+    {  JLabel tableau;
+        JPanel p1=new JPanel();
+        LinkedList<String>contrainte=new LinkedList<String>();
+        p1.setLayout(new BorderLayout());p1.setBackground(Color.lightGray);
 
-    private void retour_vehicule()//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
-    { add(new JLabel("retour_vehicule"),BorderLayout.NORTH);
+
+        JPanel p2=new JPanel(); p2.setLayout( new GridLayout(5, 2));
+
+        JTextField[] recherche=new JTextField[2];
+        JLabel[] texte=new JLabel[2];
+
+        p2.add(new JLabel("barre de recherche"));       p2.add(new JLabel(""));
+
+        for(int i=0;i<2;i++)
+            {recherche[i]=new JTextField();
+             texte[i]=new JLabel();
+                recherche[i]=new JTextField();
+                texte[i].setText("vide");
+                if(!recherche[i].getText().equals("")){  contrainte.add(recherche[i].getText());}
+            }
+        for(int i=0;i<2;i++)
+            { p2.add(new JLabel("filtre "+i+":"));
+                p2.add(recherche[i]);
+            }
+        for(int i=0;i<2;i++)
+            {p2.add(texte[i]);}
 
 
+
+        recherche[0].addKeyListener(new KeyAdapter(){public void keyPressed(KeyEvent ke)
+        {if(!(ke.getKeyChar()==27||ke.getKeyChar()==65535))        {texte[0].setText(recherche[0].getText()); }}});
+
+        recherche[1].addKeyListener(new KeyAdapter(){public void keyPressed(KeyEvent ke)
+        {if(!(ke.getKeyChar()==27||ke.getKeyChar()==65535))        { texte[1].setText(recherche[1].getText());} }});
+
+        p1.add(p2,BorderLayout.SOUTH);
+
+
+
+        tableau=Catalogue_voiture(contrainte);
+
+        p1.add(tableau,BorderLayout.NORTH);
+        return p1;
 
     }
 
 
+
+
+    private void retour_vehicule()//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
+    { add(new JLabel("retour_vehicule"),BorderLayout.NORTH);
+        JOptionPane jop1 = new JOptionPane();
+        jop1.showMessageDialog(null, "Message informatif", "Information", JOptionPane.INFORMATION_MESSAGE);
+
+
+    }
+
+    private void louer_vehicule()//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
+    { add(new JLabel("louer_vehicule"),BorderLayout.NORTH);
+        JOptionPane jop1 = new JOptionPane();
+        jop1.showMessageDialog(null, "Message informatif", "Information", JOptionPane.INFORMATION_MESSAGE);
+
+    }
+
+    private void supprimer_vehicule()//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
+    { add(new JLabel("supprimer_vehicule"),BorderLayout.NORTH);
+        JOptionPane jop1 = new JOptionPane();
+        jop1.showMessageDialog(null, "Vous avez supprimer un vehicule", "Information", JOptionPane.INFORMATION_MESSAGE);
+
+    }
 
     private JLabel Catalogue_voiture(LinkedList<String>contrainte)//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
     { int max =12;
@@ -218,13 +240,10 @@ public class Fenetre_ajout extends Ecran {
 
 
         for(int i=0;i<CopieBdd.size() ;i++)
-        { System.out.println(Gestion_BDD.contrainte(CopieBdd.get(i) ,contrainte) +" "+(contrainte.size()==0));
-
-
-            if(Gestion_BDD.contrainte(CopieBdd.get(i) , contrainte)||contrainte.size()==0)
+        {  if(Gestion_BDD.contrainte(CopieBdd.get(i) , contrainte)||contrainte.size()==0)
             {System.out.println("Hello World!");
                 tableau+="<tr>";
-                for(int j=0;j<CopieBdd.get(i).size()&&j<max;j++)
+                for(int j=0;j<CopieBdd.get(i).size()&&j<max;j++)// a faire le cas par cas
                     {if(j==112)
                         {}
                      else if(i==11)
@@ -239,7 +258,7 @@ public class Fenetre_ajout extends Ecran {
 
 
         JLabel returned= new JLabel(tableau);
-        returned.setForeground(Color.RED);
+
         return returned;
 
     }
@@ -261,45 +280,32 @@ public class Fenetre_ajout extends Ecran {
 
 
 
-
-
-
-    public void keyPressed(KeyEvent e) {
-        // TODO Auto-generated method stub
-        if((e.getKeyCode()==KeyEvent.VK_ENTER))
-            System.out.println("vous avez apuyer sur entrer");
-    }
-
-
-
-    public void keyReleased(KeyEvent e) {        // TODO Auto-generated method stub
-    }
-
-    public void keyTyped(KeyEvent e) {        // TODO Auto-generated method stub
-    }
-
-
     class Pression implements ActionListener {
         public void actionPerformed(ActionEvent arg0)
         {String press=arg0.getActionCommand();
 
-            if      (press.equals("Emprunteur ID"))      {setIsopen(4);}
-            else if(press.equals("Devis ID"))           {setIsopen(5);}
-            else if(press.equals("Vehicule ID"))        {setIsopen(6);}
+            if      (press.equals("Ajout véhicule"))      {setIsopen(10);}
+            else if(press.equals("Modifier un vehicule"))  {setIsopen(10);}
+            else if(press.equals("Louer un vehicule"))     {setIsopen(9);}
 
-            else if(press.equals("Voir le Catalogue"))  {setIsopen(7);}
+            else if(press.equals("Supprimer un vehicule"))  {setIsopen(7);}
         }
     }
+
+
+
 
     class Validation implements ActionListener {
         public void actionPerformed(ActionEvent arg0) {
             boolean test=true;
-
+            JOptionPane jop1 = new JOptionPane();
             for(int i=0;i<3;i++) { if(form[i].getContain().equals("")) {test=false;}}
         //--------------------------------------------------------------------------------------------------------------
+
+            LinkedList<String> text=new LinkedList<String>();
+
             if(test)
                 {
-                    LinkedList<String> text=new LinkedList<String>();
 
                     if(name=="Nouveau Emprunteur1")
                         {texte[0].setText("Nouveau Emprunteur cree");
@@ -309,8 +315,23 @@ public class Fenetre_ajout extends Ecran {
                         }
                     else if(name=="Nouveau Devis1")
                         {texte[0].setText("Nouveau Devis cree");
-                            for(int i=0;i<5;i++){text.add(form[i].getContain());}
-                            Gestion_BDD. ajout("./src/BDD/Devis/",text);
+                            if(Gestion_BDD.existe("./src/BDD/Emprunteur/",Integer.parseInt("0"+form[0].getContain()))
+                                    &&Gestion_BDD.existe("./src/BDD/Vehicule/",Integer.parseInt("0"+form[1].getContain())))
+                            {
+                                if(vehicule_disponible(Integer.parseInt("0"+form[1].getContain())))
+                                {for(int i=0;i<5;i++){text.add(form[i].getContain());}
+                                    Gestion_BDD. ajout("./src/BDD/Devis/",text);
+                                }
+                                else
+                                { jop1.showMessageDialog(null, "Il n'y a plus assez de vehicule disponible", "Information", JOptionPane.INFORMATION_MESSAGE);}
+                            }
+                            else
+                            {
+                             if(Gestion_BDD.existe("./src/BDD/Emprunteur/",Integer.parseInt("0"+form[0].getContain())))
+                                { jop1.showMessageDialog(null, "Le vehicule demander n'existe pas", "Information", JOptionPane.INFORMATION_MESSAGE);}
+                                 else
+                                { jop1.showMessageDialog(null, "L'emprunteur demander n'existe pas", "Information", JOptionPane.INFORMATION_MESSAGE);}
+                            }
                         }
                     else
                         {  texte[0].setText("Nouveau Vehicule cree");
@@ -327,7 +348,17 @@ public class Fenetre_ajout extends Ecran {
 
         }
     }
+    public static boolean vehicule_disponible(int id)
+    {
+        LinkedList<String> texte=Gestion_BDD.lecture("./src/BDD/Vehicule/",id);
+        if((Integer.parseInt("0"+texte.get(10))-Integer.parseInt("0"+texte.get(11)))>0)
+        {
+            texte.set(11,""+(parseInt(texte.get(11))+1));
 
+            return true;
+        }
+        return false;
+    }
 
     class Retour implements ActionListener {
         public void actionPerformed(ActionEvent arg0)
