@@ -17,30 +17,29 @@ public class Menu extends Ecran {
     public  Menu()
     {//----------------------------Creation de la fenetre global ---------------------------------------------------------
         name="Menu initialiser";
-        setBackground(Color.green);
 
-        //---------------------
         initialiser(4,0);
 
-        setBackground(Color.red);
+
         setLayout(new BorderLayout());
 
 
 
 
         //haut ------------------------------------------------------------------v
-        add(new JLabel("Menu"),BorderLayout.NORTH);
+        add(Fenetre_ajout.titre("Menu",true),BorderLayout.NORTH);
 
 
 
         //gauche -----------------------------------------------------------------------------
         Ecran centre=new Ecran();
+
         centre.setLayout( new GridLayout(1,2));
         add(centre,BorderLayout.CENTER);
 
         Ecran gauche=new Ecran();
         gauche.setLayout( new GridLayout(6,1));
-            gauche.add(new JLabel("Recherche"));
+            gauche.add(Fenetre_ajout.titre("Recherche",false));
 
             form[0].setTexteString("Emprunteur ID");
             form[0].addBouton(new Bouton("Validation 0", new Validation()));
@@ -63,7 +62,7 @@ public class Menu extends Ecran {
         //droite ---------------------------------------------------------------------------------------------------
         Ecran droite=new Ecran();
          droite.setLayout( new GridLayout(4,1));
-            droite.add(new JLabel("Nouveau"));
+            droite.add(Fenetre_ajout.titre("Nouveau",false));
 
             droite.add(new Bouton("Nouveau Emprunteur", new Pression()));
             droite.add(new Bouton("Nouveau devis", new Pression()));
@@ -85,7 +84,7 @@ public class Menu extends Ecran {
 class Pression implements ActionListener {
     public void actionPerformed(ActionEvent arg0)
     {String press=arg0.getActionCommand();
-    if      (press.equals("Emprunteur ID"))      {setIsopen(4);id=Integer.parseInt("0"+form[0].getContain());}
+    if      (press.equals("Emprunteur ID"))     {setIsopen(4);id=Integer.parseInt("0"+form[0].getContain());}
     else if(press.equals("Devis ID"))           {setIsopen(5);id=Integer.parseInt("0"+form[1].getContain());}
     else if(press.equals("Vehicule ID"))        {setIsopen(6);id=Integer.parseInt("0"+form[2].getContain());}
 
@@ -117,8 +116,8 @@ class Pression implements ActionListener {
 
 
             if(test!=0  && Gestion_BDD.existe( chemin, id) )
-            {   texte.setText("22");
-                 Gestion_BDD.afficher(chemin,Integer.parseInt( form[test-4].getContain()));
+            {
+                Gestion_BDD.afficher(chemin,Integer.parseInt( form[test-4].getContain()));
 
                 setIsopen(test);
             }

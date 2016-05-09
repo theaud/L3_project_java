@@ -22,31 +22,32 @@ public class Login extends Ecran {
 
 
     private void Login_initialisation()
-    {setLayout(new GridLayout(10, 0));
+    {setLayout(new BorderLayout());
 
-        //ligne 0
-        texte[0].setText("Authentification");
-        add(texte[0]);
 
+
+        add(Fenetre_ajout.titre("Authentification",true),BorderLayout.NORTH);
         //ligne 1
+
+        JPanel centre=new JPanel();
+        centre.setLayout(new GridLayout(3,1));
         form[0].setTexteString("Utilisateur");
-        add(form[0].getOnPanel());
+        centre.add(form[0].getOnPanel());
 
         //ligne 0
         form[1].setTexteString("Mot de passe");
-        add(form[1].getOnPanel());
+        centre.add(form[1].getOnPanel());
 
         //ligne 3
-        texte[1].setText("(utilisateur ='u' et mdp='m'");
-        add(texte[1]);
+        centre.add(new JLabel("<html><p>utilisateur ='u' <br> mdp='m'<p><html>"));
 
-
+        add(centre,BorderLayout.CENTER);
 
 
 
 
         //ligne 4
-        add(new Bouton("Log in",new Validation()));
+        add(new Bouton("Log in",new Validation()),BorderLayout.SOUTH);
 
     }
 
@@ -55,7 +56,7 @@ public class Login extends Ecran {
     //------------------------------------------------------------------------------------------------------------
     //------------------------------------------------------------------------------------------------------------
     public  boolean Authentification_utilisateur(String Utilisateur,String Mdp)
-    {System.out.println("-------------Test d'Authentification a faire return true actuelment------------- ");
+    {
     //on contourne pour pas remettrele mdp
 
         isopen=3;

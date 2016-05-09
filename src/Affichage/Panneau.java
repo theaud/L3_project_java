@@ -29,6 +29,8 @@ public class Panneau extends JFrame {
         changement_Ecran(new Login());//on se place a la connection sur la page login
 
         this.setContentPane(Ecran_actif);
+
+
         setVisible(true);
 
 
@@ -43,7 +45,6 @@ public class Panneau extends JFrame {
 
     public void retour_Menu()
     {   Ecran_actif=Ecran_menu; getEcran_actif().setIsopen(0);
-
         actualisation();
     }
 
@@ -62,18 +63,15 @@ public class Panneau extends JFrame {
     public void gestion_fenetre()
     {//on reste dans la boucle en permanence , on peut tout de meme quitter le programme par la croix rouge
        int Isopen;
-
+        int Id=Ecran_menu.id;
+        System.out.println("rendu id="+Id);
         while(true)
-        {
-            Isopen=getEcran_actif().getIsopen();
-
+        {Isopen=getEcran_actif().getIsopen();
             if(Isopen!=0)
-            {
-
-            if((4<=Isopen && Isopen<=6) || (8<=Isopen && Isopen<=10) || Isopen==7 || (11<=Isopen && Isopen<=13))
+            {if((4<=Isopen && Isopen<=6) || (8<=Isopen && Isopen<=10) || Isopen==7 || (11<=Isopen && Isopen<=13))
                 {int type=Isopen;
 
-                    changement_Ecran(new Fenetre_ajout(type,getEcran_menu().getIsopen()));
+                 changement_Ecran(new Fenetre_ajout(type,Id));
                 stopIsopen();}
             else
                 {switch (Isopen)

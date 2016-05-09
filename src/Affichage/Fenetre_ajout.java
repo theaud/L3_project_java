@@ -24,7 +24,7 @@ public class Fenetre_ajout extends Ecran {
 
     public Fenetre_ajout(int type,int id){
         name="Fenetre_ajout 1";
-        setBackground(Color.lightGray);
+
 
         if((4<=type && type <=6) ||type==7){setLayout(new BorderLayout());}
                                      else{split(10);}
@@ -51,7 +51,7 @@ public class Fenetre_ajout extends Ecran {
     private void initialisation_formulaire(int type,int id)
     {
         switch (type) {
-         case 4:name="afficher_emprunteur(id);";    afficher_emprunteur( id);   break;
+         case 4:name="afficher_emprunteur(id);";    afficher_emprunteur(id);   break;
          case 5:name="afficher_devis(id);";         afficher_devis(id);         break;
          case 6:name="afficher_vehicule(id);";      afficher_vehicule(id);      break;
 
@@ -69,78 +69,56 @@ public class Fenetre_ajout extends Ecran {
     }
 
  private void nouveau_Emprunteur()
- {name="Nouveau Emprunteur1";
-     initialiser(5,1);split(7);
-
+ {name="Nouveau Emprunteur";
+     initialiser(5,0);split(7);
+    add(titre("Nouveau Emprunteur",true));
      form[0].setTexteString("Nom");         add(form[0]);
      form[1].setTexteString("Prenom");      add(form[1]);
      form[2].setTexteString("Adresse");     add(form[2]);
      form[3].setTexteString("Assurance");   add(form[3]);// =>  JCheckBox premier = new JCheckBox("Nom check box");
-     texte[0].setText("");     add(texte[0]);
 
-     add(new Bouton("Validation",new Validation()));
+
+     add(new Bouton("Validation",new Emprunteur()));
  }
 
     private void nouveau_Devis()
-    {name="Nouveau Devis1";      initialiser(5,1);
-    split(8);
+    {name="Nouveau Devis";      initialiser(5,0);
+    split(8);add(titre("Nouveau Devis",true));
 
         form[0].setTexteString("Id_emprunteur");    add(form[0]);
         form[1].setTexteString("Id_vehicule");      add(form[1]);
         form[2].setTexteString("Date_debut");       add(form[2]);
         form[3].setTexteString("Date_fin");         add(form[3]);// =>  JCheckBox premier = new JCheckBox("Nom check box");
         form[4].setTexteString("Tarif");            add(form[4]);
-        texte[0].setText("");                       add(texte[0]);
 
-        add(new Bouton("Validation",new Validation()));
+
+        add(new Bouton("Validation",new Devis()));
     }
 
     private void nouveau_Vehicule()
-    {name="Nouveau Vehicule1";initialiser(9,1);
+    {name="Nouveau Vehicule";initialiser(9,0);
         split(12);
+        add(titre("Nouveau Vehicule",true));
+        form[0].setTexteString("Marque");          add(form[0]);
+        form[1].setTexteString("Modèle");          add(form[1]);
+        form[2].setTexteString("Constructeur");    add(form[2]);
+        form[3].setTexteString("Couleur");         add(form[3]);
+        form[4].setTexteString("Kilomètrage");     add(form[4]);
+        form[5].setTexteString("Moto ou Voiture"); add(form[5]);
+        form[6].setTexteString("Luxe ou Standard");add(form[6]);
+        form[7].setTexteString("Tarif");           add(form[7]);
 
-        form[0].setTexteString("Nom");             add(form[0]);
-        form[1].setTexteString("Marque");          add(form[1]);
-        form[2].setTexteString("Modèle");          add(form[2]);
-        form[3].setTexteString("Constructeur");    add(form[3]);
-        form[4].setTexteString("Couleur");         add(form[4]);
-        form[5].setTexteString("Kilomètrage");     add(form[5]);
-        form[6].setTexteString("Moto ou Voiture"); add(form[6]);
-        form[7].setTexteString("Luxe ou Standard");add(form[7]);
-        form[8].setTexteString("Tarif");           add(form[8]);
-        texte[0].setText("");     add(texte[0]);
 
-        add(new Bouton("Validation",new Validation()));
+        add(new Bouton("Validation",new Vehicule()));
     }
 
-    private void afficher_emprunteur(int Id)
-            {name="afficher_emprunteur Emprunteur";
+    private void afficher_emprunteur(int Id) { System.out.println("= "+Id);
+       add(Gestion_BDD.afficher_Emprunteur(Id));}
+    private void afficher_devis(int Id)      { System.out.println("= "+Id);add(Gestion_BDD.afficher_Devis(Id));    }
+    private void afficher_vehicule(int Id)   { System.out.println("= "+Id);add(Gestion_BDD.afficher_Vehicule(Id)); }
 
-                add(new JLabel("afficher_emprunteur Emprunteur"),BorderLayout.NORTH);
-                add(Emprunteur.afficher_utilisateur_console(Id),BorderLayout.WEST);
-                add(new JLabel("Le reste a remplir"),BorderLayout.EAST);
-
-            }
-
-    private void afficher_devis(int Id)
-        {
-            add(new JLabel("afficher_devis"),BorderLayout.NORTH);
-
-        add(Gestion_BDD.afficher_Devis_console(Id));}
-
-    private void afficher_vehicule(int Id)//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
-        {
-        System.out.println("afficher_vehicule pas coder WARNING on envoie rien actuelment");
-        split(2);
-        add(new JLabel("afficher_vehicule pas coder WARNING on envoie rien actuelment"));
-
-        }
-
-    private void Catalogue()//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
-    {add(new JLabel("Catalogue"),BorderLayout.NORTH);
-
-
-
+    private void Catalogue()
+    {add(titre("Catalogue",true),BorderLayout.NORTH);
 
         add(Catalogue_tableau(),BorderLayout.WEST);
 
@@ -157,7 +135,7 @@ public class Fenetre_ajout extends Ecran {
     {  JLabel tableau;
         JPanel p1=new JPanel();
         LinkedList<String>contrainte=new LinkedList<String>();
-        p1.setLayout(new BorderLayout());p1.setBackground(Color.lightGray);
+        p1.setLayout(new BorderLayout());
 
 
         JPanel p2=new JPanel(); p2.setLayout( new GridLayout(5, 2));
@@ -200,11 +178,9 @@ public class Fenetre_ajout extends Ecran {
 
     }
 
+    private void retour_vehicule()
+    { add(titre("retour_vehicule",true),BorderLayout.NORTH);
 
-
-
-    private void retour_vehicule()//§§§§§§§§§§§§§§§§§§§§§§§§§§ pas fait
-    { add(new JLabel("retour_vehicule"),BorderLayout.NORTH);
         JOptionPane jop1 = new JOptionPane();
         jop1.showMessageDialog(null, "Message informatif", "Information", JOptionPane.INFORMATION_MESSAGE);
 
@@ -233,7 +209,7 @@ public class Fenetre_ajout extends Ecran {
 
         String tableau="<html><table>";
 
-        tableau+=Gestion_BDD.affichage_Bdd_entete(chemin,12);
+        tableau+=Gestion_BDD.affichage_Bdd_entete(chemin,11);
 
 
 
@@ -241,7 +217,7 @@ public class Fenetre_ajout extends Ecran {
 
         for(int i=0;i<CopieBdd.size() ;i++)
         {  if(Gestion_BDD.contrainte(CopieBdd.get(i) , contrainte)||contrainte.size()==0)
-            {System.out.println("Hello World!");
+            {
                 tableau+="<tr>";
                 for(int j=0;j<CopieBdd.get(i).size()&&j<max;j++)// a faire le cas par cas
                     {if(j==112)
@@ -263,7 +239,27 @@ public class Fenetre_ajout extends Ecran {
 
     }
 
+    public static JPanel titre(String titre,boolean color)
+    {
+        JPanel returned=new JPanel();
+        JLabel texte=new JLabel("<html><h1>"+titre+"</h1><html>");
 
+        if(color){returned.setBackground(Color.lightGray);}
+        returned.setLayout(new BorderLayout());
+
+
+        returned.setLayout(new GridLayout(1,4));
+        for(int i=0;i<2;i++)        {returned.add(new JLabel(""));}
+        returned.add(texte);
+        for(int i=0;i<1;i++)        {returned.add(new JLabel(""));}
+
+
+
+
+
+
+        return returned;
+    }
 
 
     private void split(int i){GridLayout Layout=new GridLayout(i, 1);    Layout.setVgap(10);     setLayout(Layout);}
@@ -293,67 +289,130 @@ public class Fenetre_ajout extends Ecran {
     }
 
 
+    class Emprunteur implements ActionListener {
 
-
-    class Validation implements ActionListener {
         public void actionPerformed(ActionEvent arg0) {
+            JOptionPane jop = new JOptionPane();
             boolean test=true;
-            JOptionPane jop1 = new JOptionPane();
-            for(int i=0;i<3;i++) { if(form[i].getContain().equals("")) {test=false;}}
-        //--------------------------------------------------------------------------------------------------------------
-
-            LinkedList<String> text=new LinkedList<String>();
-
-            if(test)
+            LinkedList<String> text = new LinkedList<String>();
+            for (int i = 0; i < 3; i++) {
+                if (form[i].getContain().equals("")) {
+                    test = false;
+                } else
                 {
-
-                    if(name=="Nouveau Emprunteur1")
-                        {texte[0].setText("Nouveau Emprunteur cree");
-                            for(int i=0;i<4;i++){text.add(form[i].getContain());}
-
-                            Gestion_BDD. ajout("./src/BDD/Emprunteur/",text);
-                        }
-                    else if(name=="Nouveau Devis1")
-                        {texte[0].setText("Nouveau Devis cree");
-                            if(Gestion_BDD.existe("./src/BDD/Emprunteur/",Integer.parseInt("0"+form[0].getContain()))
-                                    &&Gestion_BDD.existe("./src/BDD/Vehicule/",Integer.parseInt("0"+form[1].getContain())))
-                            {
-                                if(vehicule_disponible(Integer.parseInt("0"+form[1].getContain())))
-                                {for(int i=0;i<5;i++){text.add(form[i].getContain());}
-                                    Gestion_BDD. ajout("./src/BDD/Devis/",text);
-                                }
-                                else
-                                { jop1.showMessageDialog(null, "Il n'y a plus assez de vehicule disponible", "Information", JOptionPane.INFORMATION_MESSAGE);}
-                            }
-                            else
-                            {
-                             if(Gestion_BDD.existe("./src/BDD/Emprunteur/",Integer.parseInt("0"+form[0].getContain())))
-                                { jop1.showMessageDialog(null, "Le vehicule demander n'existe pas", "Information", JOptionPane.INFORMATION_MESSAGE);}
-                                 else
-                                { jop1.showMessageDialog(null, "L'emprunteur demander n'existe pas", "Information", JOptionPane.INFORMATION_MESSAGE);}
-                            }
-                        }
-                    else
-                        {  texte[0].setText("Nouveau Vehicule cree");
-                            for(int i=0;i<9;i++){text.add(form[i].getContain());}
-                            text.add("0");
-                            text.add("0");
-
-                            Gestion_BDD.ajout("./src/BDD/Vehicule/",text);
-                        }
-
+                    text.add(form[i].getContain());
                 }
-            else
-                {texte[0].setText("(erreur) pas tous les champ remplie");}
+            }
+            if (form[4].getContain().equals(""))            {text.add("false");}
+            else{text.add("true");}
 
+
+//------------------------------------------------------------------------------------------------------
+                if (test) {
+
+
+                        text.add("0");
+                        Gestion_BDD.ajout("./src/BDD/Emprunteur/", text);
+                    jop.showMessageDialog(null, "Nouveau Emprunteur cree id:"+Gestion_BDD.getIdLast("./src/BDD/Emprunteur/"), "information", JOptionPane.INFORMATION_MESSAGE);
+
+// --------------------------------------------------------------------------------------------------------------------------------------
+                } else {
+                    jop.showMessageDialog(null, "(erreur) pas tous les champ remplie", "Erreur", JOptionPane.ERROR_MESSAGE);
+                }
         }
     }
-    public static boolean vehicule_disponible(int id)
-    {
-        LinkedList<String> texte=Gestion_BDD.lecture("./src/BDD/Vehicule/",id);
-        if((Integer.parseInt("0"+texte.get(10))-Integer.parseInt("0"+texte.get(11)))>0)
-        {
-            texte.set(11,""+(parseInt(texte.get(11))+1));
+
+    class Devis implements ActionListener {
+
+        public void actionPerformed(ActionEvent arg0) {
+            JOptionPane jop = new JOptionPane();
+            boolean test=true;
+            LinkedList<String> text = new LinkedList<String>();
+            for (int i = 0; i < 5; i++) {
+                if (form[i].getContain().equals("")) {
+                    test = false;
+                }
+            }
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
+                if (test)
+                    {
+                            if (Gestion_BDD.existe("./src/BDD/Emprunteur/", Integer.parseInt("0" + form[0].getContain())) && Gestion_BDD.existe("./src/BDD/Vehicule/", Integer.parseInt("0" + form[1].getContain())))
+                            {if (vehicule_disponible(Integer.parseInt("0" + form[1].getContain())))
+                                { for (int i = 0; i < 5; i++)
+                                    {text.add(form[i].getContain());}
+                                    Gestion_BDD.ajout("./src/BDD/Devis/", text);
+                                    jop.showMessageDialog(null, "Le nouveau utilisateur a ete ajouter son id est:"+Gestion_BDD.getIdLast("./src/BDD/Devis/"), "Information", JOptionPane.INFORMATION_MESSAGE);
+                                }
+                            else
+                                { jop.showMessageDialog(null, "Il n'y a plus assez de vehicule disponible", "Information", JOptionPane.INFORMATION_MESSAGE);}
+                            }
+                   }
+                else
+                    {jop.showMessageDialog(null, "(erreur) pas tous les champ remplie", "Erreur", JOptionPane.ERROR_MESSAGE);}
+
+        }
+
+
+
+
+
+    }  class Vehicule implements ActionListener {
+
+        private LinkedList<String> entrer()
+        {  LinkedList<String> text = new LinkedList<String>();
+            boolean test=true;
+
+            for (int i = 0; i < 5; i++)
+                {if (form[i].getContain().equals(""))
+                     {test = false; }
+                 else
+                    {text.add(form[i].getContain());}
+                 }
+
+            for (int i = 5; i < 7; i++)
+            {if(form[i].getContain().equals("")){text.add("false");}
+            else{text.add("true"); }
+            }
+
+            if (form[7].getContain().equals("")) {test = false;}
+            else {text.add(form[7].getContain());}
+
+            if(test)
+                {return text;}
+            else
+             { return new LinkedList<String>(); }
+        }
+
+
+
+
+
+        public void actionPerformed(ActionEvent arg0) {
+            JOptionPane jop = new JOptionPane();
+
+            LinkedList<String> text=entrer();
+ //---------------------------------------------------------------------------------------------------------------------
+            if (text.size()>0) //ajout de ce vehicule a la flotte
+            {   text.add("1");
+                text.add("0");
+                Gestion_BDD.ajout("./src/BDD/Vehicule/", text);
+                jop.showMessageDialog(null, "Le vehicule a ete ajouter a la flotte son id est:"+Gestion_BDD.getIdLast("./src/BDD/Vehicule/"), "Information", JOptionPane.INFORMATION_MESSAGE);
+            }
+            else
+                {jop.showMessageDialog(null, "(erreur) pas tous les champ remplie", "Erreur", JOptionPane.ERROR_MESSAGE);}
+        }
+    }
+
+
+    public static boolean vehicule_disponible(int id) {
+        LinkedList<String> texte = Gestion_BDD.lecture("./src/BDD/Vehicule/", id);
+
+
+        for (int i=0;i<texte.size();i++){ System.out.println(i+" "+ texte.get(i));}
+
+
+        if ((Integer.parseInt("0" + texte.get(9)) - Integer.parseInt("0" + texte.get(10))) > 0) {
+            texte.set(10, "" + (parseInt(texte.get(10)) + 1));
 
             return true;
         }
@@ -361,8 +420,10 @@ public class Fenetre_ajout extends Ecran {
     }
 
     class Retour implements ActionListener {
-        public void actionPerformed(ActionEvent arg0)
-        {setIsopen(3);}  }
+            public void actionPerformed(ActionEvent arg0) {
+                setIsopen(3);
+            }
+        }
+    }
 
 
-}

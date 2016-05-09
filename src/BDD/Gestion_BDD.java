@@ -31,6 +31,12 @@ public class Gestion_BDD extends util3.fichier {
       return Id_nouveau;
   }
 
+    public static int getIdLast(String chemin)
+    {
+        LinkedList<String> listLign=lectureFichier(chemin+"Annuaire");
+        return parseInt(listLign.getLast());
+    }
+
     public static void clear_bdd(String chemin)
     {
         LinkedList<String> texte=lectureFichier(chemin+"Annuaire");
@@ -104,8 +110,9 @@ public class Gestion_BDD extends util3.fichier {
 
 
     public static  LinkedList<String> lecture(String chemin,int id)
-    {  if(id>=0 && existe( chemin, id))
+    {  if(id>=0 && existe(chemin, id))
         {return lectureFichier(chemin+id);}
+
       return new LinkedList<String>();
     }
 
@@ -189,13 +196,47 @@ public class Gestion_BDD extends util3.fichier {
 //----------------------------------------------------------------------------------------------------------------------------------------------
 
 
+    public static JLabel afficher_Vehicule(int id)
+    {String chemin="./src/BDD/Vehicule/";
+        LinkedList<String> texte=lecture(chemin,id);
+        LinkedList<String> texte_ajout=new LinkedList<String>();
+        texte_ajout.add("--------------------------------------------------");
+        texte_ajout.add("Id :"+texte.get(0));
+        texte_ajout.add("Marque :"+texte.get(1));
+        texte_ajout.add("Modèle :"+texte.get(2));
+        texte_ajout.add("Constructeur :"+texte.get(3));
+        texte_ajout.add("Couleur :"+texte.get(4));
 
+        texte_ajout.add("Kilomètrage :" +texte.get(5));
+        texte_ajout.add("moto ou voiture :"+texte.get(6));
+        texte_ajout.add("de luxe ?:"+texte.get(7));
+        texte_ajout.add("Tarif :"+texte.get(8));
+        texte_ajout.add("Nombre de vehicule :"+texte.get(9));
 
+        texte_ajout.add("Nombre de véhicule loué :"+texte.get(10));
+        texte_ajout.add("--------------------------------------------------");
+        return Lign.mise_en_forme_ligne_jpanel(texte_ajout);
+    }
 
+    public static JLabel afficher_Emprunteur(int id)
+    {String chemin="./src/BDD/Emprunteur/";
+        LinkedList<String> texte=lecture(chemin,id);
 
+        LinkedList<String> texte_ajout=new LinkedList<String>();
 
+        texte_ajout.add("--------------------------------------------------");
+        texte_ajout.add("Fiche emprunteur");
+        texte_ajout.add("Id de l'utilisateur :"+texte.get(0));
+        texte_ajout.add("Nom  :"+texte.get(1));
+        texte_ajout.add("Prenom :"+texte.get(2));
+        texte_ajout.add("Adresse :"+texte.get(3));
+        texte_ajout.add("A souscrit à l'assurance :"+texte.get(4));
+        texte_ajout.add("Nombre de contract en cour  :"+texte.get(5));
+        texte_ajout.add("--------------------------------------------------");
+        return Lign.mise_en_forme_ligne_jpanel(texte_ajout);
+    }
 
-    public static JLabel afficher_Devis_console(int id)
+    public static JLabel afficher_Devis(int id)
     {String chemin="./src/BDD/Devis/";
 
         LinkedList<String> texte=lecture(chemin,id);

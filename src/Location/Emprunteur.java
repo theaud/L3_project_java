@@ -48,8 +48,9 @@ public class Emprunteur {
 
     }
 
-    public static JLabel afficher_utilisateur_console(int id)
+    public static JLabel afficher_utilisateur(int id)
         {Emprunteur current=new Emprunteur(id);
+
         LinkedList<String> texte_ajout=new LinkedList<String>();
 
         texte_ajout.add("Fiche emprunteur");
@@ -67,10 +68,13 @@ public class Emprunteur {
                 {texte_ajout.add("\ndevis numero :"+current.getReference_Devis()[i+6]);}
             }
 
-
-        util3.Util3.afficher(texte_ajout);
         return Lign.mise_en_forme_ligne_jpanel(texte_ajout);
     }
+
+
+
+
+
     public int getId() {return Id;    }
     public void setId(int id) {        Id = id;    }
 
