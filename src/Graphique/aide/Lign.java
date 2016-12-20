@@ -1,5 +1,7 @@
-package Graphique;
+package Graphique.aide;
 
+
+import Graphique.general.Fenetre;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +13,6 @@ public class Lign extends Fenetre {
     {
         dim=new Dimension(10000,30);
     }
-
 
 
     public static  Lign[] assemblage_ligne(int size)
@@ -37,25 +38,11 @@ public class Lign extends Fenetre {
 //---------------------------------------------------------------------------------------------------------------------------------------------
 
     public static JLabel mise_en_forme_ligne_jpanel(LinkedList<String> texte)
-    {
-        String traduction="<html><div>";
-
-        for(int i=0;i<texte.size();i++)
-        {traduction+=texte.get(i)+"<br>";}
+    {   String traduction="<html><div>";
+            for (String ligne:texte) {traduction+=ligne+"<br>";}
         traduction+="</div></html>";
-        JLabel returned=new JLabel(traduction) ;
-
-        return returned;
+        return new JLabel(traduction) ;
     }
-
-
-
-
-
-
-
-
-
 
 
 }

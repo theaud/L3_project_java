@@ -71,7 +71,7 @@ public static  int[][] InitiateTableInt(int x,int y)
     /**
      * @param x int
      * @param y int
-     * @return
+     * @return .
      */
      public static int dividemore(double x,double y)
     {if((x/y)-(int)(x/y)!=0)
@@ -80,7 +80,7 @@ public static  int[][] InitiateTableInt(int x,int y)
     }
 
   /**
-     * @param table
+     * @param table  table
      * @param x int
      * @param y int
      */
@@ -93,9 +93,9 @@ public static  int[][] InitiateTableInt(int x,int y)
   }
 
     /**
-     * @param table
-     * @param x
-     * @param y
+     * @param table table
+     * @param x x
+     * @param y y
      */
     public static void printTableDouble(double table[][],int x,int y)
   {for(int i=0;i<y;i++)
@@ -105,12 +105,16 @@ public static  int[][] InitiateTableInt(int x,int y)
       }
   }
 
-    /** @param x */
+    /** @param x x*/
     public static void line(int x){for(int i=0;i<x;i++) {System.out.println();}}
 
 
+
+    public static String regrouper(LinkedList<String> texte)
+    {String retour="";for(String ligne:texte){retour+=ligne+"\n";}return retour;}
+
     public static void afficher(LinkedList<String> texte)
-    {for (int i=0;i<texte.size();i++) {System.out.println(texte.get(i));}}
+    {for(String ligne:texte) {System.out.println(ligne);}}
     
 //---------------------------------------------------------------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------------------------------------------

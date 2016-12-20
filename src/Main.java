@@ -1,25 +1,19 @@
-import Affichage.Panneau;
-import Affichage.test1;
 
-import javax.swing.*;
+import util3.bdd;
+
+import java.sql.*;
+import java.util.LinkedList;
 
 public class Main {
 
+
     public static void main(String[] args) {
-       // System.out.println("Hello World!");
 
-/*
-//Boîte du message d'erreur
-        JOptionPane jop3 = new JOptionPane();
-        jop3.showMessageDialog(null, "Message d'erreur", "Erreur", JOptionPane.ERROR_MESSAGE);
-*/
+        Connection connection= bdd.InitialisationBDD("jdbc:postgresql://localhost/testdb?user=postgres&password=azertyuiop");
+        LinkedList<String>argument=new LinkedList<>();
+        argument.add("\"Titre     NOT NULL\"");
 
-        //on ouvre la fenetre principale
-    Panneau Panneau=new Panneau();
-
-
-
-
+        //creationTable( connection,  "table41", argument);
 
 
 
@@ -29,12 +23,6 @@ public class Main {
 
 
 
+    }
 
 
-
-
-
-
-
-
-}

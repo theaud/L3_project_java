@@ -1,4 +1,6 @@
-package Graphique;
+package Graphique.aide;
+
+import Graphique.general.Fenetre;
 
 import javax.swing.*;
 import java.awt.*;

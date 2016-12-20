@@ -1,4 +1,6 @@
-package Graphique;
+package Graphique.general;
+
+import Graphique.aide.Form;
 
 import javax.swing.*;
 
