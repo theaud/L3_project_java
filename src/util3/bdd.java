@@ -21,7 +21,6 @@ public class bdd {
 
         }
 
-        System.out.println("PostgreSQL JDBC Driver Registered!");
         Connection connection = null;
 
 
@@ -35,65 +34,72 @@ public class bdd {
             e.printStackTrace();
 
         }
-        if (connection != null) {
-            System.out.println("You made it, take control your database now!");
-        } else {
+        if (connection == null) {
             System.out.println("Failed to make connection!");
         }
         return connection;
     }
 
-    public static void creationTable(Connection connection, String nomTable, LinkedList<String> argument)
+    public static void CREATE_TABLE(Connection connection, String nomTable, LinkedList<String> argument)
     {
 
         try{String requete="CREATE TABLE "+nomTable+"(";
-
+            int i=0;
             for(String ligne:argument)
             {
-                requete+=ligne+"\n";
+                requete+=ligne;
+
+                if(argument.size()!=++i)
+                {
+                    requete+=",\n";
+                }
+
 
             }
-            requete+="COMPANY"+('a')+"  CHAR(50) NOT NULL";
             requete+="); ";
 
             Statement state = connection.createStatement();
 
-
+            System.out.println(requete);
             state.executeUpdate(requete);
 
 
         }catch (SQLException e){
-            System.out.println("Requete Failed! Check output console");
+            System.out.println("creationTable:Requete Failed! Check output console");
             e.printStackTrace();
 
         }
 
     }
-    public static boolean SuppressionTable(Connection connection, String nomTable)
+    public static boolean DROP_TABLE(Connection connection, String nomTable)
     {try{String requete="DROP TABLE "+nomTable;
         Statement state = connection.createStatement();
         state.executeUpdate(requete);
 
     }catch (SQLException e){
-        System.out.println("Requete Failed! Check output console");
+        System.out.println("SuppressionTable:Requete Failed! Check output console");
         e.printStackTrace();
         return false;
     }return true;
     }
 
 
-    public static boolean ajoutBDD(Connection connection,String emplacement)
-    {try{String requete = "INSERT  INTO aaa VALUES('valeur 1');";
+    public static boolean INSERT(Connection connection,String emplacement,String donne)
+    {try{String requete = "INSERT  INTO "+emplacement+" VALUES("+donne+");";
 
         Statement state = connection.createStatement();
-        state.executeQuery(requete);
+        state.executeUpdate(requete);
 
     }catch (SQLException e){
-        System.out.println("Requete Failed! Check output console");
+        System.out.println("ajoutBDD:Requete Failed! Check output console");
         e.printStackTrace();
         return false;
     }return true;
     }
+
+
+
+
 
 
 

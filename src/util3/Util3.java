@@ -111,7 +111,14 @@ public static  int[][] InitiateTableInt(int x,int y)
 
 
     public static String regrouper(LinkedList<String> texte)
-    {String retour="";for(String ligne:texte){retour+=ligne+"\n";}return retour;}
+    {String retour="";for(String ligne:texte){retour+=ligne;}return retour;}
+
+    public static String regrouper(LinkedList<String> texte,String separateur)
+    {String retour="";int i=0;for(String ligne:texte)
+        {retour+=ligne+separateur;
+           if(texte.size()!=++i){retour+=separateur;}
+        }
+    return retour;}
 
     public static void afficher(LinkedList<String> texte)
     {for(String ligne:texte) {System.out.println(ligne);}}
