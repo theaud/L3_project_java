@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd101131-1de1-4493-bafc-6a1b4a09b567" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/BDD/BDD_simuler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/BDD/user.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/BDD/vehicule.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/L3_projet_java/Main.class" afterPath="$PROJECT_DIR$/out/production/L3_projet_java/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util3/bdd.java" afterPath="$PROJECT_DIR$/src/util3/bdd.java" />
     </list>
     <ignored path="L3_projet_java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -807,7 +802,7 @@
       <workItem from="1481641105422" duration="4116000" />
       <workItem from="1482231709790" duration="7129000" />
       <workItem from="1482312084158" duration="6494000" />
-      <workItem from="1483449575449" duration="3107000" />
+      <workItem from="1483449575449" duration="3184000" />
     </task>
     <task id="LOCAL-00001" summary="fuck thomas">
       <created>1457702114212</created>
@@ -1013,11 +1008,17 @@
       <option name="project" value="LOCAL" />
       <updated>1482325996033</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="ajout insert/delete/select">
+      <created>1483452762307</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1483452762307</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254833000" />
+    <option name="totallyTimeSpent" value="254910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -1085,7 +1086,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Generator getter setter auto generer" />
     <MESSAGE value="Generator getter setter auto generer 2" />
     <MESSAGE value="Login partie I fait&#10;" />
     <MESSAGE value="Login partie II&#10;Menu partie I&#10;" />
@@ -1110,7 +1110,8 @@
     <MESSAGE value="ppt" />
     <MESSAGE value="restart" />
     <MESSAGE value="ajout nouvelle table" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout nouvelle table" />
+    <MESSAGE value="ajout insert/delete/select" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout insert/delete/select" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
