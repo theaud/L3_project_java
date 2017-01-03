@@ -1,8 +1,12 @@
 
+import Graphique.app.Application;
 import util3.bdd;
 
 import java.sql.*;
 import java.util.LinkedList;
+
+import static util3.Util3.afficher;
+import static util3.Util3.rand;
 
 public class Main {
 
@@ -11,7 +15,15 @@ public class Main {
 
         Connection connection= bdd.InitialisationBDD("jdbc:postgresql://localhost/testdb?user=postgres&password=azertyuiop");
 
-        inserTemp( connection);
+
+        inserTemp(connection);
+
+
+        Application pricipale=new Application();
+
+       LinkedList<String> a= bdd.select(connection,"select * from temp",5);
+        afficher(a);
+
 
 
     }
@@ -49,7 +61,7 @@ CREATE TABLE temps (
 
     static void inserTemp(Connection connection)
     {
-        String donne="'San Francisco', 46, 50, 0.25, '1994-11-27'";
+        String donne="'San Francisco', "+(double)rand(1,1000)*0.01+","+rand(1,50)+", 0.25, '1994-11-27'";
         bdd.INSERT( connection,"temp",donne);
     }
 
