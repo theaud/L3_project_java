@@ -15,6 +15,7 @@ public class Util3 {
      */
     public static int rand(int min,int max)
     {Random r = new Random();
+     if(min>max){int tmp=max;max=min;min=tmp;}
      return  min + r.nextInt(max - min);
     }
 
@@ -122,7 +123,28 @@ public static  int[][] InitiateTableInt(int x,int y)
 
     public static void afficher(LinkedList<String> texte)
     {for(String ligne:texte) {System.out.println(ligne);}}
-    
+
+
+    public static String generer_mot(int taille)
+    {String mot=(char)rand('A','Z')+"";
+        for(int i=0;i<taille;i++){mot+=(char)rand('a','z');}
+        return  mot;
+    }
+
+    public static String generer_date(int anne_min,int anne_max)
+    {   String date="";
+        int jour,anne=rand(anne_min,anne_max),mois=rand(1,12);
+
+        if(mois==1 ||mois==3||mois==5||mois==7||mois==8||mois==10||mois==12)
+            {jour=rand(1,31);}
+        else if(mois==2 && anne%4==0){jour=rand(1,29);}
+        else if(mois==2)             {jour=rand(1,28);}
+        else                         {jour=rand(1,30);}
+        return  ""+anne+"-"+mois+"-"+jour;
+    }
+
+
+
 //---------------------------------------------------------------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------------------------------------------

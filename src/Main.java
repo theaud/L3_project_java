@@ -5,8 +5,7 @@ import util3.bdd;
 import java.sql.*;
 import java.util.LinkedList;
 
-import static util3.Util3.afficher;
-import static util3.Util3.rand;
+import static util3.Util3.*;
 
 public class Main {
 
@@ -16,15 +15,11 @@ public class Main {
         Connection connection= bdd.InitialisationBDD("jdbc:postgresql://localhost/testdb?user=postgres&password=azertyuiop");
 
 
-        inserTemp(connection);
 
-
-        Application pricipale=new Application();
+        //Application pricipale=new Application();
 
        LinkedList<String> a= bdd.select(connection,"select * from temp",5);
         afficher(a);
-
-
 
     }
 /*
@@ -35,7 +30,6 @@ CREATE TABLE temps (
     prcp            real,          -- précipitation
     date            date
 );
-
 
  */
     static void tableVille(Connection connection)
@@ -55,17 +49,20 @@ CREATE TABLE temps (
         argument.add("prcp            real");
         argument.add("date            date");
 
-
         bdd.CREATE_TABLE( connection,  "Temp", argument);
     }
 
     static void inserTemp(Connection connection)
     {
-        String donne="'San Francisco', "+(double)rand(1,1000)*0.01+","+rand(1,50)+", 0.25, '1994-11-27'";
+        String donne="";
+        donne+="'"+generer_mot(rand(2,7))+"',";
+        donne+=rand(1,10)+",";
+        donne+=rand(1,50)+",";
+        donne+=""+rand(1,100)+",";
+        donne+="'"+generer_date(1950,2016)+"'";
+
         bdd.INSERT( connection,"temp",donne);
     }
-
-
-    }
+}
 
 

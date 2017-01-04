@@ -20,8 +20,6 @@ public class bdd {
 
         Connection connection = null;
 
-
-
         try
         {
             // String url = "jdbc:postgresql://localhost/testdb?user=postgres&password=azertyuiop";
@@ -39,27 +37,16 @@ public class bdd {
 
     public static void CREATE_TABLE(Connection connection, String nomTable, LinkedList<String> argument)
     {
-
         try{String requete="CREATE TABLE "+nomTable+"(";
             int i=0;
             for(String ligne:argument)
-            {
-                requete+=ligne;
-
-                if(argument.size()!=++i)
-                {
-                    requete+=",\n";
+                {requete+=ligne;
+                 if(argument.size()!=++i)   { requete+=",\n";}
                 }
-
-
-            }
             requete+="); ";
 
             Statement state = connection.createStatement();
-
-            System.out.println(requete);
             state.executeUpdate(requete);
-
 
         }catch (SQLException e){
             System.out.println("creationTable:Requete Failed! Check output console");
@@ -83,7 +70,6 @@ public class bdd {
 
     public static boolean INSERT(Connection connection,String emplacement,String donne)
     {try{String requete = "INSERT  INTO "+emplacement+" VALUES("+donne+");";
-
         Statement state = connection.createStatement();
         state.executeUpdate(requete);
 
@@ -95,7 +81,20 @@ public class bdd {
     }
 
     public static boolean DELETE(Connection connection,String emplacement,String donne,String valeur)
-    {try{String requete = "DELETE  FROM "+emplacement+" WHERE ("+donne+"="+valeur+");";
+    {try{String requete = "DELETE FROM "+emplacement+" WHERE "+donne+"="+valeur+";";
+
+        Statement state = connection.createStatement();
+        state.executeUpdate(requete);
+
+    }catch (SQLException e){
+        System.out.println("DELETE:Requete Failed! Check output console");
+        e.printStackTrace();
+        return false;
+    }return true;
+    }
+
+    public static boolean CLEAR(Connection connection,String emplacement)
+    {try{String requete = "DELETE FROM "+emplacement+";";
 
         Statement state = connection.createStatement();
         state.executeUpdate(requete);
@@ -108,49 +107,29 @@ public class bdd {
     }
 
 
-
-
-
     public static LinkedList<String> select(Connection connection,String requete,int nb_argument)
     {LinkedList<String> returned=new LinkedList<>();
-
-
-
-
 
         try{
 
             ResultSet rs;
             Statement state = connection.createStatement();
             rs=state.executeQuery(requete);
-            int j=0;
-            while ( rs.next() ) {
-                String ligne="" ;
 
+            while ( rs.next() ) {String ligne="" ;
 
-                for (int i=1;i<=nb_argument;i++) {
-                    ligne+=rs.getString(i)+" ";
-                }
-
+                for (int i=1;i<=nb_argument;i++)
+                {ligne+=rs.getString(i)+" ";}
                 returned.add(ligne);
-                System.out.println(j++);
             }
 
         }catch (SQLException e){
             System.out.println("select:Requete Failed! Check output console");
             e.printStackTrace();
-
         }
-
-
-
         return returned;
 
     }
-
-
-
-
 
 
 }
