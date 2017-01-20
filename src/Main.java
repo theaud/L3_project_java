@@ -1,8 +1,6 @@
-
-import Graphique.app.Application;
 import util3.bdd;
 
-import java.sql.*;
+import java.sql.Connection;
 import java.util.LinkedList;
 
 import static util3.Util3.*;
@@ -16,10 +14,10 @@ public class Main {
 
 
 
+
         //Application pricipale=new Application();
 
-       LinkedList<String> a= bdd.select(connection,"select * from temp",5);
-        afficher(a);
+        afficher(bdd.select(connection,"select * from temp",5));
 
     }
 /*
