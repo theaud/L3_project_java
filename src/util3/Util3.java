@@ -1,6 +1,10 @@
 
 package util3;
-import java.util.*;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.LinkedList;
+import java.util.Random;
 
 
 public class Util3 {
@@ -80,49 +84,65 @@ public static  int[][] InitiateTableInt(int x,int y)
           return (int)(x/y);
     }
 
-  /**
-     * @param table  table
-     * @param x int
-     * @param y int
-     */
-    public static void printTableInt(int table[][],int x,int y)
-  {for(int i=0;i<y;i++)
-      {for(int j=0;j<y;j++)
-        {System.out.print(table[i][j]+" ");}
-       System.out.println();
-      }
-  }
+
+
+    //------------------------------------------------------------------------------------------------------------------
+    //--------------------------------------   Fonction de regroupement ------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------------
 
     /**
-     * @param table table
-     * @param x x
-     * @param y y
+     * @param texte whole lign who need to be merge
+     * @return text in one string each lign is seperate from other with a wrapping
      */
-    public static void printTableDouble(double table[][],int x,int y)
-  {for(int i=0;i<y;i++)
-      {for(int j=0;j<y;j++)
-        {System.out.print(table[i][j]+" ");}
-       System.out.println();
-      }
-  }
-
-    /** @param x x*/
-    public static void line(int x){for(int i=0;i<x;i++) {System.out.println();}}
+    public static String merge(LinkedList<String> texte)
+    {String retour="";for(String ligne:texte){retour+=ligne+"\n";}return retour;}
 
 
+    public static String merge(LinkedList<String> texte,int nb_element)
+    {String retour="";int i=0;
+        for(String ligne:texte)
+        {retour += ligne;
+            if (++i % nb_element == 0) { retour += ligne;}
+        }
 
-    public static String regrouper(LinkedList<String> texte)
-    {String retour="";for(String ligne:texte){retour+=ligne;}return retour;}
+        return retour;}
 
-    public static String regrouper(LinkedList<String> texte,String separateur)
+    public static String merge(LinkedList<String> texte,String separateur)
     {String retour="";int i=0;for(String ligne:texte)
         {retour+=ligne+separateur;
            if(texte.size()!=++i){retour+=separateur;}
         }
     return retour;}
 
+
+
+
+    public static LinkedList<JLabel> Liste_String_to_Liste_Jlabel(LinkedList<String> texte)
+    {LinkedList<JLabel> retour=new LinkedList<>();for(String ligne:texte){retour.add(new JLabel(ligne));}return retour;}
+
+    public static JLabel Tableau_String_to_Jlabel(LinkedList<LinkedList<String>> texte)
+    {String retour="<html><table border: 1px>";
+
+        for(LinkedList<String> ligne:texte)
+        {retour+="<tr>";
+            for (String mot : ligne){retour += "<td>" + mot + "</td>\n";}
+            retour+="</tr>";
+        }
+        retour+="</table></html>";
+
+        JLabel retourned=new JLabel(retour);
+        retourned.setBackground(Color.white);
+
+        return retourned;}
+    //------------------------------------------------------------------------------------------------------------------
+    //--------------------------------------   Fonction d'affichage     ------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------------
     public static void afficher(LinkedList<String> texte)
     {for(String ligne:texte) {System.out.println(ligne);}}
+
+    public static void afficher_tableau(LinkedList<LinkedList<String>> texte)
+    {for(LinkedList<String> ligne:texte) {for(String mot:ligne){System.out.println(ligne);}}}
+
 
 
     public static String generer_mot(int taille)
@@ -130,6 +150,34 @@ public static  int[][] InitiateTableInt(int x,int y)
         for(int i=0;i<taille;i++){mot+=(char)rand('a','z');}
         return  mot;
     }
+    /**
+     * @param table  table
+     * @param x int
+     * @param y int
+     */
+    public static void printTableInt(int table[][],int x,int y)
+    {for(int i=0;i<y;i++)
+    {for(int j=0;j<y;j++)
+    {System.out.print(table[i][j]+" ");}
+        System.out.println();
+    }
+    }
+
+    /**
+     * @param table table
+     * @param x x
+     * @param y y
+     */
+    public static void printTableDouble(double table[][],int x,int y)
+    {for(int i=0;i<y;i++)
+    {for(int j=0;j<y;j++)
+    {System.out.print(table[i][j]+" ");}
+        System.out.println();
+    }
+    }
+    //------------------------------------------------------------------------------------------------------------------
+    //--------------------------------------   Fonction de generation aleatoire-----------------------------------------
+    //------------------------------------------------------------------------------------------------------------------
 
     public static String generer_date(int anne_min,int anne_max)
     {   String date="";
@@ -145,7 +193,10 @@ public static  int[][] InitiateTableInt(int x,int y)
 
 
 
-//---------------------------------------------------------------------------------------------------------------------------------------------
-//---------------------------------------------------------------------------------------------------------------------------------------------
-//---------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
+
+    /** @param x x*/
+    public static void line(int x){for(int i=0;i<x;i++) {System.out.println();}}
 }

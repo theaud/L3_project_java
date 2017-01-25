@@ -107,26 +107,69 @@ public class bdd {
     }
 
 
-    public static LinkedList<String> select(Connection connection,String requete,int nb_argument)
-    {LinkedList<String> returned=new LinkedList<>();
+    public static LinkedList<LinkedList<String>> SELECT(Connection connection,String filtre,String from,int nb_argument)
+    {
+        String requete="select "+filtre+" from "+from;
 
-        try{
-
+        LinkedList<LinkedList<String>> returned=new LinkedList<LinkedList<String>>();
+        //--------------------------------------------------------------------------------------------
+        //---------------------------    intituler    -------------------------------------------------
+        // --------------------------------------------------------------------------------------------
+        if(filtre=="*")
+        {try{
             ResultSet rs;
+            Statement state = connection.createStatement();
+            rs=state.executeQuery("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='"+from+"' ");
+          //  System.out.println(rs);
+            LinkedList<String> tmp=new LinkedList<>();
+            while ( rs.next() )
+            {
+
+                /*for (int i=1;i<=nb_argument;i++)
+                {tmp.add(rs.getString(i));}*/
+                tmp.add(rs.getString(1));
+
+            }
+            returned.add(tmp);
+        }catch (SQLException e){
+                System.out.println("select:Requete Failed! Check output console");
+                e.printStackTrace();
+            }
+
+        }
+        else
+        {
+           // SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS  WHERE TABLE_NAME='NomDeLaTable'
+        }
+
+        //--------------------------------------------------------------------------------------------
+        //---------------------------    contenu    -------------------------------------------------
+        // --------------------------------------------------------------------------------------------
+
+
+
+
+
+        try{ResultSet rs;
             Statement state = connection.createStatement();
             rs=state.executeQuery(requete);
 
-            while ( rs.next() ) {String ligne="" ;
-
+            while ( rs.next() )
+            {LinkedList<String> tmp=new LinkedList<>();
                 for (int i=1;i<=nb_argument;i++)
-                {ligne+=rs.getString(i)+" ";}
-                returned.add(ligne);
+                {tmp.add(rs.getString(i));}
+                returned.add(tmp);
             }
+
 
         }catch (SQLException e){
             System.out.println("select:Requete Failed! Check output console");
             e.printStackTrace();
         }
+
+
+
+
         return returned;
 
     }

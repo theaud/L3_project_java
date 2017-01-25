@@ -1,7 +1,7 @@
 package Graphique.aide;
 
 
-import Graphique.general.Fenetre;
+import Graphique.Jpanel.Fenetre;
 
 import javax.swing.*;
 import java.awt.*;

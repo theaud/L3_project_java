@@ -1,5 +1,6 @@
 package util3;
-import java.util.*;
+
+import java.util.Scanner;
 
 
 public class Scan {
@@ -9,9 +10,9 @@ public class Scan {
  //---------------------------------------------------------------------------------------------------------------------
  //----------------Scanner with Scan clear included---------------------------------------------------------------------
  //---------------------------------------------------------------------------------------------------------------------
-/**  - integer 0 0 = No other yes<br/>
- * -string Yes True y Y T t <br/>
- * -string No False n N f F <br/>
+/**  - integer 0 0 = No other yes<br>
+ * -string Yes True y Y T t <br>
+ * -string No False n N f F <br>
  * @return the value true/false 
  */
   public  boolean scanBoolean()
@@ -70,11 +71,11 @@ public class Scan {
 
 /** @param min the minimum point (useless with type 0 or 3)
  * @param max the maximum point (useless with type 0 or 3)
-         * @param type choose the type          <br/>
-         *  type 0 = without less or more       <br/>
-         *  type 1 = with less and  more        <br/>
-         *  type 0 = with less no more          <br/>
-         *  type 3 = no less but with more      <br/>
+         * @param type choose the type          <br>
+         *  type 0 = without less or more       <br>
+         *  type 1 = with less and  more        <br>
+         *  type 0 = with less no more          <br>
+         *  type 3 = no less but with more      <br>
  * @return the value integer selected
  */
 public  int scanINT(int min,int max,int type)
@@ -121,11 +122,11 @@ public  int scanINT(int min,int max,int type)
 
   /** @param min the minimum point (useless with type 0 or 3)
     * @param max the maximum point (useless with type 0 or 3)
-         * @param type choose the type          <br/>
-         *  type 0 = without less or more       <br/>
-         *  type 1 = with less and  more        <br/>
-         *  type 0 = with less no more          <br/>
-         *  type 3 = no less but with more      <br/>
+         * @param type choose the type          <br>
+         *  type 0 = without less or more       <br>
+         *  type 1 = with less and  more        <br>
+         *  type 0 = with less no more          <br>
+         *  type 3 = no less but with more      <br>
  * @return the value integer selected */
 public  double scanDOUBLE(double min,double max,int type)
   {double returned=scanDOUBLE();
@@ -152,6 +153,7 @@ public  double scanDOUBLE(double min,double max,int type)
 //---------------------------------------------------------------------------------------------------------------------
 
     /** scanner next with a clear after
+     * @return return the input
      * */
 public  String scannext()
   {String returned;
@@ -166,7 +168,7 @@ public  String scannext()
       }
   }
 
-    /**  */
+    /** @return return the input */
 public  String scanLine()
   {String returned;
       while(true)

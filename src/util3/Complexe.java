@@ -1,10 +1,6 @@
-
 package util3;
 
-/**
- *
- * @author mathieu
- */
+
 public class Complexe {
 
       private Double _im;

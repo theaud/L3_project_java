@@ -1,3 +1,4 @@
+import Graphique.app.Application;
 import util3.bdd;
 
 import java.sql.Connection;
@@ -13,11 +14,8 @@ public class Main {
         Connection connection= bdd.InitialisationBDD("jdbc:postgresql://localhost/testdb?user=postgres&password=azertyuiop");
 
 
-
-
-        //Application pricipale=new Application();
-
-        afficher(bdd.select(connection,"select * from temp",5));
+        Application pricipale=new Application(connection);
+        Application pricipale1=new Application(connection);
 
 
     }

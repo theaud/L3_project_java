@@ -31,15 +31,15 @@ public class ComplexeInt {
 
     /**
      *
-     * @param size
-     * @return
+     * @param size number of valu for the new table
+     * @return a empty new table of int
      */
     public static ComplexeInt[] newTableComplexeInt(int size)
    {
        if(size>0)
        {ComplexeInt[] table=new ComplexeInt[size];
          for(int i=0;i<size;i++)
-             { table[i]=new ComplexeInt(); }
+             { table[i]=new ComplexeInt(0,0); }
                
          return table; 
        }
@@ -47,7 +47,11 @@ public class ComplexeInt {
       return table;
    
    }
-    
+
+    /**
+     *
+     * @return
+     */
    public int getIm()            {return _im;}
    public void   setIm(int im)   {_im=im;}
    
