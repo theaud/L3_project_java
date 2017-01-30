@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd101131-1de1-4493-bafc-6a1b4a09b567" name="Default" comment="ajout de tt les oublis">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Graphique/aide/Casee.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Graphique/dame8.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/L3_projet_java/Main.class" afterPath="$PROJECT_DIR$/out/production/L3_projet_java/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphique/Jpanel/Fenetre.java" afterPath="$PROJECT_DIR$/src/Graphique/Jpanel/Fenetre.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Graphique/Jpanel/Jframeadd.java" afterPath="$PROJECT_DIR$/src/Graphique/Jpanel/Jframeadd.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
     <ignored path="L3_projet_java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,17 +53,17 @@
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graphique/app/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3725262">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,29 +71,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bdd.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util3/bdd.java">
+      <file leaf-file-name="test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Graphique/app/test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="54" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dame8.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Graphique/dame8.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.3196582">
+              <caret line="61" column="22" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1485256051309" expanded="true" signature="1087:1113" placeholder="CREATE TABLE... missingValue" />
-                <marker date="1485256051309" expanded="true" signature="1694:1705" placeholder="DROP TABLE m... " />
-                <marker date="1485256051309" expanded="true" signature="2118:2154" placeholder="INSERT INTO aaa" />
-                <marker date="1485256051309" expanded="true" signature="2118:2164" placeholder="INSERT INTO aaa" />
-                <marker date="1485256051309" expanded="true" signature="2574:2618" placeholder="DELETE FROM " />
-                <marker date="1485256051309" expanded="true" signature="2574:2628" placeholder="DELETE FROM " />
-                <marker date="1485256051309" expanded="true" signature="3009:3021" placeholder="DELETE FROM " />
-                <marker date="1485256051309" expanded="true" signature="3009:3034" placeholder="DELETE FROM " />
-                <marker date="1485256051309" expanded="true" signature="3468:3475" placeholder="select missi... " />
-                <marker date="1485256051309" expanded="true" signature="3468:3491" placeholder="select * fro... temp" />
-                <marker date="1485256051309" expanded="true" signature="3468:3493" placeholder="select missi... " />
-                <marker date="1485256051309" expanded="true" signature="3468:3498" placeholder="select missi... " />
-                <marker date="1485256051309" expanded="true" signature="4056:4107" placeholder="SELECT COLUM... COLUMNS" />
-                <marker date="1485256051309" expanded="true" signature="4056:4125" placeholder="SELECT COLUM... COLUMNS" />
-                <marker date="1485256051309" expanded="true" signature="4056:4134" placeholder="SELECT COLUM... COLUMNS" />
-                <marker date="1485256051309" expanded="true" signature="4056:4138" placeholder="SELECT COLUM... COLUMNS" />
               </folding>
             </state>
           </provider>
@@ -117,17 +117,7 @@
         <entry file="file://$PROJECT_DIR$/src/Graphique/Jpanel/Jframeadd.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Util3.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util3/Util3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+              <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -137,17 +127,7 @@
         <entry file="file://$PROJECT_DIR$/src/Graphique/Jpanel/Fenetre.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="25" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Form.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graphique/aide/Form.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -158,6 +138,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Casee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Graphique/aide/Casee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -185,9 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Graphique/Fenetre.java" />
-        <option value="$PROJECT_DIR$/src/Graphique/Ecran.java" />
-        <option value="$PROJECT_DIR$/src/util3/fichier.java" />
         <option value="$PROJECT_DIR$/src/lll.form" />
         <option value="$PROJECT_DIR$/src/Affichage/test.java" />
         <option value="$PROJECT_DIR$/src/Affichage/test1.java" />
@@ -228,14 +215,17 @@
         <option value="$PROJECT_DIR$/src/util3/Scan.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Jpanel/Ecran.java" />
         <option value="$PROJECT_DIR$/src/Graphique/aide/Jframeadd.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/util3/Util3.java" />
-        <option value="$PROJECT_DIR$/src/Graphique/Jpanel/Fenetre.java" />
-        <option value="$PROJECT_DIR$/src/Graphique/Jpanel/Jframeadd.java" />
         <option value="$PROJECT_DIR$/src/util3/bdd.java" />
         <option value="$PROJECT_DIR$/src/util3/Complexe.java" />
         <option value="$PROJECT_DIR$/src/util3/ComplexeInt.java" />
         <option value="$PROJECT_DIR$/src/Graphique/app/Application.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/Jpanel/Jframeadd.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/Jpanel/Fenetre.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/aide/Case.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/aide/Casee.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/dame8.java" />
       </list>
     </option>
   </component>
@@ -245,10 +235,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1050" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -323,9 +313,15 @@
               <option name="myItemId" value="L3_project_java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+              <option name="myItemId" value="L3_project_java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L3_project_java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -336,6 +332,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="L3_project_java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="postgresql-9.4.1212.jre6.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -385,6 +385,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L3_project_java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L3_project_java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Graphique" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -490,20 +508,21 @@
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="l3_project_java" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/Graphique" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mathieu\Documents\developement 1\L3_project_java\src\Layout" />
-      <recent name="C:\Users\mathieu\Documents\developpement\L3_project_java\src\Graphique" />
-      <recent name="C:\Users\mathieu\Documents\developement 1\L3_projet_java\src\consigne" />
-      <recent name="C:\Users\mathieu\Documents\developement 1\L3_projet_java\src\Location" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mathieu\Downloads\L3_project_java\src\BDD\Vehicule" />
       <recent name="C:\Users\mathieu\Links\L3_project_java\src\BDD\Devis" />
       <recent name="C:\Users\mathieu\Links\L3_project_java\src\BDD\vehicule" />
       <recent name="C:\Users\mathieu\Documents\developement 1\L3_projet_java\src\util3" />
       <recent name="C:\Users\mathieu\Documents\developement 1\L3_projet_java\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mathieu\Documents\developement 1\L3_project_java\src\Layout" />
+      <recent name="C:\Users\mathieu\Documents\developpement\L3_project_java\src\Graphique" />
+      <recent name="C:\Users\mathieu\Documents\developement 1\L3_projet_java\src\consigne" />
+      <recent name="C:\Users\mathieu\Documents\developement 1\L3_projet_java\src\Location" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -935,6 +954,7 @@
       <workItem from="1485345921341" duration="216000" />
       <workItem from="1485346946457" duration="170000" />
       <workItem from="1485789504061" duration="47000" />
+      <workItem from="1485790026669" duration="9169000" />
     </task>
     <task id="LOCAL-00001" summary="fuck thomas">
       <created>1457702114212</created>
@@ -1216,7 +1236,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277845000" />
+    <option name="totallyTimeSpent" value="287014000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1228,33 +1248,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31744313" sideWeight="0.4426581" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33782268" sideWeight="0.23954985" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40852973" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33586133" sideWeight="0.7604502" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19882101" sideWeight="0.49335864" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20095949" sideWeight="0.49335864" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19078243" sideWeight="0.5066414" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.4924357" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31762066" sideWeight="0.4426581" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955604" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33670035" sideWeight="0.7604502" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32098764" sideWeight="0.4415863" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934355" sideWeight="0.4924357" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1333,14 +1353,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Graphique/aide/Lign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util3/Temp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1364,22 +1376,6 @@
           <caret line="71" column="76" selection-start-line="71" selection-start-column="76" selection-end-line="71" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1485256051309" expanded="true" signature="1087:1113" placeholder="CREATE TABLE... missingValue" />
-            <marker date="1485256051309" expanded="true" signature="1694:1705" placeholder="DROP TABLE m... " />
-            <marker date="1485256051309" expanded="true" signature="2118:2154" placeholder="INSERT INTO aaa" />
-            <marker date="1485256051309" expanded="true" signature="2118:2164" placeholder="INSERT INTO aaa" />
-            <marker date="1485256051309" expanded="true" signature="2574:2618" placeholder="DELETE FROM " />
-            <marker date="1485256051309" expanded="true" signature="2574:2628" placeholder="DELETE FROM " />
-            <marker date="1485256051309" expanded="true" signature="3009:3021" placeholder="DELETE FROM " />
-            <marker date="1485256051309" expanded="true" signature="3009:3034" placeholder="DELETE FROM " />
-            <marker date="1485256051309" expanded="true" signature="3468:3475" placeholder="select missi... " />
-            <marker date="1485256051309" expanded="true" signature="3468:3491" placeholder="select * fro... temp" />
-            <marker date="1485256051309" expanded="true" signature="3468:3493" placeholder="select missi... " />
-            <marker date="1485256051309" expanded="true" signature="3468:3498" placeholder="select missi... " />
-            <marker date="1485256051309" expanded="true" signature="4056:4107" placeholder="SELECT COLUM... COLUMNS" />
-            <marker date="1485256051309" expanded="true" signature="4056:4125" placeholder="SELECT COLUM... COLUMNS" />
-            <marker date="1485256051309" expanded="true" signature="4056:4134" placeholder="SELECT COLUM... COLUMNS" />
-            <marker date="1485256051309" expanded="true" signature="4056:4138" placeholder="SELECT COLUM... COLUMNS" />
           </folding>
         </state>
       </provider>
@@ -1805,13 +1801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/64d26356-a9f5-4f42-829a-efa18b719868/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.041666668">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util3/Temp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1840,33 +1829,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/app/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphique/aide/Form.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/aide/Lign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1879,36 +1845,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Jpanel/Fenetre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util3/bdd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1485256051309" expanded="true" signature="1087:1113" placeholder="CREATE TABLE... missingValue" />
-            <marker date="1485256051309" expanded="true" signature="1694:1705" placeholder="DROP TABLE m... " />
-            <marker date="1485256051309" expanded="true" signature="2118:2154" placeholder="INSERT INTO aaa" />
-            <marker date="1485256051309" expanded="true" signature="2118:2164" placeholder="INSERT INTO aaa" />
-            <marker date="1485256051309" expanded="true" signature="2574:2618" placeholder="DELETE FROM " />
-            <marker date="1485256051309" expanded="true" signature="2574:2628" placeholder="DELETE FROM " />
-            <marker date="1485256051309" expanded="true" signature="3009:3021" placeholder="DELETE FROM " />
-            <marker date="1485256051309" expanded="true" signature="3009:3034" placeholder="DELETE FROM " />
-            <marker date="1485256051309" expanded="true" signature="3468:3475" placeholder="select missi... " />
-            <marker date="1485256051309" expanded="true" signature="3468:3491" placeholder="select * fro... temp" />
-            <marker date="1485256051309" expanded="true" signature="3468:3493" placeholder="select missi... " />
-            <marker date="1485256051309" expanded="true" signature="3468:3498" placeholder="select missi... " />
-            <marker date="1485256051309" expanded="true" signature="4056:4107" placeholder="SELECT COLUM... COLUMNS" />
-            <marker date="1485256051309" expanded="true" signature="4056:4125" placeholder="SELECT COLUM... COLUMNS" />
-            <marker date="1485256051309" expanded="true" signature="4056:4134" placeholder="SELECT COLUM... COLUMNS" />
-            <marker date="1485256051309" expanded="true" signature="4056:4138" placeholder="SELECT COLUM... COLUMNS" />
           </folding>
         </state>
       </provider>
@@ -1929,18 +1871,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Jpanel/Jframeadd.java">
+    <entry file="file://$PROJECT_DIR$/src/Graphique/app/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="34" />
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Jpanel/Fenetre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/app/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/Graphique/app/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3725262">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="54" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Jpanel/Jframeadd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/aide/Lign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/aide/Casee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/dame8.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3196582">
+          <caret line="61" column="22" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

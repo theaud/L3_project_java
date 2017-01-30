@@ -1,4 +1,4 @@
-import Graphique.app.Application;
+import Graphique.dame8;
 import util3.bdd;
 
 import java.sql.Connection;
@@ -11,11 +11,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Connection connection= bdd.InitialisationBDD("jdbc:postgresql://localhost/testdb?user=postgres&password=azertyuiop");
+      //  Connection connection= bdd.InitialisationBDD("jdbc:postgresql://localhost/testdb?user=postgres&password=azertyuiop");
 
 
-        Application pricipale=new Application(connection);
-        Application pricipale1=new Application(connection);
+        dame8 pricipale=new dame8();
+
 
 
     }

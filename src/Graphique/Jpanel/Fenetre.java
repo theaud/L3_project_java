@@ -11,18 +11,26 @@ public class Fenetre extends JPanel {
 
     protected LinkedList<Form> form= new LinkedList<>();
     protected LinkedList<JLabel> texte= new LinkedList<>();
-    protected Dimension dim=new Dimension(300,300);
+    protected Dimension dim=new Dimension(500,500);
     protected static int compteur=0;
     protected String name="Fenetre autogeneration"+(compteur++);
 
+
     protected int isopen=0;
 
-    public Fenetre(){  }
+    public Fenetre(){
+        setSize(dim);
+
+
+    }
 
     public Fenetre(Color color){
        // name="Fenetre autogeneration"+(compteur++);
-        setBackground(color);
+        setBackground(color);setSize(dim);
+
+
     }
+
 
 
 

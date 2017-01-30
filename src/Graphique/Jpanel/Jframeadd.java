@@ -37,7 +37,8 @@ public class Jframeadd  extends JFrame {
     public void chargerFenetre()
     {
         this.setTitle(content.getName());
-        this.setSize(content.getSize());
+        this.setSize(content.getDim());
+
     }
 
 }
