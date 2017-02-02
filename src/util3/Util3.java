@@ -85,6 +85,21 @@ public static  int[][] InitiateTableInt(int x,int y)
     }
 
 
+    public static LinkedList<String> separer(String entrer, String separateur)
+    {LinkedList<String>sortie=new LinkedList<>();
+
+        String[] tableau = null;
+        tableau = entrer.split(separateur);
+
+        for(int i = 0; i< tableau.length;i++){
+
+            sortie.add(tableau[i]);
+        }
+
+        return sortie;
+
+    }
+
 
     //------------------------------------------------------------------------------------------------------------------
     //--------------------------------------   Fonction de regroupement ------------------------------------------------

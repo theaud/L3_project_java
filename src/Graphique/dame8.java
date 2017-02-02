@@ -32,7 +32,6 @@ public class dame8 extends Jframeadd{
 
 
 
-
 /*
             placer_dame(3);
             placer_dame(14);
@@ -44,7 +43,7 @@ public class dame8 extends Jframeadd{
             placer_dame(61);
 */
 
-            recherche_solution();
+            //recherche_solution();
 
 
 
@@ -84,11 +83,9 @@ public class dame8 extends Jframeadd{
         LinkedList<int []>Lsolution=new LinkedList<>();
 
 
+       // arbreSolution a=new arbreSolution(0,0);
 
-        arbreSolution a=new arbreSolution(0,0);
-
-        a.afficher(0,2);
-
+      //  a.afficher(0,2);
 
 
 
