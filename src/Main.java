@@ -1,4 +1,4 @@
-import Graphique.aidedecision.Probleme;
+import Graphique.dame8;
 import util3.bdd;
 
 import java.sql.Connection;
@@ -18,11 +18,14 @@ public class Main {
 
       //  pricipale.resolution();
 
-    //dame8 a=new dame8();
+    dame8 a=new dame8();
 
-
+/*
         Probleme dame8=new Probleme();
         dame8.afficher();
+*/
+
+
 
 
 

@@ -1,8 +1,5 @@
 package Graphique.aidedecision;
 
-/**
- * Created by mathieu on 01/02/2017.
- */
 public class contrainte {
 
     public boolean principale;//contrainte principale => necessaire pour ressourdre , sinon contrainte utiliser par les autre contrainte
@@ -18,6 +15,10 @@ public class contrainte {
 
 
                                 // A FAIRE
+
+
+
+
 
 
 

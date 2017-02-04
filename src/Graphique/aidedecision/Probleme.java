@@ -46,11 +46,11 @@ public class Probleme {
         {tmp=new Champ();
             temporaire=util3.Util3.separer(fichier.get(curseur+i)," ");
 
-            tmp.Type=temporaire.get(0);
-            tmp.ID=Integer.parseInt(temporaire.get(1));
+
+            tmp.ID=Integer.parseInt(temporaire.get(0));
 
 
-            for (int valeur=3;valeur<temporaire.size();valeur++)
+            for (int valeur=2;valeur<temporaire.size();valeur++)
             {
                 tmp.valeur.add(Integer.parseInt(temporaire.get(valeur)));
             }
