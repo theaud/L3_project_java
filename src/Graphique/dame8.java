@@ -2,7 +2,6 @@ package Graphique;
 
 import Graphique.Jpanel.Jframeadd;
 import Graphique.aide.Casee;
-import Graphique.aidedecision.Champ;
 
 import javax.swing.*;
 import java.awt.*;
@@ -78,30 +77,6 @@ public class dame8 extends Jframeadd{
 
     }
 
-
-    public LinkedList<int []> recherche_solution()
-    {
-
-     LinkedList<Champ> intervale=Champ.genere_champ_dame8();
-
-
-
-
-
-
-        return Lsolution;
-    }
-
-    public static boolean test_dame8(int [] solution, LinkedList<Champ> intervale)
-    {for(int i=0;i<8;i++){if(0>=solution[i] && solution[i]<36){return false;}}
-
-        for(int i=0;i<intervale;i++)
-        {
-
-        }
-
-
-    }
 
 
 

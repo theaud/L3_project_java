@@ -1,4 +1,4 @@
-import Graphique.dame8;
+import Graphique.aidedecision.Probleme;
 import util3.bdd;
 
 import java.sql.Connection;
@@ -11,22 +11,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-      //  Connection connection= bdd.InitialisationBDD("jdbc:postgresql://localhost/testdb?user=postgres&password=azertyuiop");
-
-
-       // arbreSolution pricipale=new arbreSolution();
-
-      //  pricipale.resolution();
-
-    dame8 a=new dame8();
-
-/*
-        Probleme dame8=new Probleme();
-        dame8.afficher();
-*/
-
-
-
+        Probleme p=new Probleme();
+        p.methode_triviale();
 
 
 

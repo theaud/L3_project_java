@@ -2,17 +2,15 @@ package Graphique.aidedecision;
 
 import java.util.LinkedList;
 
-/**
- * Created by mathieu on 02/02/2017.
- */
+
 public class Champ {
 
 
-    public int ID;
+    public int ID=0;
     public LinkedList<Integer> valeur=new LinkedList<>();
 
-
-
+    public Champ(int id,LinkedList<Integer> Valeur) {ID=id; valeur= Valeur;}
+    public Champ(){}
 
 
     public static LinkedList<Champ> genere_champ_dame8()
@@ -49,7 +47,7 @@ public class Champ {
 
 
     public static void afficher(LinkedList<Champ> Case)
-    {
+    {System.out.print("Champ :");
         for (Champ ligne:Case)
         {System.out.print(ligne.ID+" : ");
             for(int valeur:ligne.valeur)
